@@ -45,7 +45,11 @@ public abstract class MapObject {
     protected double maxFallSpeed;
     protected double jumpStart;
     protected double stopJumpSpeed;
+<<<<<<< HEAD
     protected int health;
+=======
+    protected static int health;
+>>>>>>> 8fc2bba (update)
     protected int maxHealth;
     protected boolean dead;
 
@@ -177,7 +181,11 @@ public abstract class MapObject {
         this.dy = dy;
     }
 
+<<<<<<< HEAD
     public void setMapPosition() {
+=======
+    public void setMapPosition(int getx, int gety) {
+>>>>>>> 8fc2bba (update)
         this.xmap = (double)this.tileMap.getx();
         this.ymap = (double)this.tileMap.gety();
     }

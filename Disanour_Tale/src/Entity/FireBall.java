@@ -79,7 +79,11 @@ public class FireBall extends MapObject {
     }
 
     public void draw(Graphics2D g) {
+<<<<<<< HEAD
         this.setMapPosition();
+=======
+        this.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
+>>>>>>> 8fc2bba (update)
         super.draw(g);
     }
 }

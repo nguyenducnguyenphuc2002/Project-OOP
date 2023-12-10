@@ -19,7 +19,11 @@ public class MenuState extends GameState {
         this.gsm = gsm;
 
         try {
+<<<<<<< HEAD
             this.bg = new Background(new File("D:/Assignments/ProjectOOP/Disanour_Tale/src/Resources/Backgrounds/menubg.gif"), 1.0);
+=======
+            this.bg = new Background(new File("/Assignments/ProjectOOP/Disanour_Tale/src/Resources/Backgrounds/menubg.gif"), 1.0);
+>>>>>>> 8fc2bba (update)
             this.bg.setVector(-0.1, 0.0);
             this.titleColor = new Color(128, 0, 0);
             this.titleFont = new Font("Century Gothic", 0, 28);

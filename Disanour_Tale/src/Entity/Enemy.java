@@ -3,6 +3,11 @@ package Entity;
 import TileMap.TileMap;
 
 public class Enemy extends MapObject {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8fc2bba (update)
     protected int health;
     protected int maxHealth;
     protected boolean dead;
@@ -33,6 +38,10 @@ public class Enemy extends MapObject {
                 this.dead = true;
             }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8fc2bba (update)
             this.flinching = true;
             this.flinchTimer = System.nanoTime();
         }

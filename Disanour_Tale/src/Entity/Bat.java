@@ -1,30 +1,31 @@
 package Entity;
 
 import TileMap.TileMap;
-import java.awt.Graphics2D;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import javax.imageio.ImageIO;
 
-public class Slugger extends Enemy {
+public class Bat extends Enemy{
     private BufferedImage[] sprites;
 
-    public Slugger(TileMap tm) {
+
+    public Bat(TileMap tm) {
         super(tm);
-        this.moveSpeed = 0.4;
-        this.maxSpeed = 0.4;
-        this.fallSpeed = 0.5;
-        this.maxFallSpeed = 15.0;
+        this.moveSpeed = 0.3;
+        this.maxSpeed = 0.3;
+        this.fallSpeed = 0.2;
+        this.maxFallSpeed = 10.0;
         this.width = 30;
         this.height = 30;
         this.cwidth = 20;
         this.cheight = 20;
-        this.health = this.maxHealth = 2;
-        this.damage = 1;
-
+        this.health = this.maxHealth = 3;
+        this.damage = 3;
         try {
-            BufferedImage spritesheet = ImageIO.read(new File("D:/Assignments/ProjectOOP/Disanour_Tale/src/Resources/Sprites/Enemies/slugger.gif"));
-            this.sprites = new BufferedImage[3];
+            BufferedImage spritesheet = ImageIO.read(new File("C:/Users/DELL/Downloads/Bat.jpg"));
+            this.sprites = new BufferedImage[1];
 
             for(int i = 0; i < this.sprites.length; ++i) {
                 this.sprites[i] = spritesheet.getSubimage(i * this.width, 0, this.width, this.height);
@@ -51,10 +52,6 @@ public class Slugger extends Enemy {
             if (this.dx > this.maxSpeed) {
                 this.dx = this.maxSpeed;
             }
-        }
-
-        if (this.falling) {
-            this.dy += this.fallSpeed;
         }
 
     }
@@ -84,11 +81,7 @@ public class Slugger extends Enemy {
     }
 
     public void draw(Graphics2D g) {
-<<<<<<< HEAD
-        this.setMapPosition();
-=======
         this.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
->>>>>>> 8fc2bba (update)
         super.draw(g);
     }
 }

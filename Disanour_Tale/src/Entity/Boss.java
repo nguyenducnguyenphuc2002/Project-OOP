@@ -1,30 +1,33 @@
 package Entity;
 
 import TileMap.TileMap;
-import java.awt.Graphics2D;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import javax.imageio.ImageIO;
+import java.util.Random;
 
-public class Slugger extends Enemy {
+public class Boss extends Enemy{
     private BufferedImage[] sprites;
+    private int direction = 0;
 
-    public Slugger(TileMap tm) {
+    public Boss(TileMap tm) {
         super(tm);
-        this.moveSpeed = 0.4;
-        this.maxSpeed = 0.4;
-        this.fallSpeed = 0.5;
-        this.maxFallSpeed = 15.0;
-        this.width = 30;
-        this.height = 30;
-        this.cwidth = 20;
-        this.cheight = 20;
-        this.health = this.maxHealth = 2;
-        this.damage = 1;
+        this.moveSpeed = 0.8;
+        this.maxSpeed = 0.8;
+        this.fallSpeed = 0.2;
+        this.maxFallSpeed = 0.2;
+        this.width = 40;
+        this.height = 40;
+        this.cwidth = 30;
+        this.cheight = 30;
+        this.health = this.maxHealth = 100;
+        this.damage = 5;
 
         try {
-            BufferedImage spritesheet = ImageIO.read(new File("D:/Assignments/ProjectOOP/Disanour_Tale/src/Resources/Sprites/Enemies/slugger.gif"));
-            this.sprites = new BufferedImage[3];
+            BufferedImage spritesheet = ImageIO.read(new File("C:/Users/DELL/Downloads/Bat.jpg"));
+            this.sprites = new BufferedImage[1];
 
             for(int i = 0; i < this.sprites.length; ++i) {
                 this.sprites[i] = spritesheet.getSubimage(i * this.width, 0, this.width, this.height);
@@ -40,7 +43,10 @@ public class Slugger extends Enemy {
         this.facingRight = true;
     }
 
+
     private void getNextPosition() {
+
+
         if (this.left) {
             this.dx -= this.moveSpeed;
             if (this.dx < -this.maxSpeed) {
@@ -70,25 +76,29 @@ public class Slugger extends Enemy {
             }
         }
 
-        if (this.right && this.dx == 0.0) {
+        if (this.right  && this.dx == 0.0) {
             this.right = false;
             this.left = true;
             this.facingRight = false;
-        } else if (this.left && this.dx == 0.0) {
+        } else if (this.left  && this.dx == 0.0) {
             this.right = true;
             this.left = false;
             this.facingRight = true;
         }
+        if (dy == 0) {
+            dy -= 5;
+        }
+
 
         this.animation.update();
     }
 
     public void draw(Graphics2D g) {
-<<<<<<< HEAD
-        this.setMapPosition();
-=======
         this.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
->>>>>>> 8fc2bba (update)
         super.draw(g);
     }
+    public boolean getDirection (){
+        return new Random().nextInt(0,10) > 5;
+    }
 }
+

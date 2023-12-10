@@ -10,6 +10,11 @@ import java.util.HashMap;
 import javax.imageio.ImageIO;
 
 public class Player extends MapObject {
+<<<<<<< HEAD
+=======
+    public static int steps = 0;
+
+>>>>>>> 8fc2bba (update)
     private int fire;
     private int maxFire;
     private boolean flinching;
@@ -47,7 +52,11 @@ public class Player extends MapObject {
         this.jumpStart = -4.8;
         this.stopJumpSpeed = 0.3;
         this.facingRight = true;
+<<<<<<< HEAD
         this.health = this.maxHealth = 5;
+=======
+        health = this.maxHealth = 5;
+>>>>>>> 8fc2bba (update)
         this.fire = this.maxFire = 2500;
         this.fireCost = 200;
         this.fireBallDamage = 5;
@@ -118,20 +127,37 @@ public class Player extends MapObject {
             Enemy e = (Enemy)enemies.get(i);
             if (this.scratching) {
                 if (this.facingRight) {
+<<<<<<< HEAD
                     if ((double)e.getx() > this.x && (double)e.getx() < this.x + (double)this.scratchRange && (double)e.gety() > this.y - (double)(this.height / 2) && (double)e.gety() < this.y + (double)(this.height / 2)) {
                         e.hit(this.scratchDamage);
                     }
                 } else if ((double)e.getx() < this.x && (double)e.getx() > this.x - (double)this.scratchRange && (double)e.gety() > this.y - (double)(this.height / 2) && (double)e.gety() < this.y + (double)(this.height / 2)) {
+=======
+                    if ((double)e.getx() > this.x && (double)e.getx() < this.x + (double)this.scratchRange &&
+                            (double)e.gety() > this.y - (double)(this.height / 2) && (double)e.gety() < this.y + (double)(this.height / 2)) {
+                        e.hit(this.scratchDamage);
+                    }
+                } else if ((double)e.getx() < this.x && (double)e.getx() > this.x - (double)this.scratchRange &&
+                        (double)e.gety() > this.y - (double)(this.height / 2) && (double)e.gety() < this.y + (double)(this.height / 2)) {
+>>>>>>> 8fc2bba (update)
                     e.hit(this.scratchDamage);
                 }
             }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8fc2bba (update)
             for(int j = 0; j < this.fireBalls.size(); ++j) {
                 if (((FireBall)this.fireBalls.get(j)).intersects(e)) {
                     e.hit(this.fireBallDamage);
                     ((FireBall)this.fireBalls.get(j)).setHit();
                     break;
                 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8fc2bba (update)
             }
 
             if (this.intersects(e)) {
@@ -139,10 +165,15 @@ public class Player extends MapObject {
             }
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8fc2bba (update)
     }
 
     public void hit(int damage) {
         if (!this.flinching) {
+<<<<<<< HEAD
             this.health -= damage;
             if (this.health < 0) {
                 this.health = 0;
@@ -152,11 +183,28 @@ public class Player extends MapObject {
                 this.dead = true;
             }
 
+=======
+            health -= damage;
+            if (health < 0) {
+                health = 0;
+            }
+
+            if (health == 0) {
+                this.dead = true;
+            }
+
+
+>>>>>>> 8fc2bba (update)
             this.flinching = true;
             this.flinchTimer = System.nanoTime();
         }
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8fc2bba (update)
     private void getNextPosition() {
         if (this.left) {
             this.dx -= this.moveSpeed;
@@ -315,7 +363,11 @@ public class Player extends MapObject {
     }
 
     public void draw(Graphics2D g) {
+<<<<<<< HEAD
         this.setMapPosition();
+=======
+        this.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
+>>>>>>> 8fc2bba (update)
 
         for(int i = 0; i < this.fireBalls.size(); ++i) {
             ((FireBall)this.fireBalls.get(i)).draw(g);

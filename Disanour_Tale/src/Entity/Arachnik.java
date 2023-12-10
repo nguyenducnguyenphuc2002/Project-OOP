@@ -41,12 +41,20 @@ public class Arachnik extends Enemy {
     }
 
     private void getNextPosition() {
+<<<<<<< HEAD
         if (this.left) {
+=======
+        if (this.left && this.dx == 0.0) {
+>>>>>>> 8fc2bba (update)
             this.dx -= this.moveSpeed;
             if (this.dx < -this.maxSpeed) {
                 this.dx = -this.maxSpeed;
             }
+<<<<<<< HEAD
         } else if (this.right) {
+=======
+        } else if (this.right && this.dx == 0.0) {
+>>>>>>> 8fc2bba (update)
             this.dx += this.moveSpeed;
             if (this.dx > this.maxSpeed) {
                 this.dx = this.maxSpeed;
@@ -84,7 +92,11 @@ public class Arachnik extends Enemy {
     }
 
     public void draw(Graphics2D g) {
+<<<<<<< HEAD
         this.setMapPosition();
+=======
+        this.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
+>>>>>>> 8fc2bba (update)
         super.draw(g);
     }
 }
