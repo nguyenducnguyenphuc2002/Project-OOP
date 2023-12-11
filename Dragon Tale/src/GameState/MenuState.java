@@ -1,20 +1,21 @@
 package GameState;
 
+import java.awt.Color;
+
+import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
+
 import TileMap.Background;
 
-import java.awt.*;
-import java.awt.event.KeyEvent;
-
-public class MenuState extends GameState {
+public class MenuState extends GameState{
 	
 	private Background bg;
 	
 	private int currentChoice = 0;
-	private String[] options = {
-		"Start",
-		"Help",
-		"Quit"
-	};
+	private String[] options = {"Start","Help", "Quit"};
 	
 	private Color titleColor;
 	private Font titleFont;
@@ -24,35 +25,35 @@ public class MenuState extends GameState {
 	public MenuState(GameStateManager gsm) {
 		
 		this.gsm = gsm;
-		
 		try {
-			
-			bg = new Background("/Backgrounds/menubg.gif", 1);
-			bg.setVector(-0.1, 0);
-			
-			titleColor = new Color(128, 0, 0);
-			titleFont = new Font(
-					"Century Gothic",
-					Font.PLAIN,
-					28);
-			
-			font = new Font("Arial", Font.PLAIN, 12);
-			
-		}
-		catch(Exception e) {
+		bg = new Background(new File("Resources/Backgrounds/menubg.gif"), 1);
+		bg.setVector(-0.1, 0);
+		
+		titleColor = new Color(128, 0, 0);
+		titleFont = new Font("Century Gothic", 
+							Font.PLAIN, 
+							28);
+		font = new Font("Arial", Font.PLAIN, 12);
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
-	public void init() {}
-	
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
 	public void update() {
 		bg.update();
-	}
-	
-	public void draw(Graphics2D g) {
 		
+	}
+
+	@Override
+	public void draw(Graphics2D g) {
 		// draw bg
 		bg.draw(g);
 		
@@ -63,57 +64,53 @@ public class MenuState extends GameState {
 		
 		// draw menu options
 		g.setFont(font);
-		for(int i = 0; i < options.length; i++) {
-			if(i == currentChoice) {
+		for (int i = 0; i < options.length; i++) {
+			if (i == currentChoice) {
 				g.setColor(Color.BLACK);
-			}
-			else {
+			} else {
 				g.setColor(Color.RED);
 			}
 			g.drawString(options[i], 145, 140 + i * 15);
 		}
-		
 	}
-	
+
 	private void select() {
 		if(currentChoice == 0) {
 			gsm.setState(GameStateManager.LEVEL1STATE);
-		}
+		} 
 		if(currentChoice == 1) {
 			// help
-		}
+		} 
 		if(currentChoice == 2) {
 			System.exit(0);
-		}
+		} 
 	}
 	
+	@Override
 	public void keyPressed(int k) {
-		if(k == KeyEvent.VK_ENTER){
+		if (k == KeyEvent.VK_ENTER) {
 			select();
 		}
-		if(k == KeyEvent.VK_UP) {
+		if (k == KeyEvent.VK_UP) {
 			currentChoice--;
 			if(currentChoice == -1) {
 				currentChoice = options.length - 1;
 			}
 		}
-		if(k == KeyEvent.VK_DOWN) {
+		if (k == KeyEvent.VK_DOWN) {
 			currentChoice++;
 			if(currentChoice == options.length) {
 				currentChoice = 0;
 			}
 		}
+		
 	}
-	public void keyReleased(int k) {}
-	
+
+
+	@Override
+	public void keyReleased(int k) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
-
-
-
-
-
-
-
-
-
-

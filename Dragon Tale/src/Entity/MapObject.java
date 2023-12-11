@@ -1,34 +1,34 @@
 package Entity;
 
-import Main.GamePanel;
-import TileMap.TileMap;
-import TileMap.Tile;
-
 import java.awt.Rectangle;
 
-public abstract class MapObject {
+import Main.GamePanel;
+import TileMap.Tile;
+import TileMap.TileMap;
+
+public abstract class MapObject { // đối tượng trên bản đồ
 	
 	// tile stuff
 	protected TileMap tileMap;
-	protected int tileSize;
+	protected int tileSize; // kích thước ô
 	protected double xmap;
 	protected double ymap;
 	
 	// position and vector
 	protected double x;
 	protected double y;
-	protected double dx;
-	protected double dy;
+	protected double dx; // hướng của x
+	protected double dy; // hướng của y
 	
-	// dimensions
+	// dimensions : xác định kích thước của object
 	protected int width;
 	protected int height;
 	
-	// collision box
+	//collision box: sử dụng để xác định va chạm với enemies, kích thước thực 
 	protected int cwidth;
 	protected int cheight;
 	
-	// collision
+	// collision: những thứ va chạm khác
 	protected int currRow;
 	protected int currCol;
 	protected double xdest;
@@ -44,9 +44,9 @@ public abstract class MapObject {
 	protected Animation animation;
 	protected int currentAction;
 	protected int previousAction;
-	protected boolean facingRight;
+	protected boolean facingRight; // biến xoay mặt sang trái: dùng để xác định xem sang trái hay sang phải 
 	
-	// movement
+	// movement: xác định đối tượng đang làm gì
 	protected boolean left;
 	protected boolean right;
 	protected boolean up;
@@ -54,22 +54,26 @@ public abstract class MapObject {
 	protected boolean jumping;
 	protected boolean falling;
 	
-	// movement attributes
-	protected double moveSpeed;
-	protected double maxSpeed;
-	protected double stopSpeed;
-	protected double fallSpeed;
-	protected double maxFallSpeed;
-	protected double jumpStart;
-	protected double stopJumpSpeed;
-	
+	// movement attributes: các tác đọng vặt lý
+	protected double moveSpeed; // tốc độ di chuyển
+	protected double maxSpeed; // tốc độ tối đa
+	protected double stopSpeed; // tốc độ giảm đi
+	protected double fallSpeed; // tốc độ rơi
+	protected double maxFallSpeed; // tốc độ rơi tối đa
+	protected double jumpStart; // độ cao mà vật có thể nhảy
+	protected double stopJumpSpeed; // tốc độ nhảy giảm đi
+
+	// Objects in map
+	protected int health; // mạng hiện tại
+	protected int maxHealth;// mạng cao nhất
+	protected boolean dead;
 	// constructor
 	public MapObject(TileMap tm) {
 		tileMap = tm;
-		tileSize = tm.getTileSize(); 
+		tileSize = tm.getTileSize();
 	}
-	
-	public boolean intersects(MapObject o) {
+	// cần nghiêm cứu thêm
+	public boolean intersects(MapObject o) { // giao nhau giữa 2 đối tượng trên bản đồ va chạm nhau
 		Rectangle r1 = getRectangle();
 		Rectangle r2 = o.getRectangle();
 		return r1.intersects(r2);
@@ -83,27 +87,31 @@ public abstract class MapObject {
 				cheight
 		);
 	}
-	
+	// cần chạy test để hiểu hơn
 	public void calculateCorners(double x, double y) {
-		
-		int leftTile = (int)(x - cwidth / 2) / tileSize;
-		int rightTile = (int)(x + cwidth / 2 - 1) / tileSize;
-		int topTile = (int)(y - cheight / 2) / tileSize;
-		int bottomTile = (int)(y + cheight / 2 - 1) / tileSize;
-		
+
+		int leftTile = (int) (x - cwidth / 2) / tileSize;
+		int rightTile = (int) (x + cwidth / 2 - 1) / tileSize;
+		int topTile = (int) (y - cheight / 2) / tileSize;
+		int bottomTile = (int) (y + cheight / 2 - 1) / tileSize;
+
 		int tl = tileMap.getType(topTile, leftTile);
 		int tr = tileMap.getType(topTile, rightTile);
 		int bl = tileMap.getType(bottomTile, leftTile);
 		int br = tileMap.getType(bottomTile, rightTile);
-		
-		topLeft = tl == Tile.BLOCKED;
-		topRight = tr == Tile.BLOCKED;
-		bottomLeft = bl == Tile.BLOCKED;
-		bottomRight = br == Tile.BLOCKED;
-		
+
+		if (bl == -1 || br == -1) {
+			dead = true;
+		} else{
+			topLeft = tl == Tile.BLOCKED;
+			topRight = tr == Tile.BLOCKED;
+			bottomLeft = bl == Tile.BLOCKED;
+			bottomRight = br == Tile.BLOCKED;
+		}
 	}
 	
-	public void checkTileMapCollision() {
+	// cần nghiêm cứu thêm
+	public void checkTileMapCollision() { // kiểm tra đối tượng có chạy vào một ô bị chặn hoặc một ô bình thường
 		
 		currCol = (int)x / tileSize;
 		currRow = (int)y / tileSize;
@@ -118,7 +126,7 @@ public abstract class MapObject {
 		if(dy < 0) {
 			if(topLeft || topRight) {
 				dy = 0;
-				ytemp = currRow * tileSize + cheight / 2;
+				ytemp = currRow * tileSize + cheight / 2; // đứng ngay bên dưới ô mà đối tượng chạm vào
 			}
 			else {
 				ytemp += dy;
@@ -128,7 +136,7 @@ public abstract class MapObject {
 			if(bottomLeft || bottomRight) {
 				dy = 0;
 				falling = false;
-				ytemp = (currRow + 1) * tileSize - cheight / 2;
+				ytemp = (currRow + 1) * tileSize - cheight / 2; // đứng ngay trên ô vừa hạ cách
 			}
 			else {
 				ytemp += dy;
@@ -139,7 +147,7 @@ public abstract class MapObject {
 		if(dx < 0) {
 			if(topLeft || bottomLeft) {
 				dx = 0;
-				xtemp = currCol * tileSize + cwidth / 2;
+				xtemp = currCol * tileSize + cwidth / 2; // đứng ngay bên phải của ô vừa chạm vào 
 			}
 			else {
 				xtemp += dx;
@@ -148,14 +156,14 @@ public abstract class MapObject {
 		if(dx > 0) {
 			if(topRight || bottomRight) {
 				dx = 0;
-				xtemp = (currCol + 1) * tileSize - cwidth / 2;
+				xtemp = (currCol + 1) * tileSize - cwidth / 2; // dứng ngay bên trái ô vừa chạm vào
 			}
 			else {
 				xtemp += dx;
 			}
 		}
 		
-		if(!falling) {
+		if(!falling) { // trường hợp không bị té
 			calculateCorners(x, ydest + 1);
 			if(!bottomLeft && !bottomRight) {
 				falling = true;
@@ -170,7 +178,11 @@ public abstract class MapObject {
 	public int getHeight() { return height; }
 	public int getCWidth() { return cwidth; }
 	public int getCHeight() { return cheight; }
-	
+
+	public boolean isDead() {
+		return dead;
+	}
+
 	public void setPosition(double x, double y) {
 		this.x = x;
 		this.y = y;
@@ -191,7 +203,8 @@ public abstract class MapObject {
 	public void setDown(boolean b) { down = b; }
 	public void setJumping(boolean b) { jumping = b; }
 	
-	public boolean notOnScreen() {
+	// cần chạy test để rõ hơn 
+	public boolean notOnScreen() { // x+ xmap, y + ymap: vị trí cuối cùng của người chơi
 		return x + xmap + width < 0 ||
 			x + xmap - width > GamePanel.WIDTH ||
 			y + ymap + height < 0 ||
@@ -220,6 +233,16 @@ public abstract class MapObject {
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

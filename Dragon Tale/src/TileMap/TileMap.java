@@ -48,13 +48,11 @@ public class TileMap {
 		tween = 0.07;
 	}
 	
-	public void loadTiles(String s) {
+	public void loadTiles(File file) {
 		
 		try {
 
-			tileset = ImageIO.read(
-				getClass().getResourceAsStream(s)
-			);
+			tileset = ImageIO.read(file);
 			numTilesAcross = tileset.getWidth() / tileSize;
 			tiles = new Tile[2][numTilesAcross];
 			
@@ -82,12 +80,12 @@ public class TileMap {
 		}
 		
 	}
-	
-	public void loadMap(String s) {
+		
+	public void loadMap(File file) {
 		
 		try {
 			
-			InputStream in = getClass().getResourceAsStream(s);
+			FileInputStream in = new FileInputStream(file);
 			BufferedReader br = new BufferedReader(
 						new InputStreamReader(in)
 					);
@@ -120,19 +118,27 @@ public class TileMap {
 	}
 	
 	public int getTileSize() { return tileSize; }
-	public double getx() { return x; }
-	public double gety() { return y; }
+	public int getx() { return (int)x; }
+	public int gety() { return (int)y; }
 	public int getWidth() { return width; }
 	public int getHeight() { return height; }
 	
 	public int getType(int row, int col) {
-		int rc = map[row][col];
-		int r = rc / numTilesAcross;
-		int c = rc % numTilesAcross;
-		return tiles[r][c].getType();
+
+		if ((row >= 0 && row < numRows) && (col >= 0 && col < numCols)) {
+			int rc = map[row][col];
+			int r = rc / numTilesAcross;
+			int c = rc % numTilesAcross;
+			return tiles[r][c].getType();
+		}else{
+			return -1;
+		}
+
 	}
 	
-	public void setTween(double d) { tween = d; }
+	public void setTween(double d) { 
+		tween = d; 
+		}
 	
 	public void setPosition(double x, double y) {
 		
