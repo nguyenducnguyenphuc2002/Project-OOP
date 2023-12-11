@@ -1,21 +1,22 @@
 package Audio;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import javax.print.attribute.standard.Media;
 import javax.sound.sampled.*;
 
 public class AudioPlayer {
 	
 	private Clip clip;
 	
-	public AudioPlayer(String s) {
+	public AudioPlayer(File file) {
 		
 		try {
+			AudioInputStream ais = AudioSystem.getAudioInputStream(file);
 			
-			AudioInputStream ais =
-				AudioSystem.getAudioInputStream(
-					getClass().getResourceAsStream(
-						s
-					)
-				);
 			AudioFormat baseFormat = ais.getFormat();
 			AudioFormat decodeFormat = new AudioFormat(
 				AudioFormat.Encoding.PCM_SIGNED,

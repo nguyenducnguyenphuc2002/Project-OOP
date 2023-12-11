@@ -4,6 +4,8 @@ import Main.GamePanel;
 
 import java.awt.*;
 import java.awt.image.*;
+import java.io.File;
+
 import javax.imageio.ImageIO;
 
 public class Background {
@@ -15,14 +17,12 @@ public class Background {
 	private double dx;
 	private double dy;
 	
-	private double moveScale;
+	private double moveScale; // tỉ lệ di chuyển  
 	
-	public Background(String s, double ms) {
+	public Background(File file, double ms) {
 		
 		try {
-			image = ImageIO.read(
-				getClass().getResourceAsStream(s)
-			);
+			image = ImageIO.read(file);
 			moveScale = ms;
 		}
 		catch(Exception e) {

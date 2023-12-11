@@ -1,25 +1,26 @@
 package Entity;
 
-import TileMap.TileMap;
-
-import java.awt.*;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.io.File;
+
 import javax.imageio.ImageIO;
 
-public class FireBall extends MapObject {
+import TileMap.TileMap;
+
+public class FireBall extends MapObject{
 	
-	private boolean hit;
-	private boolean remove;
+	private boolean hit; // kiểm tra xem cầu lửa đã chạm vào thứ gì chưa 
+	private boolean remove; // kiểm tra xem có nên loại bỏ cầu lửa đó không
 	private BufferedImage[] sprites;
-	private BufferedImage[] hitSprites;
+	private BufferedImage[] hitSprites; // loạt ảnh phóng ra cầu lửa
 	
 	public FireBall(TileMap tm, boolean right) {
-		
 		super(tm);
 		
 		facingRight = right;
 		
-		moveSpeed = 3.8;
+		moveSpeed = 3.8; // tốc độ di chuyển của Fire Ball
 		if(right) dx = moveSpeed;
 		else dx = -moveSpeed;
 		
@@ -30,13 +31,10 @@ public class FireBall extends MapObject {
 		
 		// load sprites
 		try {
-			
-			BufferedImage spritesheet = ImageIO.read(
-				getClass().getResourceAsStream(
-					"/Sprites/Player/fireball.gif"
-				)
-			);
-			
+
+			BufferedImage spritesheet = ImageIO.read(new File("Resources/Sprites/Player/fireball.gif"));
+
+
 			sprites = new BufferedImage[4];
 			for(int i = 0; i < sprites.length; i++) {
 				sprites[i] = spritesheet.getSubimage(
@@ -79,8 +77,8 @@ public class FireBall extends MapObject {
 	public boolean shouldRemove() { return remove; }
 	
 	public void update() {
-		
 		checkTileMapCollision();
+		calculateCorners(x + 30, ydest);
 		setPosition(xtemp, ytemp);
 		
 		if(dx == 0 && !hit) {

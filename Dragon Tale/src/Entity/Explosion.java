@@ -2,6 +2,8 @@ package Entity;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.io.File;
+
 import javax.imageio.ImageIO;
 
 public class Explosion {
@@ -30,9 +32,8 @@ public class Explosion {
 		try {
 			
 			BufferedImage spritesheet = ImageIO.read(
-				getClass().getResourceAsStream(
-					"/Sprites/Enemies/explosion.gif"
-				)
+				new File("Resources/Sprites/Enemies/explosion.gif")
+					
 			);
 			
 			sprites = new BufferedImage[6];
@@ -80,6 +81,7 @@ public class Explosion {
 	}
 	
 }
+
 
 
 
