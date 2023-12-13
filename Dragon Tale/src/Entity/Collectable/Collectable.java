@@ -1,8 +1,7 @@
 package Entity.Collectable;
 
-import Entity.Animation;
-import Entity.MapObject;
-import GameState.Level1State;
+import Entity.Enemies.Animation;
+import Entity.Enemies.MapObject;
 import Handlers.Content;
 import TileMap.TileMap;
 

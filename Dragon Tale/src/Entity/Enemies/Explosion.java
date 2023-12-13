@@ -1,4 +1,6 @@
-package Entity;
+package Entity.Enemies;
+
+import Entity.Enemies.Animation;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;

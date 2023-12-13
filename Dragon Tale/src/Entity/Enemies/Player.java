@@ -1,6 +1,10 @@
-package Entity;
+package Entity.Enemies;
 
 import Entity.Collectable.Collectable;
+import Entity.Enemies.Animation;
+import Entity.Enemies.Enemy;
+import Entity.Enemies.FireBall;
+import Entity.Enemies.MapObject;
 import TileMap.*;
 
 import java.util.ArrayList;

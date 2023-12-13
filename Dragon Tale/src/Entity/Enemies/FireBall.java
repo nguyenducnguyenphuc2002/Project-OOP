@@ -1,4 +1,4 @@
-package Entity;
+package Entity.Enemies;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -8,7 +8,7 @@ import javax.imageio.ImageIO;
 
 import TileMap.TileMap;
 
-public class FireBall extends MapObject{
+public class FireBall extends MapObject {
 	
 	private boolean hit; // kiểm tra xem cầu lửa đã chạm vào thứ gì chưa 
 	private boolean remove; // kiểm tra xem có nên loại bỏ cầu lửa đó không

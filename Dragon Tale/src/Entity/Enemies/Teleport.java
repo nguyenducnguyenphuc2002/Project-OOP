@@ -1,9 +1,10 @@
-package Entity;
+package Entity.Enemies;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+import Entity.Enemies.Animation;
+import Entity.Enemies.MapObject;
 import Handlers.Content;
 import TileMap.TileMap;
 
