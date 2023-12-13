@@ -1,13 +1,13 @@
-package Entity;
-import Entity.Animation;
-import Entity.Enemy;
+package Entity.Enemies;
+import Entity.Enemies.Animation;
+import Entity.Enemies.Enemy;
 import Handlers.Content;
 import TileMap.TileMap;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class HatMonkey extends Enemy{
+public class HatMonkey extends Enemy {
     private BufferedImage[] sprites;
 
     public HatMonkey (TileMap tm) {

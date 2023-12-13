@@ -1,9 +1,10 @@
 package GameState;
 
 import Entity.Collectable.Collectable;
+import Entity.Enemies.*;
+import Entity.Enemies.Slugger;
 import Main.GamePanel;
 import TileMap.*;
-import Entity.*;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

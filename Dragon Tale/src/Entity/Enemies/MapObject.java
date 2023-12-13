@@ -1,4 +1,4 @@
-package Entity;
+package Entity.Enemies;
 
 import java.awt.Rectangle;
 

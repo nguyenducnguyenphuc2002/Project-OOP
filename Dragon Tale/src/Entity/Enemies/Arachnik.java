@@ -1,7 +1,5 @@
-package Entity;
+package Entity.Enemies;
 
-import Entity.Animation;
-import Entity.Enemy;
 import Handlers.Content;
 import TileMap.TileMap;
 

@@ -1,9 +1,11 @@
 package Entity.Enemies;
 
-import Entity.*;
+import Entity.Enemies.Animation;
+import Entity.Enemies.Enemy;
 import TileMap.TileMap;
 
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.awt.Graphics2D;
 
 import javax.imageio.ImageIO;
@@ -16,10 +18,10 @@ public class Slugger extends Enemy {
 		
 		super(tm);
 		
-		moveSpeed = 0.3;
-		maxSpeed = 0.3;
-		fallSpeed = 0.2;
-		maxFallSpeed = 10.0;
+		moveSpeed = 0.4;
+		maxSpeed = 0.4;
+		fallSpeed = 0.5;
+		maxFallSpeed = 15.0;
 		
 		width = 30;
 		height = 30;
@@ -33,9 +35,7 @@ public class Slugger extends Enemy {
 		try {
 			
 			BufferedImage spritesheet = ImageIO.read(
-				getClass().getResourceAsStream(
-					"/Sprites/Enemies/slugger.gif"
-				)
+				new File("Resources/Sprites/Enemies/slugger.gif")
 			);
 			
 			sprites = new BufferedImage[3];
@@ -120,7 +120,7 @@ public class Slugger extends Enemy {
 	
 	public void draw(Graphics2D g) {
 		
-		//if(notOnScreen()) return;
+//		if(notOnScreen()) return;
 		
 		setMapPosition();
 		

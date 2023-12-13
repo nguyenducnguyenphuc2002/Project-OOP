@@ -1,12 +1,12 @@
-package Entity;
+package Entity.Enemies;
 
-import Entity.Animation;
+import Entity.Enemies.Animation;
 import Handlers.Content;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class BurningArachnik {
+public class BurningSlugger {
     private int x;
     private int y;
     private int xmap;
@@ -20,14 +20,14 @@ public class BurningArachnik {
 
     private boolean remove;
 
-    public BurningArachnik(int x, int y) {
+    public BurningSlugger(int x, int y) {
         this.x = x;
         this.y = y;
 
         width = 30;
         height = 30;
 
-        sprites = Content.ArachnikOnFire[0];
+        sprites = Content.SluggerOnFire[0];
         animation = new Animation();
         animation.setFrames(sprites);
         animation.setDelay(70);
