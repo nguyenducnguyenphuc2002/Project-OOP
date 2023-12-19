@@ -8,12 +8,12 @@ public class DieSlugger extends DieEnemies {
     public DieSlugger(int x, int y) {
         super(x, y);
 
-        this.width = 30;
-        this.height = 30;
+        width = 30;
+        height = 30;
 
-        this.sprites = LoadEntities.loadLine(LoadEntities.DIESLUGGER, this.width, this.height);
-        this.animation.setFrames(this.sprites);
-        this.animation.setDelay(70L);
+        sprites = LoadEntities.loadLine(LoadEntities.DIESLUGGER, width, height);
+        animation.setFrames(sprites);
+        animation.setDelay(70L);
     }
     @Override
     public void update() {

@@ -15,73 +15,73 @@ public class Slugger extends Enemy {
     public Slugger(TileMap tm) {
         super(tm);
 
-        this.moveSpeed = 0.4;
-        this.maxSpeed = 0.4;
-        this.fallSpeed = 0.5;
-        this.maxFallSpeed = 15.0;
+        moveSpeed = 0.4;
+        maxSpeed = 0.4;
+        fallSpeed = 0.5;
+        maxFallSpeed = 15.0;
 
-        this.width = 30;
-        this.height = 30;
-        this.cwidth = 20;
-        this.cheight = 20;
+        width = 30;
+        height = 30;
+        cwidth = 20;
+        cheight = 20;
 
-        this.health = this.maxHealth = 2;
-        this.damage = 2;
+        health = maxHealth = 2;
+        damage = 2;
 
-        this.sprites = LoadEntities.loadLine(LoadEntities.SLUGGER, this.width,this.height);
-        this.animation = new Animation();
-        this.animation.setFrames(this.sprites);
-        this.animation.setDelay(300L);
-        this.right = true;
-        this.facingRight = true;
+        sprites = LoadEntities.loadLine(LoadEntities.SLUGGER, width,height);
+        animation = new Animation();
+        animation.setFrames(sprites);
+        animation.setDelay(300L);
+        right = true;
+        facingRight = true;
     }
 
     private void getNextPosition() {
-        if (this.left) {
-            this.dx -= this.moveSpeed;
-            if (this.dx < -this.maxSpeed) {
-                this.dx = -this.maxSpeed;
+        if (left) {
+            dx -= moveSpeed;
+            if (dx < -maxSpeed) {
+                dx = -maxSpeed;
             }
-        } else if (this.right) {
-            this.dx += this.moveSpeed;
-            if (this.dx > this.maxSpeed) {
-                this.dx = this.maxSpeed;
+        } else if (right) {
+            dx += moveSpeed;
+            if (dx > maxSpeed) {
+                dx = maxSpeed;
             }
         }
 
-        if (this.falling) {
-            this.dy += this.fallSpeed;
+        if (falling) {
+            dy += fallSpeed;
         }
 
     }
 
     public void update() {
-        this.getNextPosition();
-        this.checkTileMapCollision();
-        this.setPosition(this.xtemp, this.ytemp);
-        if (this.flinching) {
-            long elapsed = (System.nanoTime() - this.flinchTimer) / 1000000L;
+        getNextPosition();
+        checkTileMapCollision();
+        setPosition(xtemp, ytemp);
+        if (flinching) {
+            long elapsed = (System.nanoTime() - flinchTimer) / 1000000L;
             if (elapsed > 400L) {
-                this.flinching = false;
+                flinching = false;
             }
         }
 
-        if (this.right && this.dx == 0.0) {
-            this.right = false;
-            this.left = true;
-            this.facingRight = false;
-        } else if (this.left && this.dx == 0.0) {
-            this.right = true;
-            this.left = false;
-            this.facingRight = true;
+        if (right && dx == 0.0) {
+            right = false;
+            left = true;
+            facingRight = false;
+        } else if (left && dx == 0.0) {
+            right = true;
+            left = false;
+            facingRight = true;
         }
 
-        this.animation.update();
+        animation.update();
     }
 
     public void draw(Graphics2D g) {
-        this.setMapPosition();
-        this.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
+        setMapPosition();
+        setMapPosition(tileMap.getx(), tileMap.gety());
         super.draw(g);
     }
 

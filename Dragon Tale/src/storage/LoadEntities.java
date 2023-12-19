@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class LoadEntities {
+    public static String ARACHNIK = "enemies/arachnik.gif";
+    public static String DIEARACHNIK = "enemies/diearachnik.gif";
     public static String SLUGGER = "enemies/slugger.gif";
     public static String DIESLUGGER = "enemies/sluggeronfire.gif";
     public static String DIEHATMONKEY = "enemies/diehatmonekey.gif";

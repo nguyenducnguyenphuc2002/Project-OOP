@@ -16,8 +16,8 @@ public class Background {
 
     public Background(File file, double ms) {
         try {
-            this.image = ImageIO.read(file);
-            this.moveScale = ms;
+            image = ImageIO.read(file);
+            moveScale = ms;
         } catch (Exception var5) {
             var5.printStackTrace();
         }
@@ -25,8 +25,8 @@ public class Background {
     }
 
     public void setPosition(double x, double y) {
-        this.x = x * this.moveScale % 320.0;
-        this.y = y * this.moveScale % 240.0;
+        this.x = x * moveScale % 320.0;
+        this.y = y * moveScale % 240.0;
     }
 
     public void setVector(double dx, double dy) {
@@ -35,18 +35,18 @@ public class Background {
     }
 
     public void update() {
-        this.x += this.dx;
-        this.y += this.dy;
+        x += dx;
+        y += dy;
     }
 
     public void draw(Graphics2D g) {
-        g.drawImage(this.image, (int)this.x, (int)this.y, (ImageObserver)null);
-        if (this.x < 0.0) {
-            g.drawImage(this.image, (int)this.x + 320, (int)this.y, (ImageObserver)null);
+        g.drawImage(image, (int)x, (int)y, (ImageObserver)null);
+        if (x < 0.0) {
+            g.drawImage(image, (int)x + 320, (int)y, (ImageObserver)null);
         }
 
-        if (this.x > 0.0) {
-            g.drawImage(this.image, (int)this.x - 320, (int)this.y, (ImageObserver)null);
+        if (x > 0.0) {
+            g.drawImage(image, (int)x - 320, (int)y, (ImageObserver)null);
         }
 
     }

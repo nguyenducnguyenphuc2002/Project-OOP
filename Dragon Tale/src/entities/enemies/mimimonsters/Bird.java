@@ -15,67 +15,67 @@ public class Bird extends Enemy {
 
     public Bird(TileMap tm) {
         super(tm);
-        this.moveSpeed = 0.3;
-        this.maxSpeed = 0.3;
-        this.fallSpeed = 0.2;
-        this.maxFallSpeed = 10.0;
-        this.width = 28;
-        this.height = 64;
-        this.cwidth = 10;
-        this.cheight = 10;
-        this.health = this.maxHealth = 3;
-        this.damage = 4;
+        moveSpeed = 0.3;
+        maxSpeed = 0.3;
+        fallSpeed = 0.2;
+        maxFallSpeed = 10.0;
+        width = 28;
+        height = 64;
+        cwidth = 10;
+        cheight = 10;
+        health = maxHealth = 3;
+        damage = 4;
 
 
-        this.sprites = LoadEntities.loadLine(LoadEntities.BIRD, this.width,this.height); // load bird
-        this.animation = new Animation();
-        this.animation.setFrames(this.sprites);
-        this.animation.setDelay(300L);
-        this.right = true;
-        this.facingRight = true;
+        sprites = LoadEntities.loadLine(LoadEntities.BIRD, width,height); // load bird
+        animation = new Animation();
+        animation.setFrames(sprites);
+        animation.setDelay(300L);
+        right = true;
+        facingRight = true;
     }
 
     private void getNextPosition() {
-        if (this.left) {
-            this.dx -= this.moveSpeed;
-            if (this.dx < -this.maxSpeed) {
-                this.dx = -this.maxSpeed;
+        if (left) {
+            dx -= moveSpeed;
+            if (dx < -maxSpeed) {
+                dx = -maxSpeed;
             }
-        } else if (this.right) {
-            this.dx += this.moveSpeed;
-            if (this.dx > this.maxSpeed) {
-                this.dx = this.maxSpeed;
+        } else if (right) {
+            dx += moveSpeed;
+            if (dx > maxSpeed) {
+                dx = maxSpeed;
             }
         }
 
     }
 
     public void update() {
-        this.getNextPosition();
-        this.checkTileMapCollision();
-        this.setPosition(this.xtemp, this.ytemp);
-        if (this.flinching) {
-            long elapsed = (System.nanoTime() - this.flinchTimer) / 1000000L;
+        getNextPosition();
+        checkTileMapCollision();
+        setPosition(xtemp, ytemp);
+        if (flinching) {
+            long elapsed = (System.nanoTime() - flinchTimer) / 1000000L;
             if (elapsed > 400L) {
-                this.flinching = false;
+                flinching = false;
             }
         }
 
-        if (this.right && this.dx == 0.0) {
-            this.right = false;
-            this.left = true;
-            this.facingRight = false;
-        } else if (this.left && this.dx == 0.0) {
-            this.right = true;
-            this.left = false;
-            this.facingRight = true;
+        if (right && dx == 0.0) {
+            right = false;
+            left = true;
+            facingRight = false;
+        } else if (left && dx == 0.0) {
+            right = true;
+            left = false;
+            facingRight = true;
         }
 
-        this.animation.update();
+        animation.update();
     }
 
     public void draw(Graphics2D g) {
-        this.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
+        setMapPosition(tileMap.getx(), tileMap.gety());
         super.draw(g);
     }
 

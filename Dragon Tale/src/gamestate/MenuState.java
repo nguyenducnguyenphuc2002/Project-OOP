@@ -35,24 +35,24 @@ public class MenuState extends GameState {
     }
 
     public void update() {
-        this.bg.update();
+        bg.update();
     }
 
     public void draw(Graphics2D g) {
-        this.bg.draw(g);
-        g.setColor(this.titleColor);
-        g.setFont(this.titleFont);
+        bg.draw(g);
+        g.setColor(titleColor);
+        g.setFont(titleFont);
         g.drawString("Dragon Tale", 80, 70);
-        g.setFont(this.font);
+        g.setFont(font);
 
-        for(int i = 0; i < this.options.length; ++i) {
-            if (i == this.currentChoice) {
+        for(int i = 0; i < options.length; ++i) {
+            if (i == currentChoice) {
                 g.setColor(Color.BLACK);
             } else {
                 g.setColor(Color.RED);
             }
 
-            g.drawString(this.options[i], 145, 140 + i * 15);
+            g.drawString(options[i], 145, 140 + i * 15);
         }
 
     }
@@ -75,7 +75,7 @@ public class MenuState extends GameState {
     public void keyReleased(int k) {}
 
     public void setCurrentChoice(int currentChoice) {
-        this.currentChoice = currentChoice;
+        currentChoice = currentChoice;
     }
 
     public String[] getOptions() {

@@ -12,6 +12,7 @@ import entities.enemies.Enemy;
 import entities.enemies.Teleport;
 import entities.enemies.boss.Boss;
 import entities.enemies.die.*;
+import entities.enemies.mimimonsters.Arachnik;
 import entities.enemies.mimimonsters.Bird;
 import entities.enemies.mimimonsters.HatMonkey;
 import entities.player.Collectable;
@@ -45,25 +46,25 @@ public class Level1State extends GameState {
 
     public Level1State(GameStateManager gsm) {
         this.gsm = gsm;
-        this.init();
+        init();
     }
 
     public void init() {
 
-        this.tileMap = new TileMap(Tile.TILESIZE);
+        tileMap = new TileMap(Tile.TILESIZE);
         LoadTileMap.loadTileMap(tileMap, LoadTileMap.MAP, LoadTileMap.TILES);
 
         bg = LoadBackground.loadBackground(LoadBackground.LEVEL1STATE);
 
         player = new Player(tileMap);
         player.setPosition(100, 100);
-        player.setPosition(2600,150);
-        this.populateEnemies();
-        this.populateCollectables();
+        player.setPosition(2400,200);
+        populateEnemies();
+        populateCollectables();
 
 
-        this.dieEnemies = new ArrayList<DieEnemies>();
-        this.hud = new HUD(this.player);
+        dieEnemies = new ArrayList<DieEnemies>();
+        hud = new HUD(player);
 
     }
 
@@ -85,7 +86,7 @@ public class Level1State extends GameState {
     }
 
     private void populateEnemies() {
-        this.enemies = new ArrayList<>();
+        enemies = new ArrayList<>();
         teleports = new ArrayList<>();
         Point[] points1 = new Point[]{
                 new Point(200, 100),
@@ -96,9 +97,9 @@ public class Level1State extends GameState {
                 new Point(1800, 200)};
 
         for (Point value : points1) {
-            Slugger s = new Slugger(this.tileMap);
+            Slugger s = new Slugger(tileMap);
             s.setPosition( value.x, value.y);
-            this.enemies.add(s);
+            enemies.add(s);
         }
 
         Point[] points2 = new Point[]{
@@ -110,56 +111,71 @@ public class Level1State extends GameState {
                 new Point(1800, 200)};
 
         for (Point value : points2) {
-            HatMonkey h = new HatMonkey(this.tileMap);
+            HatMonkey h = new HatMonkey(tileMap);
             h.setPosition(value.x, value.y);
-            this.enemies.add(h);
+            enemies.add(h);
         }
 
         Point[] points3 = new Point[]{
                 new Point(100, 50),
                 new Point(860, 155),
                 new Point(960, 100),
-                new Point(2500, 150)
+                new Point(2500, 150),
+                new Point(2700, 85)
         };
         for (Point point : points3) {
-            Bird b = new Bird(this.tileMap);
+            Bird b = new Bird(tileMap);
             b.setPosition(point.x, point.y);
-            this.enemies.add(b);
+            enemies.add(b);
         }
 
-        Point points4 = new Point(3000,198);
+        Point[] points4 = new Point[]{
+                new Point(1000, 200),
+                new Point(1400, 65),
+                new Point(1625, 200),
+                new Point(2400, 200)
+        };
+        for (Point point : points4) {
+            Arachnik a = new Arachnik(tileMap);
+            a.setPosition(point.x, point.y);
+            enemies.add(a);
+        }
 
-            Boss boss = new Boss(this.tileMap);
-            boss.setPosition(points4.x, points4.y);
-            this.enemies.add(boss);
+        Point points5 = new Point(3000,198);
 
-        Point point5 = new Point(3150, 200);
+            Boss boss = new Boss(tileMap);
+            boss.setPosition(points5.x, points5.y);
+            enemies.add(boss);
 
-        Teleport teleport = new Teleport(this.tileMap);
-        teleport.setPosition(point5.x, point5.y);
+        Point point6 = new Point(3150, 200);
+
+        Teleport teleport = new Teleport(tileMap);
+        teleport.setPosition(point6.x, point6.y);
         teleports.add(teleport);
+
+
     }
 
     public void update() {
-        if (this.player.isDead()) {
-            this.gsm.setState(0);
+        if (player.isDead()) {
+            gsm.setState(0);
         }
 
-        this.player.update();
-        this.tileMap.setPosition(160.0 - (double) this.player.getx(), 120.0 - (double) this.player.gety());
-        this.bg.setPosition( this.tileMap.getx(), this.tileMap.gety());
-        this.player.checkAttack(this.enemies);
+        player.update();
+        tileMap.setPosition(160.0 - (double) player.getx(), 120.0 - (double) player.gety());
+        bg.setPosition( tileMap.getx(), tileMap.gety());
+        player.checkAttack(enemies);
 
 
-        for (Enemy enemy : this.enemies) {
-            enemy.checkAttack(this.player);
+        for (Enemy enemy : enemies) {
+            enemy.checkAttack(player);
         }
 
-        for (int i = 0; i < this.enemies.size(); ++i) {
-            Enemy e = this.enemies.get(i);
+        for (int i = 0; i < enemies.size(); ++i) {
+            Enemy e = enemies.get(i);
             e.update();
             if (e.isDead()) {
-                this.enemies.remove(i);
+                enemies.remove(i);
                 --i;
                 dieEnemies.add(getDie(e));
             }
@@ -186,7 +202,7 @@ public class Level1State extends GameState {
             Collectable c = coins.get(j);
             c.update();
             if (coins.get(j).intersects(player)) {
-                this.player.checkCoins(coins);
+                player.checkCoins(coins);
                 coins.remove(j);
                 j--;
             }
@@ -202,12 +218,12 @@ public class Level1State extends GameState {
     }
 
     public void draw(Graphics2D g) {
-        this.bg.draw(g);
-        this.tileMap.draw(g);
-        this.player.draw(g);
+        bg.draw(g);
+        tileMap.draw(g);
+        player.draw(g);
 
 
-        for (Enemy enemy : this.enemies) {
+        for (Enemy enemy : enemies) {
             enemy.draw(g);
         }
 
@@ -217,7 +233,7 @@ public class Level1State extends GameState {
         }
 
         for (ExplosionFireVenom explosionFireVenom : player.getExplosionsFireVenom()) {
-            explosionFireVenom.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
+            explosionFireVenom.setMapPosition(tileMap.getx(), tileMap.gety());
             explosionFireVenom.draw(g);
         }
 
@@ -230,7 +246,7 @@ public class Level1State extends GameState {
             }
         }
 
-        this.hud.draw(g);
+        hud.draw(g);
     }
 
     public void keyPressed(int k) {
@@ -256,6 +272,8 @@ public class Level1State extends GameState {
 //                        die = new BurningMushroom(e.getx(), e.gety()); sẽ là con mushroom của N nha
         } else if (e.getIndex() == Enemy.BOSS) {
             die = new DieBoss(e.getx(), e.gety());
+        } else if (e.getIndex() == Enemy.ARACHINK) {
+            die = new DieArachnik(e.getx(), e.gety());
         }
 
         return die;

@@ -40,30 +40,30 @@ public class Boss extends Enemy{
         venomDamage = 3;
 
 
-        this.sprites = LoadEntities.loadLine(LoadEntities.BOSS, width, height);
+        sprites = LoadEntities.loadLine(LoadEntities.BOSS, width, height);
         animation = new Animation();
         animation.setFrames(sprites);
         animation.setDelay(100L);
-        this.right = true;
-        this.facingRight = true;
+        right = true;
+        facingRight = true;
     }
 
     private void  getNextPosition() {
         //movement
-        if (this.left) {
-            this.dx -= this.moveSpeed;
-            if (this.dx < -this.maxSpeed) {
-                this.dx = -this.maxSpeed;
+        if (left) {
+            dx -= moveSpeed;
+            if (dx < -maxSpeed) {
+                dx = -maxSpeed;
             }
-        } else if (this.right) {
-            this.dx += this.moveSpeed;
-            if (this.dx > this.maxSpeed) {
-                this.dx = this.maxSpeed;
+        } else if (right) {
+            dx += moveSpeed;
+            if (dx > maxSpeed) {
+                dx = maxSpeed;
             }
         }
 
-//        if (this.falling) {
-//            this.dy += this.fallSpeed;
+//        if (falling) {
+//            dy += fallSpeed;
 //        }
     }
 
@@ -77,9 +77,9 @@ public class Boss extends Enemy{
         stepcount++;
         if (stepcount == 35) {
 //            dy -= 5;
-            Venom venom = new Venom(this.tileMap, this.facingRight);
-            venom.setPosition(this.x, this.y);
-            this.venoms.add(venom);
+            Venom venom = new Venom(tileMap, facingRight);
+            venom.setPosition(x, y);
+            venoms.add(venom);
             stepcount = 0;
         }
 
@@ -91,10 +91,10 @@ public class Boss extends Enemy{
             facingRight = !facingRight;
         }
 
-        for(int i = 0; i < this.venoms.size(); ++i) {
-            this.venoms.get(i).update();
-            if (this.venoms.get(i).shouldRemove()) {
-                this.venoms.remove(i);
+        for(int i = 0; i < venoms.size(); ++i) {
+            venoms.get(i).update();
+            if (venoms.get(i).shouldRemove()) {
+                venoms.remove(i);
                 --i;
             }
         }
@@ -118,11 +118,11 @@ public class Boss extends Enemy{
 
         setMapPosition();
         setMapPosition(tileMap.getx(), tileMap.gety());
-        for (Venom venom : this.venoms) {
+        for (Venom venom : venoms) {
             venom.draw(g);
         }
         if (flinching) {
-            long elapsed = (System.nanoTime() - this.flinchTimer) / 1000000L;
+            long elapsed = (System.nanoTime() - flinchTimer) / 1000000L;
             if (elapsed / 100L % 2L == 0L) {
                 return;
             }
@@ -133,10 +133,10 @@ public class Boss extends Enemy{
 
     @Override
     public int checkAttack(Player player){
-        for(int j = 0; j < this.venoms.size(); ++j) {
-            if (this.venoms.get(j).intersects(player)) {
-                player.hit(this.venomDamage);
-                this.venoms.get(j).setHit();
+        for(int j = 0; j < venoms.size(); ++j) {
+            if (venoms.get(j).intersects(player)) {
+                player.hit(venomDamage);
+                venoms.get(j).setHit();
                 break;
             } else{
                 return j;

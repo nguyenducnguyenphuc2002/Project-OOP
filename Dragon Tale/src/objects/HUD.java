@@ -16,22 +16,22 @@ public class HUD {
     private Font font;
 
     public HUD(Player p) {
-        this.player = p;
+        player = p;
 
-        this.hudLeft = LoadHUD.loadImage(LoadHUD.HUDLEFT);
-        this.hudRight = LoadHUD.loadImage(LoadHUD.HUDRIGHT);;
-        this.font = new Font("Arial", 0, 14);
+        hudLeft = LoadHUD.loadImage(LoadHUD.HUDLEFT);
+        hudRight = LoadHUD.loadImage(LoadHUD.HUDRIGHT);;
+        font = new Font("Arial", 0, 14);
 
     }
 
     public void draw(Graphics2D g) {
-        g.drawImage(this.hudLeft, 0, 10, (ImageObserver)null);
-        g.drawImage(this.hudRight, 246, 10, null);
-        g.setFont(this.font);
+        g.drawImage(hudLeft, 0, 10, (ImageObserver)null);
+        g.drawImage(hudRight, 246, 10, null);
+        g.setFont(font);
         g.setColor(Color.YELLOW);
-        g.drawString((int) this.player.getHealth() + "/" + (int) this.player.getMaxHealth(), 30, 25);
-        int var10001 = this.player.getFire() / 100;
-        g.drawString("" + var10001 + "/" + this.player.getMaxFire() / 100, 30, 45);
+        g.drawString((int) player.getHealth() + "/" + (int) player.getMaxHealth(), 30, 25);
+        int var10001 = player.getFire() / 100;
+        g.drawString("" + var10001 + "/" + player.getMaxFire() / 100, 30, 45);
         g.drawString(String.valueOf(player.getCoinAmount()), 260, 25);
         g.drawString(String.valueOf(player.getScore()), 260, 45);
     }

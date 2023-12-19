@@ -12,30 +12,30 @@ public class GameStateManager {
 //    public static final int HELPSTATE = 2;
 
     public GameStateManager() {
-        this.gameStates.add(new MenuState(this));
-        this.gameStates.add(new Level1State(this));
+        gameStates.add(new MenuState(this));
+        gameStates.add(new Level1State(this));
 
     }
 
     public void setState(int state) {
-        this.currentState = state;
-        ((GameState)this.gameStates.get(this.currentState)).init();
+        currentState = state;
+        ((GameState)gameStates.get(currentState)).init();
     }
 
     public void update() {
-        ((GameState)this.gameStates.get(this.currentState)).update();
+        ((GameState)gameStates.get(currentState)).update();
     }
 
     public void draw(Graphics2D g) {
-        ((GameState)this.gameStates.get(this.currentState)).draw(g);
+        ((GameState)gameStates.get(currentState)).draw(g);
     }
 
     public void keyPressed(int k) {
-        ((GameState)this.gameStates.get(this.currentState)).keyPressed(k);
+        ((GameState)gameStates.get(currentState)).keyPressed(k);
     }
 
     public void keyReleased(int k) {
-        ((GameState)this.gameStates.get(this.currentState)).keyReleased(k);
+        ((GameState)gameStates.get(currentState)).keyReleased(k);
     }
 }
 

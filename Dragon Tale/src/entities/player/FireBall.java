@@ -17,59 +17,59 @@ public class FireBall extends MapObject {
 
     public FireBall(TileMap tm, boolean right) {
         super(tm);
-        this.facingRight = right;
-        this.moveSpeed = 3.8;
+        facingRight = right;
+        moveSpeed = 3.8;
         if (right) {
-            this.dx = this.moveSpeed;
+            dx = moveSpeed;
         } else {
-            this.dx = -this.moveSpeed;
+            dx = -moveSpeed;
         }
 
-        this.width = 30;
-        this.height = 30;
-        this.cwidth = 14;
-        this.cheight = 14;
+        width = 30;
+        height = 30;
+        cwidth = 14;
+        cheight = 14;
 
-        this.sprites = LoadEntities.loadLine(LoadEntities.FIREBALL, this.width,this.height);
-        this.hitSprites = LoadEntities.loadLine(LoadEntities.HITFIREBALL, this.width, this.height);
-        this.animation = new Animation();
-        this.animation.setFrames(this.sprites);
-        this.animation.setDelay(70L);
+        sprites = LoadEntities.loadLine(LoadEntities.FIREBALL, width,height);
+        hitSprites = LoadEntities.loadLine(LoadEntities.HITFIREBALL, width, height);
+        animation = new Animation();
+        animation.setFrames(sprites);
+        animation.setDelay(70L);
 
     }
 
     public void setHit() {
-        if (!this.hit) {
-            this.hit = true;
-            this.animation.setFrames(this.hitSprites);
-            this.animation.setDelay(70L);
-            this.dx = 0.0;
+        if (!hit) {
+            hit = true;
+            animation.setFrames(hitSprites);
+            animation.setDelay(70L);
+            dx = 0.0;
         }
     }
 
     public boolean shouldRemove() {
-        return this.remove;
+        return remove;
     }
 
     public void update() {
-        this.checkTileMapCollision();
-        this.setPosition(this.xtemp, this.ytemp);
-        if (this.dx == 0.0 && !this.hit) {
-            this.setHit();
+        checkTileMapCollision();
+        setPosition(xtemp, ytemp);
+        if (dx == 0.0 && !hit) {
+            setHit();
         }
 
-        this.animation.update();
-        if (this.hit && this.animation.hasPlayedOnce()) {
-            this.remove = true;
+        animation.update();
+        if (hit && animation.hasPlayedOnce()) {
+            remove = true;
         }
 
     }
 
     public void draw(Graphics2D g) {
 
-        this.setMapPosition();
+        setMapPosition();
 
-        this.setMapPosition(this.tileMap.getx(), this.tileMap.gety());
+        setMapPosition(tileMap.getx(), tileMap.gety());
         super.draw(g);
     }
 

@@ -28,30 +28,30 @@ public class HatMonkey extends Enemy{
         damage = 2;
 
 
-        this.sprites = LoadEntities.loadLine(LoadEntities.HATMONKEY, this.width, this.height);
+        sprites = LoadEntities.loadLine(LoadEntities.HATMONKEY, width, height);
         animation = new Animation();
         animation.setFrames(sprites);
         animation.setDelay(100L);
-        this.right = true;
-        this.facingRight = true;
+        right = true;
+        facingRight = true;
     }
 
     private void  getNextPosition() {
         //movement
-        if (this.left) {
-            this.dx -= this.moveSpeed;
-            if (this.dx < -this.maxSpeed) {
-                this.dx = -this.maxSpeed;
+        if (left) {
+            dx -= moveSpeed;
+            if (dx < -maxSpeed) {
+                dx = -maxSpeed;
             }
-        } else if (this.right) {
-            this.dx += this.moveSpeed;
-            if (this.dx > this.maxSpeed) {
-                this.dx = this.maxSpeed;
+        } else if (right) {
+            dx += moveSpeed;
+            if (dx > maxSpeed) {
+                dx = maxSpeed;
             }
         }
 
-        if (this.falling) {
-            this.dy += this.fallSpeed;
+        if (falling) {
+            dy += fallSpeed;
         }
     }
 
@@ -62,10 +62,10 @@ public class HatMonkey extends Enemy{
         checkTileMapCollision();
         //slugger turns around if it hits a wall or is about to fall off a cliff
         setPosition(xtemp, ytemp);
-        if (this.flinching) {
-            long elapsed = (System.nanoTime() - this.flinchTimer) / 1000000L;
+        if (flinching) {
+            long elapsed = (System.nanoTime() - flinchTimer) / 1000000L;
             if (elapsed > 400L) {
-                this.flinching = false;
+                flinching = false;
             }
         }
 

@@ -11,9 +11,9 @@ public class DieHatMonkey extends DieEnemies {
         width = 30;
         height = 30;
 
-        this.sprites = LoadEntities.loadLine(LoadEntities.DIEHATMONKEY, this.width, this.height);
-        this.animation.setFrames(this.sprites);
-        this.animation.setDelay(70L);
+        sprites = LoadEntities.loadLine(LoadEntities.DIEHATMONKEY, width, height);
+        animation.setFrames(sprites);
+        animation.setDelay(70L);
     }
     @Override
     public void update() {

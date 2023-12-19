@@ -52,113 +52,113 @@ public abstract class MapObject {
     protected boolean dead;
 
     public MapObject(TileMap tm) {
-        this.tileMap = tm;
-        this.tileSize = tm.getTileSize();
+        tileMap = tm;
+        tileSize = tm.getTileSize();
     }
 
     public boolean intersects(MapObject o) {
-        Rectangle r1 = this.getRectangle();
+        Rectangle r1 = getRectangle();
         Rectangle r2 = o.getRectangle();
         return r1.intersects(r2);
     }
 
     public Rectangle getRectangle() {
-        return new Rectangle((int)this.x - this.cwidth, (int)this.y - this.cheight, this.cwidth, this.cheight);
+        return new Rectangle((int)x - cwidth, (int)y - cheight, cwidth, cheight);
     }
 
     public void calculateCorners(double x, double y) {
-        int leftTile = (int)(x - (double)(this.cwidth / 2)) / this.tileSize;
-        int rightTile = (int)(x + (double)(this.cwidth / 2) - 1.0) / this.tileSize;
-        int topTile = (int)(y - (double)(this.cheight / 2)) / this.tileSize;
-        int bottomTile = (int)(y + (double)(this.cheight / 2) - 1.0) / this.tileSize;
-        int tl = this.tileMap.getType(topTile, leftTile);
-        int tr = this.tileMap.getType(topTile, rightTile);
-        int bl = this.tileMap.getType(bottomTile, leftTile);
-        int br = this.tileMap.getType(bottomTile, rightTile);
+        int leftTile = (int)(x - (double)(cwidth / 2)) / tileSize;
+        int rightTile = (int)(x + (double)(cwidth / 2) - 1.0) / tileSize;
+        int topTile = (int)(y - (double)(cheight / 2)) / tileSize;
+        int bottomTile = (int)(y + (double)(cheight / 2) - 1.0) / tileSize;
+        int tl = tileMap.getType(topTile, leftTile);
+        int tr = tileMap.getType(topTile, rightTile);
+        int bl = tileMap.getType(bottomTile, leftTile);
+        int br = tileMap.getType(bottomTile, rightTile);
         if (bl != -1 && br != -1) {
-            this.topLeft = tl == 1;
-            this.topRight = tr == 1;
-            this.bottomLeft = bl == 1;
-            this.bottomRight = br == 1;
+            topLeft = tl == 1;
+            topRight = tr == 1;
+            bottomLeft = bl == 1;
+            bottomRight = br == 1;
         } else {
-            this.dead = true;
+            dead = true;
         }
 
     }
 
     public void checkTileMapCollision() {
-        this.currCol = (int)this.x / this.tileSize;
-        this.currRow = (int)this.y / this.tileSize;
-        this.xdest = this.x + this.dx;
-        this.ydest = this.y + this.dy;
-        this.xtemp = this.x;
-        this.ytemp = this.y;
-        this.calculateCorners(this.x, this.ydest);
-        if (this.dy < 0.0) {
-            if (!this.topLeft && !this.topRight) {
-                this.ytemp += this.dy;
+        currCol = (int)x / tileSize;
+        currRow = (int)y / tileSize;
+        xdest = x + dx;
+        ydest = y + dy;
+        xtemp = x;
+        ytemp = y;
+        calculateCorners(x, ydest);
+        if (dy < 0.0) {
+            if (!topLeft && !topRight) {
+                ytemp += dy;
             } else {
-                this.dy = 0.0;
-                this.ytemp = (this.currRow * this.tileSize + (double) this.cheight / 2);
+                dy = 0.0;
+                ytemp = (currRow * tileSize + (double) cheight / 2);
             }
         }
 
-        if (this.dy > 0.0) {
-            if (!this.bottomLeft && !this.bottomRight) {
-                this.ytemp += this.dy;
+        if (dy > 0.0) {
+            if (!bottomLeft && !bottomRight) {
+                ytemp += dy;
             } else {
-                this.dy = 0.0;
-                this.falling = false;
-                this.ytemp = ((this.currRow + 1) * this.tileSize - (double) this.cheight / 2);
+                dy = 0.0;
+                falling = false;
+                ytemp = ((currRow + 1) * tileSize - (double) cheight / 2);
             }
         }
 
-        this.calculateCorners(this.xdest, this.y);
-        if (this.dx < 0.0) {
-            if (!this.topLeft && !this.bottomLeft) {
-                this.xtemp += this.dx;
+        calculateCorners(xdest, y);
+        if (dx < 0.0) {
+            if (!topLeft && !bottomLeft) {
+                xtemp += dx;
             } else {
-                this.dx = 0.0;
-                this.xtemp = (this.currCol * this.tileSize + (double) this.cwidth / 2);
+                dx = 0.0;
+                xtemp = (currCol * tileSize + (double) cwidth / 2);
             }
         }
 
-        if (this.dx > 0.0) {
-            if (!this.topRight && !this.bottomRight) {
-                this.xtemp += this.dx;
+        if (dx > 0.0) {
+            if (!topRight && !bottomRight) {
+                xtemp += dx;
             } else {
-                this.dx = 0.0;
-                this.xtemp = (this.currCol + 1) * this.tileSize - (double) this.cwidth / 2;
+                dx = 0.0;
+                xtemp = (currCol + 1) * tileSize - (double) cwidth / 2;
             }
         }
 
-        if (!this.falling) {
-            this.calculateCorners(this.x, this.ydest + 1.0);
-            if (!this.bottomLeft && !this.bottomRight) {
-                this.falling = true;
+        if (!falling) {
+            calculateCorners(x, ydest + 1.0);
+            if (!bottomLeft && !bottomRight) {
+                falling = true;
             }
         }
 
     }
 
     public int getx() {
-        return (int)this.x;
+        return (int)x;
     }
 
     public int gety() {
-        return (int)this.y;
+        return (int)y;
     }
 
     public int getWidth() {
-        return this.width;
+        return width;
     }
 
     public int getHeight() {
-        return this.height;
+        return height;
     }
 
     public boolean isDead() {
-        return this.dead;
+        return dead;
     }
 
     public void setDead(boolean dead) {
@@ -175,39 +175,39 @@ public abstract class MapObject {
     }
     public void setMapPosition(int x, int y) {
 
-        this.xmap = x;
-        this.ymap = y;
+        xmap = x;
+        ymap = y;
     }
 
     public void setLeft(boolean b) {
-        this.left = b;
+        left = b;
     }
 
     public void setRight(boolean b) {
-        this.right = b;
+        right = b;
     }
 
     public void setUp(boolean b) {
-        this.up = b;
+        up = b;
     }
 
     public void setDown(boolean b) {
-        this.down = b;
+        down = b;
     }
 
     public void setJumping(boolean b) {
-        this.jumping = b;
+        jumping = b;
     }
 
     public boolean notOnScreen() {
-        return this.x + this.xmap + (double)this.width < 0.0 || this.x + this.xmap - (double)this.width > 320.0 || this.y + this.ymap + (double)this.height < 0.0 || this.y + this.ymap - (double)this.height > 240.0;
+        return x + xmap + (double)width < 0.0 || x + xmap - (double)width > 320.0 || y + ymap + (double)height < 0.0 || y + ymap - (double)height > 240.0;
     }
 
     public void draw(Graphics2D g) {
-        if (this.facingRight) {
-            g.drawImage(this.animation.getImage(), (int)(this.x + this.xmap - (double)(this.width / 2)), (int)(this.y + this.ymap - (double)(this.height / 2)), null);
+        if (facingRight) {
+            g.drawImage(animation.getImage(), (int)(x + xmap - (double)(width / 2)), (int)(y + ymap - (double)(height / 2)), null);
         } else {
-            g.drawImage(this.animation.getImage(), (int)(this.x + this.xmap - (double)(this.width / 2) + (double)this.width), (int)(this.y + this.ymap - (double)(this.height / 2)), -this.width, this.height, null);
+            g.drawImage(animation.getImage(), (int)(x + xmap - (double)(width / 2) + (double)width), (int)(y + ymap - (double)(height / 2)), -width, height, null);
         }
 
     }

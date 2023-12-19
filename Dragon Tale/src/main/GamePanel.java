@@ -22,40 +22,40 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
 
     public GamePanel() {
         int FPS = 60;
-        this.targetTime = (long)(1000 / FPS);
-        this.setPreferredSize(new Dimension(WIDTH*SCALE, HEIGHT*SCALE));
-        this.setFocusable(true);
-        this.requestFocus();
+        targetTime = (long)(1000 / FPS);
+        setPreferredSize(new Dimension(WIDTH*SCALE, HEIGHT*SCALE));
+        setFocusable(true);
+        requestFocus();
     }
 
     public void addNotify() {
         super.addNotify();
-        if (this.thread == null) {
-            this.thread = new Thread(this);
-            this.addKeyListener(this);
-            this.thread.start();
+        if (thread == null) {
+            thread = new Thread(this);
+            addKeyListener(this);
+            thread.start();
         }
 
     }
 
     private void init() {
-        this.image = new BufferedImage(WIDTH, HEIGHT,
+        image = new BufferedImage(WIDTH, HEIGHT,
                 BufferedImage.TYPE_INT_RGB);
-        this.g = (Graphics2D)this.image.getGraphics();
-        this.running = true;
-        this.gsm = new GameStateManager();
+        g = (Graphics2D)image.getGraphics();
+        running = true;
+        gsm = new GameStateManager();
     }
 
     public void run() {
-        this.init();
+        init();
 
-        while(this.running) {
+        while(running) {
             long start = System.nanoTime();
-            this.update();
-            this.draw();
-            this.drawToScreen();
+            update();
+            draw();
+            drawToScreen();
             long elapsed = System.nanoTime() - start;
-            long wait = this.targetTime - elapsed / 1000000L;
+            long wait = targetTime - elapsed / 1000000L;
             if (wait < 0L) {
                 wait = 5L;
             }
@@ -70,27 +70,27 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
     }
 
     private void drawToScreen() {
-        Graphics2D g2 = (Graphics2D)this.getGraphics();
-        g2.drawImage(this.image, 0, 0, 960, 720, (ImageObserver)null);
+        Graphics2D g2 = (Graphics2D)getGraphics();
+        g2.drawImage(image, 0, 0, 960, 720, (ImageObserver)null);
         g2.dispose();
     }
 
     private void draw() {
-        this.gsm.draw(this.g);
+        gsm.draw(g);
     }
 
     private void update() {
-        this.gsm.update();
+        gsm.update();
     }
 
     public void keyTyped(KeyEvent key) {
     }
 
     public void keyPressed(KeyEvent key) {
-        this.gsm.keyPressed(key.getKeyCode());
+        gsm.keyPressed(key.getKeyCode());
     }
 
     public void keyReleased(KeyEvent key) {
-        this.gsm.keyReleased(key.getKeyCode());
+        gsm.keyReleased(key.getKeyCode());
     }
 }

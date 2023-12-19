@@ -26,8 +26,8 @@ public class DieEnemies {
         this.y = y;
 
 
-        this.animation = new Animation();
-        this.animation.setFrames(this.sprites);
+        animation = new Animation();
+//        animation.setFrames(sprites);
     }
 
     public void update() {
@@ -38,7 +38,7 @@ public class DieEnemies {
     }
 
     public boolean shouldRemove() {
-        return this.remove;
+        return remove;
     }
 
     public void setMapPosition(int x, int y) {
