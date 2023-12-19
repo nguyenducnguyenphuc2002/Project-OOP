@@ -11,7 +11,7 @@ public class LoadHUD {
 
     public static BufferedImage loadImage(String name) {
         try {
-            return ImageIO.read(new File("D:/Assignments/Project-OOP/Disanour_Tale/src/resources/hud/"+name));
+            return ImageIO.read(new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/hud/"+name));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -7,8 +7,8 @@ import java.awt.*;
 public class DieBoss extends DieEnemies {
     public DieBoss(int x, int y) {
         super(x, y);
-        this.width = 110;
-        this.height = 57;
+        this.width = 100;
+        this.height = 83;
 
         this.sprites = LoadEntities.loadLine(LoadEntities.BOSSDIE, this.width, this.height);
         this.animation.setFrames(this.sprites);

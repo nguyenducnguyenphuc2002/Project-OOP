@@ -16,16 +16,12 @@ public class LoadBackground {
 
 
     public static Background loadBackground(String fileName) {
-        File file = new File("D:/Assignments/Project-OOP/Disanour_Tale/src/resources/Backgrounds/" + fileName+ ".gif");
+        File file = new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/backgrounds/" + fileName+ ".gif");
         if (Objects.equals(fileName, MENUBACKGROUND)) {
             return new Background(file, 1);
         } else {
             return new Background(file, 0.1);
         }
     }
-
-
-
-
 
 }

@@ -261,19 +261,7 @@ public class Level1State extends GameState {
         return die;
     }
 
-//    private void musicOnOff(){
-//        if (turnOnMusic) {
-//            System.out.println(1);
-//            bgMusic.close();
-//            turnOnMusic = !turnOnMusic;
-//        }
-//        else {
-//            System.out.println(2);
-//            bgMusic.play();
-//            turnOnMusic = !turnOnMusic;
-//        }
-//
-//    }
+
 
 
 }

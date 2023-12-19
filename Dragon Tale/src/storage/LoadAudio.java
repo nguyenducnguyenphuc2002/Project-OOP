@@ -15,7 +15,7 @@ public class LoadAudio {
     public static String SCRATCH = "sfx/scratch";
 
     public static Clip loadClip(String fileName) {
-        File file = new File("D:/Assignments/Project-OOP/Disanour_Tale/src/resources/"+fileName+".wav");
+        File file = new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/"+fileName+".wav");
         Clip clip = null;
         try {
             AudioInputStream ais = AudioSystem.getAudioInputStream(file);

@@ -31,7 +31,7 @@ public class FireBall extends MapObject {
         this.cheight = 14;
 
         this.sprites = LoadEntities.loadLine(LoadEntities.FIREBALL, this.width,this.height);
-        this.hitSprites = LoadEntities.loadLine(LoadEntities.FIREBALL, this.width, this.height);
+        this.hitSprites = LoadEntities.loadLine(LoadEntities.HITFIREBALL, this.width, this.height);
         this.animation = new Animation();
         this.animation.setFrames(this.sprites);
         this.animation.setDelay(70L);

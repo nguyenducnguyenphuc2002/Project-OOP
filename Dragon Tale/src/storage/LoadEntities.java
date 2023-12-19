@@ -1,6 +1,8 @@
 package storage;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -12,23 +14,24 @@ public class LoadEntities {
     public static String DIESLUGGER = "enemies/sluggeronfire.gif";
     public static String DIEHATMONKEY = "enemies/diehatmonekey.gif";
     public static String HATMONKEY = "enemies/hatmonkey.gif";
-    public static String HATMOMKEYONFIRE = "enemies/";
     public static String COIN = "player/coin.png";
     public static String FIREBALL = "player/fireball.gif";
+    public static String HITFIREBALL = "player/hitfireball.gif";
     public static String PLAYER = "player/playersprites.gif";
     public static String BIRD = "enemies/bird.gif";
     public static String DIEBIRD = "enemies/diebird.gif";
     public static String BOSS = "enemies/boss3green.gif";
-    public static String BOSSDIE = "enemies/bossdie.gif";
+    public static String BOSSDIE = "enemies/bossdie3green.gif";
     public static String VENOM = "enemies/venom.gif";
     public static String TELEPORT = "/portal.gif";
     public static String EXPLOSIONFIREVENOM = "enemies/explosionfirevenom.gif";
+    public static String ICON = "player/iconplayer.gif";
 
 
 
     public static BufferedImage[] loadLine(String name, int width, int height){
         try {
-             BufferedImage image = ImageIO.read(new File("D:/Assignments/Project-OOP/Disanour_Tale/src/resources/sprites/"+name));
+             BufferedImage image = ImageIO.read(new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/sprites/"+name));
 
             int num = image.getWidth() / width ;
 
@@ -46,7 +49,7 @@ public class LoadEntities {
     public static ArrayList<BufferedImage[]> loadMatrix(String name, int[] numFrames, int width, int height){
         try {
             ArrayList<BufferedImage[]> sprites = new ArrayList<>();
-            BufferedImage image = ImageIO.read(new File("D:/Assignments/Project-OOP/Disanour_Tale/src/resources/sprites/"+name));
+            BufferedImage image = ImageIO.read(new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/sprites/"+name));
 
             int num = image.getHeight() / height;
 
@@ -70,6 +73,9 @@ public class LoadEntities {
         }
     }
 
+    public static Image LoadIcon(String fileName){
+        return new ImageIcon("D:/Assignments/Project-OOP/Dragon Tale/src/resources/sprites/"+fileName).getImage();
+    }
 
 
 }
