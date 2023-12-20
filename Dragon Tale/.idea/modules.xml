@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Dragon Tale.iml" filepath="$PROJECT_DIR$/Dragon Tale.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/DragonTale.iml" filepath="$PROJECT_DIR$/DragonTale.iml" />
+>>>>>>> NguyenPhuc
     </modules>
   </component>
 </project>

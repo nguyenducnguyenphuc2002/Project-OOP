@@ -11,8 +11,13 @@ public class LoadTileMap {
     public static String MAP = "maps/level1-1.map";
 
     public static void loadTileMap(TileMap tileMap, String mapName, String tilesName){
+<<<<<<< HEAD
         tileMap.loadTiles(new File("resources/"+tilesName));
         tileMap.loadMap(new File("resources/"+mapName));
+=======
+        tileMap.loadTiles(new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/"+tilesName));
+        tileMap.loadMap(new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/"+mapName));
+>>>>>>> NguyenPhuc
         tileMap.setPosition(0.0, 0.0);
         tileMap.setTween(1.0);
     }

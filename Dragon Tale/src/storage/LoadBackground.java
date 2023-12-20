@@ -16,7 +16,11 @@ public class LoadBackground {
 
 
     public static Background loadBackground(String fileName) {
+<<<<<<< HEAD
         File file = new File("resources/backgrounds/" + fileName+ ".gif");
+=======
+        File file = new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/backgrounds/" + fileName+ ".gif");
+>>>>>>> NguyenPhuc
         if (Objects.equals(fileName, MENUBACKGROUND)) {
             return new Background(file, 1);
         } else {
@@ -24,6 +28,7 @@ public class LoadBackground {
         }
     }
 
+<<<<<<< HEAD
     public static BufferedImage loadImage(File file) {
         try {
             return ImageIO.read(file);
@@ -32,4 +37,6 @@ public class LoadBackground {
         }
     }
 
+=======
+>>>>>>> NguyenPhuc
 }

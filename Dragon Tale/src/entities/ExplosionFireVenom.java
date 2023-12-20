@@ -20,8 +20,13 @@ public class ExplosionFireVenom {
     private boolean remove;
 
     public ExplosionFireVenom(int x, int y) {
+<<<<<<< HEAD
         this.x = x;
         this.y = y;
+=======
+        x = x;
+        y = y;
+>>>>>>> NguyenPhuc
         width = 30;
         height = 30;
 
@@ -49,10 +54,14 @@ public class ExplosionFireVenom {
     }
 
     public void draw(Graphics2D g) {
+<<<<<<< HEAD
         g.drawImage(animation.getImage(),
                 x + xmap - width / 2,
                 y + ymap - height / 2,
                 null);
+=======
+        g.drawImage(animation.getImage(), x + xmap - width / 2, y + ymap - height / 2, (ImageObserver)null);
+>>>>>>> NguyenPhuc
     }
 }
 

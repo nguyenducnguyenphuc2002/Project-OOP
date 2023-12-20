@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class LoadEntities {
+<<<<<<< HEAD
+=======
+    public static String ARACHNIK = "enemies/arachnik.gif";
+    public static String DIEARACHNIK = "enemies/diearachnik.gif";
+>>>>>>> NguyenPhuc
     public static String SLUGGER = "enemies/slugger.gif";
     public static String DIESLUGGER = "enemies/sluggeronfire.gif";
     public static String DIEHATMONKEY = "enemies/diehatmonekey.gif";
@@ -31,7 +36,11 @@ public class LoadEntities {
 
     public static BufferedImage[] loadLine(String name, int width, int height){
         try {
+<<<<<<< HEAD
              BufferedImage image = ImageIO.read(new File("resources/sprites/"+name));
+=======
+             BufferedImage image = ImageIO.read(new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/sprites/"+name));
+>>>>>>> NguyenPhuc
 
             int num = image.getWidth() / width ;
 
@@ -49,7 +58,11 @@ public class LoadEntities {
     public static ArrayList<BufferedImage[]> loadMatrix(String name, int[] numFrames, int width, int height){
         try {
             ArrayList<BufferedImage[]> sprites = new ArrayList<>();
+<<<<<<< HEAD
             BufferedImage image = ImageIO.read(new File("resources/sprites/"+name));
+=======
+            BufferedImage image = ImageIO.read(new File("D:/Assignments/Project-OOP/Dragon Tale/src/resources/sprites/"+name));
+>>>>>>> NguyenPhuc
 
             int num = image.getHeight() / height;
 
@@ -74,7 +87,11 @@ public class LoadEntities {
     }
 
     public static Image LoadIcon(String fileName){
+<<<<<<< HEAD
         return new ImageIcon("resources/sprites/"+fileName).getImage();
+=======
+        return new ImageIcon("D:/Assignments/Project-OOP/Dragon Tale/src/resources/sprites/"+fileName).getImage();
+>>>>>>> NguyenPhuc
     }
 
 

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Resources">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/Resources" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <excluded>
+      <root url="file://$PROJECT_DIR$/src/Resources/Backgrounds" />
+    </excluded>
+  </library>
+</component>
