@@ -27,12 +27,8 @@ public class DieEnemies {
 
 
         animation = new Animation();
-<<<<<<< HEAD
 
 
-=======
-//        animation.setFrames(sprites);
->>>>>>> NguyenPhuc
     }
 
     public void update() {
@@ -43,11 +39,7 @@ public class DieEnemies {
     }
 
     public boolean shouldRemove() {
-<<<<<<< HEAD
         return this.remove;
-=======
-        return remove;
->>>>>>> NguyenPhuc
     }
 
     public void setMapPosition(int x, int y) {
@@ -56,14 +48,10 @@ public class DieEnemies {
     }
 
     public void draw(Graphics2D g) {
-<<<<<<< HEAD
         g.drawImage(animation.getImage(),
                 x + xmap - width / 2,
                 y + ymap - height / 2,
                 null);
-=======
-        g.drawImage(animation.getImage(), x + xmap - width / 2, y + ymap - height / 2, null);
->>>>>>> NguyenPhuc
     }
 
 }

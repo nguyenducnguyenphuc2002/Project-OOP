@@ -1,36 +1,19 @@
 package entities.enemies.boss;
 
-<<<<<<< HEAD
 import objects.Animation;
 import entities.enemies.Enemy;
 import entities.player.Player;
-=======
-import entities.enemies.Enemy;
-import entities.player.Player;
-import objects.Animation;
->>>>>>> NguyenPhuc
 import storage.LoadEntities;
 import tilemap.TileMap;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-<<<<<<< HEAD
 public class Boss extends Enemy {
     private final BufferedImage[] sprites;
     private int venomDamage;
     private int stepcount;
 
-=======
-public class Boss extends Enemy{
-    private final BufferedImage[] sprites;
-    private final int[] numFrames = new int[]{8,6};
-    private int venomDamage;
-    private int stepcount;
-
-    private static final int WALKING = 1;
-    private static final int ATTACKING = 2;
->>>>>>> NguyenPhuc
 
 
     public Boss(TileMap tm) {
@@ -90,10 +73,6 @@ public class Boss extends Enemy{
         setPosition(xtemp, ytemp);
         stepcount++;
         if (stepcount == 35) {
-<<<<<<< HEAD
-=======
-//            dy -= 5;
->>>>>>> NguyenPhuc
             Venom venom = new Venom(tileMap, facingRight);
             venom.setPosition(x, y);
             venoms.add(venom);
