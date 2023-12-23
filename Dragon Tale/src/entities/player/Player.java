@@ -165,8 +165,9 @@ public class Player extends MapObject {
 
 			if (e.isDead()) {
 				if (e.getIndex() == Enemy.BIRD ||
-						e.getIndex() == Enemy.MUSHROOM ||
+						e.getIndex() == Enemy.HERO ||
 						e.getIndex() == Enemy.HATMONKEY ||
+						e.getIndex() == Enemy.HERO ||
 						e.getIndex() == Enemy.HATMONKEY) {
 					coinAmount++;
 					score += 200;
