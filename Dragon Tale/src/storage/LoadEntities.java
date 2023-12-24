@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class LoadEntities {
+    public static String ARACHNIK = "enemies/arachnik.gif";
+    public static String DIEARACHNIK = "enemies/arachnikdie.gif";
     public static String SLUGGER = "enemies/slugger.gif";
     public static String DIESLUGGER = "enemies/sluggeronfire.gif";
     public static String DIEHATMONKEY = "enemies/diehatmonekey.gif";
@@ -31,7 +33,7 @@ public class LoadEntities {
 
     public static BufferedImage[] loadLine(String name, int width, int height){
         try {
-             BufferedImage image = ImageIO.read(new File("resources/sprites/"+name));
+            BufferedImage image = ImageIO.read(new File("resources/sprites/"+name));
 
             int num = image.getWidth() / width ;
 
