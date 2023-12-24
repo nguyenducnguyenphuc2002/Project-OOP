@@ -1,4 +1,4 @@
-package TileMap;
+package tilemap;
 
 import java.awt.image.BufferedImage;
 
@@ -6,6 +6,7 @@ public class Tile {
 	
 	private BufferedImage image;
 	private int type;
+	public static final int TILESIZE = 30;
 	
 	// tile types
 	public static final int NORMAL = 0;

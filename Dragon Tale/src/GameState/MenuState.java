@@ -1,4 +1,4 @@
-package GameState;
+package gamestate;
 
 import java.awt.Color;
 
@@ -6,9 +6,8 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.io.IOException;
 
-import TileMap.Background;
+import tilemap.Background;
 
 public class MenuState extends GameState{
 	
@@ -26,8 +25,8 @@ public class MenuState extends GameState{
 		
 		this.gsm = gsm;
 		try {
-		bg = new Background(new File("Resources/Backgrounds/menubg.gif"), 1);
-		bg.setVector(-0.1, 0);
+		bg = new Background(new File("resources/Backgrounds/BGnew.png"), 1);
+//		bg.setVector(-0.1, 0);
 		
 		titleColor = new Color(128, 0, 0);
 		titleFont = new Font("Century Gothic", 
@@ -70,16 +69,18 @@ public class MenuState extends GameState{
 			} else {
 				g.setColor(Color.RED);
 			}
-			g.drawString(options[i], 145, 140 + i * 15);
+			g.drawString(options[i], 145, 110 + i * 18);
 		}
 	}
 
-	private void select() {
+	public void select() {
 		if(currentChoice == 0) {
 			gsm.setState(GameStateManager.LEVEL1STATE);
 		} 
 		if(currentChoice == 1) {
 			// help
+			// Set the state to HelpState when "Help" is selected
+			gsm.setState(GameStateManager.HELPSTATE);
 		} 
 		if(currentChoice == 2) {
 			System.exit(0);
@@ -113,4 +114,15 @@ public class MenuState extends GameState{
 		
 	}
 
+	public void setCurrentChoice(int currentChoice) {
+		this.currentChoice = currentChoice;
+	}
+
+	public String[] getOptions() {
+		return options;
+	}
+
+	public int getCurrentChoice() {
+		return currentChoice;
+	}
 }

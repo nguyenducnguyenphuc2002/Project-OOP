@@ -1,6 +1,7 @@
-package TileMap;
+package tilemap;
 
-import Main.GamePanel;
+import main.GamePanel;
+import storage.LoadBackground;
 
 import java.awt.*;
 import java.awt.image.*;
@@ -20,14 +21,9 @@ public class Background {
 	private double moveScale; // tỉ lệ di chuyển  
 	
 	public Background(File file, double ms) {
-		
-		try {
-			image = ImageIO.read(file);
-			moveScale = ms;
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
+
+		image = LoadBackground.loadImage(file);
+		moveScale = ms;
 		
 	}
 	

@@ -1,4 +1,4 @@
-package TileMap;
+package tilemap;
 
 import java.awt.*;
 import java.awt.image.*;
@@ -6,7 +6,8 @@ import java.awt.image.*;
 import java.io.*;
 import javax.imageio.ImageIO;
 
-import Main.GamePanel;
+import main.GamePanel;
+import storage.LoadTileMap;
 
 public class TileMap {
 	
@@ -49,71 +50,43 @@ public class TileMap {
 	}
 	
 	public void loadTiles(File file) {
-		
-		try {
+		tileset = LoadTileMap.loadTile(file);
+		numTilesAcross = tileset.getWidth() / tileSize;
+		tiles = new Tile[2][numTilesAcross];
 
-			tileset = ImageIO.read(file);
-			numTilesAcross = tileset.getWidth() / tileSize;
-			tiles = new Tile[2][numTilesAcross];
-			
-			BufferedImage subimage;
-			for(int col = 0; col < numTilesAcross; col++) {
-				subimage = tileset.getSubimage(
-							col * tileSize,
-							0,
-							tileSize,
-							tileSize
-						);
-				tiles[0][col] = new Tile(subimage, Tile.NORMAL);
-				subimage = tileset.getSubimage(
-							col * tileSize,
-							tileSize,
-							tileSize,
-							tileSize
-						);
-				tiles[1][col] = new Tile(subimage, Tile.BLOCKED);
-			}
-			
+		BufferedImage subimage;
+		for(int col = 0; col < numTilesAcross; col++) {
+			subimage = tileset.getSubimage(
+						col * tileSize,
+						0,
+						tileSize,
+						tileSize
+					);
+			tiles[0][col] = new Tile(subimage, Tile.NORMAL);
+			subimage = tileset.getSubimage(
+						col * tileSize,
+						tileSize,
+						tileSize,
+						tileSize
+					);
+			tiles[1][col] = new Tile(subimage, Tile.BLOCKED);
 		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-		
+			
 	}
+
+		
+
 		
 	public void loadMap(File file) {
-		
-		try {
-			
-			FileInputStream in = new FileInputStream(file);
-			BufferedReader br = new BufferedReader(
-						new InputStreamReader(in)
-					);
-			
-			numCols = Integer.parseInt(br.readLine());
-			numRows = Integer.parseInt(br.readLine());
-			map = new int[numRows][numCols];
-			width = numCols * tileSize;
-			height = numRows * tileSize;
-			
-			xmin = GamePanel.WIDTH - width;
-			xmax = 0;
-			ymin = GamePanel.HEIGHT - height;
-			ymax = 0;
-			
-			String delims = "\\s+";
-			for(int row = 0; row < numRows; row++) {
-				String line = br.readLine();
-				String[] tokens = line.split(delims);
-				for(int col = 0; col < numCols; col++) {
-					map[row][col] = Integer.parseInt(tokens[col]);
-				}
-			}
-			
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
+
+		LoadTileMap.loadMap(file, this);
+		width = numCols * tileSize;
+		height = numRows * tileSize;
+
+		xmin = GamePanel.WIDTH - width;
+		xmax = 0;
+		ymin = GamePanel.HEIGHT - height;
+		ymax = 0;
 		
 	}
 	
@@ -192,6 +165,26 @@ public class TileMap {
 			
 		}
 		
+	}
+
+	public void setNumRows(int numRows) {
+		this.numRows = numRows;
+	}
+
+	public void setNumCols(int numCols) {
+		this.numCols = numCols;
+	}
+
+	public void setMap(int[][] map) {
+		this.map = map;
+	}
+
+	public int getNumRows() {
+		return numRows;
+	}
+
+	public int getNumCols() {
+		return numCols;
 	}
 	
 }
