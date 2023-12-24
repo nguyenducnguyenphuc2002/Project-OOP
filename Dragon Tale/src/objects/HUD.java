@@ -17,8 +17,6 @@ public class HUD {
 	
 	public HUD(Player p) {
 		player = p;
-
-
 		hudLeft = LoadHUD.loadImage(LoadHUD.HUDLEFT);
 		hudRight = LoadHUD.loadImage(LoadHUD.HUDRIGHT);;
 		font = new Font("Arial", 0, 14);
