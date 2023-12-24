@@ -125,6 +125,19 @@ public class Level1State extends GameState {
 			b.setPosition(point.x, point.y);
 			enemies.add(b);
 		}
+		Point[] points6 = new Point[]{
+				new Point(200, 100),
+				new Point(860, 200),
+				new Point(960, 200),
+				new Point(1550, 200),
+				new Point(1680, 200),
+				new Point(1800, 200)};
+
+		for (Point value : points6) {
+			Hero he = new Hero(tileMap);
+			he.setPosition(value.x, value.y);
+			enemies.add(he);
+		}
 
 		Point points4 = new Point(3000,198);
 
@@ -137,7 +150,10 @@ public class Level1State extends GameState {
 		Teleport teleport = new Teleport(tileMap);
 		teleport.setPosition(point5.x, point5.y);
 		teleports.add(teleport);
+
+
 	}
+
 
 	public void update() {
 		if (player.isDead()) {
@@ -251,8 +267,8 @@ public class Level1State extends GameState {
 			die = new entities.enemies.die.DieHatMonkey(e.getx(), e.gety());
 		} else if (e.getIndex() == Enemy.SLUGGER) {
 			die = new DieSlugger(e.getx(), e.gety());
-		} else if (e.getIndex() == Enemy.MUSHROOM) {
-//                        die = new BurningMushroom(e.getx(), e.gety()); sẽ là con mushroom của N nha
+		} else if (e.getIndex() == Enemy.HERO) {
+            die = new DieHero(e.getx(), e.gety());
 		} else if (e.getIndex() == Enemy.BOSS) {
 			die = new DieBoss(e.getx(), e.gety());
 		}

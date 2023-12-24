@@ -26,13 +26,12 @@ public class MenuState extends GameState{
 		this.gsm = gsm;
 		try {
 		bg = new Background(new File("resources/Backgrounds/menubg.gif"), 1);
-		bg.setVector(-0.1, 0);
-		
-		titleColor = new Color(128, 0, 0);
+
+		titleColor = new Color(50, 130, 67);
 		titleFont = new Font("Century Gothic", 
 							Font.PLAIN, 
-							28);
-		font = new Font("Arial", Font.PLAIN, 12);
+							30);
+		font = new Font("Arial", Font.PLAIN, 14);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

@@ -14,6 +14,8 @@ public class LoadEntities {
     public static String DIESLUGGER = "enemies/sluggeronfire.gif";
     public static String DIEHATMONKEY = "enemies/diehatmonekey.gif";
     public static String HATMONKEY = "enemies/hatmonkey.gif";
+    public static String HERO = "enemies/hero.gif";
+    public static String DIEHERO = "enemies/diehero.gif";
     public static String COIN = "player/coin.png";
     public static String FIREBALL = "player/fireball.gif";
     public static String HITFIREBALL = "player/hitfireball.gif";
