@@ -2,12 +2,10 @@ package entities.player;
 
 import objects.Animation;
 import objects.MapObject;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import javax.imageio.ImageIO;
 
 public class FireBall extends MapObject {
 	private boolean hit;

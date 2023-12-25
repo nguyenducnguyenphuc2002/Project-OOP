@@ -1,4 +1,4 @@
-package storage;
+package ui;
 
 import audio.AudioPlayer;
 import entities.player.Player;

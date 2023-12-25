@@ -1,4 +1,4 @@
-package storage;
+package ui;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

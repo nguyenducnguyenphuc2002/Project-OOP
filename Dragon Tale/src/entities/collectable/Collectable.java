@@ -2,13 +2,11 @@ package entities.collectable;
 
 import objects.Animation;
 import objects.MapObject;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 
 public class Collectable extends MapObject {
 

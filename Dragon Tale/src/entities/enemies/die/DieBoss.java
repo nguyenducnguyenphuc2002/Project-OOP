@@ -1,8 +1,6 @@
 package entities.enemies.die;
 
-import storage.LoadEntities;
-
-import java.awt.*;
+import ui.LoadEntities;
 
 public class DieBoss extends DieEnemies {
     public DieBoss(int x, int y) {

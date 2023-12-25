@@ -1,8 +1,6 @@
 package audio;
 
-import storage.LoadAudio;
-
-import java.io.File;
+import ui.LoadAudio;
 
 import javax.sound.sampled.*;
 

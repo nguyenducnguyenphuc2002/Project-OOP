@@ -1,13 +1,11 @@
 package tilemap;
 
 import main.GamePanel;
-import storage.LoadBackground;
+import ui.LoadBackground;
 
 import java.awt.*;
 import java.awt.image.*;
 import java.io.File;
-
-import javax.imageio.ImageIO;
 
 public class Background {
 	

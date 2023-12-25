@@ -1,4 +1,4 @@
-package storage;
+package ui;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -7,7 +7,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class LoadEntities {
     public static String ARACHNIK = "enemies/arachnik.gif";

@@ -3,7 +3,7 @@ package entities.enemies.boss;
 import objects.Animation;
 import entities.enemies.Enemy;
 import entities.player.Player;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 
 import java.awt.*;

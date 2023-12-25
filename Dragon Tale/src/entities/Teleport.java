@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import objects.Animation;
 import objects.MapObject;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 
 public class Teleport extends MapObject {

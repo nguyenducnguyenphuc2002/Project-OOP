@@ -1,4 +1,4 @@
-package storage;
+package ui;
 
 import tilemap.TileMap;
 

@@ -1,11 +1,10 @@
 package entities;
 
 import objects.Animation;
-import storage.LoadEntities;
+import ui.LoadEntities;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
 
 public class ExplosionFireVenom {
 
