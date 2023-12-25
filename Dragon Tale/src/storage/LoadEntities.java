@@ -33,7 +33,7 @@ public class LoadEntities {
 
     public static BufferedImage[] loadLine(String name, int width, int height){
         try {
-             BufferedImage image = ImageIO.read(new File("resources/sprites/"+name));
+            BufferedImage image = ImageIO.read(new File("resources/sprites/"+name));
 
             int num = image.getWidth() / width ;
 

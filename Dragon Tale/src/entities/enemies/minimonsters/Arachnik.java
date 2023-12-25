@@ -1,6 +1,4 @@
 package entities.enemies.minimonsters;
-
-
 import entities.enemies.Enemy;
 import objects.Animation;
 import storage.LoadEntities;
@@ -37,8 +35,8 @@ public class Arachnik extends Enemy {
 
     private void getNextPosition() { //xác định vị trí kế tiếp
         //movement
-        if(up) dy = -moveSpeed;
-        else if(down) dy = moveSpeed;
+        if (up) dy = -moveSpeed;
+        else if (down) dy = moveSpeed;
         else dy = 0;
     }
 
@@ -49,16 +47,16 @@ public class Arachnik extends Enemy {
 
         //arcahanik movement
         calculateCorners(x, ydest + 1); //ktra góc dưới cùng của nó -> xd sẽ đi lên hoặc xuống
-        if(!topLeft && topRight) {
+        if (!topLeft && topRight) {
             up = false;
         }
-        if(!bottomLeft && bottomRight) {
+        if (!bottomLeft && bottomRight) {
             up = true;
         }
 
         setPosition(xtemp, ytemp); //vị trí mới dc đặt thành xtemp và ytemp -> cập nhật vị trí thực sự Arachnik trên màn hình
 
-        if(dy == 0) { // v theo trục Oy -> đứng yên
+        if (dy == 0) { // v theo trục Oy -> đứng yên
             up = !up;
             down = !down;
         }
@@ -83,7 +81,9 @@ public class Arachnik extends Enemy {
     }
 
     @Override
-    public int getIndex(){
+    public int getIndex() {
         return 6;
     }
 }
+
+

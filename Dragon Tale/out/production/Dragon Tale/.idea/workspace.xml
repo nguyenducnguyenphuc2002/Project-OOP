@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46684ff1-5cf0-4afd-90b9-2f6c69a389ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/libraries/Resources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DragonTale.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/sprites/enemies/diearachnik.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/resources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/audio/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/ExplosionFireVenom.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/ExplosionFireVenom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/Teleport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/boss/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/boss/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/boss/Venom.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/boss/Venom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/die/DieArachnik.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/die/DieBird.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/die/DieBird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/die/DieBoss.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/die/DieBoss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/die/DieEnemies.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/die/DieEnemies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/die/DieHatMonkey.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/die/DieHatMonkey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/die/DieSlugger.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/enemies/die/DieSlugger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/mimimonsters/Arachnik.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/mimimonsters/Bird.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/mimimonsters/HatMonkey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/enemies/mimimonsters/Slugger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/player/Collectable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/player/FireBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/player/FireBall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/entities/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamestate/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamestate/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamestate/GameStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamestate/GameStateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamestate/Level1State.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamestate/Level1State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gamestate/MenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/gamestate/MenuState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/objects/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/HUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/objects/HUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objects/MapObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/objects/MapObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/enemies/arachnik.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/enemies/diearachnik.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tilemap/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/tilemap/Background.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tilemap/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/tilemap/Tile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tilemap/TileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/tilemap/TileMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/LoadAudio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/LoadBackground.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/LoadEntities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/LoadHUD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/LoadKeys.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/LoadTileMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project-OOP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../test.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2ZyvYbW8Su3SrcNHEXd98HNcvUF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Assignments/Project-OOP/Dragon Tale"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46684ff1-5cf0-4afd-90b9-2f6c69a389ba" name="Changes" comment="" />
+      <created>1703407184666</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703407184666</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
