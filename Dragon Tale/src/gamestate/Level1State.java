@@ -1,8 +1,4 @@
-
-
 package gamestate;
-
-import audio.AudioPlayer;
 
 import entities.ExplosionFireVenom;
 import entities.Teleport;
@@ -10,22 +6,20 @@ import entities.collectable.Collectable;
 import entities.enemies.Enemy;
 import entities.enemies.boss.Boss;
 import entities.enemies.die.*;
+import entities.enemies.minimonsters.Arachnik;
 import entities.enemies.minimonsters.Bird;
 import entities.enemies.minimonsters.HatMonkey;
 import entities.enemies.minimonsters.Slugger;
-import objects.HUD;
 import entities.player.Player;
-
-import storage.LoadAudio;
+import objects.HUD;
 import storage.LoadBackground;
 import storage.LoadKeys;
 import storage.LoadTileMap;
 import tilemap.Background;
 import tilemap.Tile;
 import tilemap.TileMap;
-import java.awt.Graphics2D;
-import java.awt.Point;
-import java.awt.event.KeyEvent;
+
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Level1State extends GameState {
@@ -103,7 +97,7 @@ public class Level1State extends GameState {
 		Point[] points2 = new Point[]{
 				new Point(200, 100),
 				new Point(860, 200),
-				new Point(960, 200),
+//				new Point(960, 200),
 				new Point(1550, 200),
 				new Point(1680, 200),
 				new Point(1800, 200)};
@@ -126,17 +120,30 @@ public class Level1State extends GameState {
 			enemies.add(b);
 		}
 
-		Point points4 = new Point(3000,198);
+		Point[] points4 = new Point[]{
+				new Point(1000, 200),
+				new Point(1400, 65),
+				new Point(1625, 200),
+				new Point(2400, 200)
+		};
+		for (Point point : points4) {
+			Arachnik a = new Arachnik(tileMap);
+			a.setPosition(point.x, point.y);
+			enemies.add(a);
+		}
+
+		Point points5 = new Point(3000,198);
 
 		Boss boss = new Boss(tileMap);
-		boss.setPosition(points4.x, points4.y);
+		boss.setPosition(points5.x, points5.y);
 		enemies.add(boss);
 
-		Point point5 = new Point(3150, 200);
+		Point point6 = new Point(3150, 200);
 
 		Teleport teleport = new Teleport(tileMap);
-		teleport.setPosition(point5.x, point5.y);
+		teleport.setPosition(point6.x, point6.y);
 		teleports.add(teleport);
+
 	}
 
 	public void update() {
@@ -248,13 +255,16 @@ public class Level1State extends GameState {
 		if (e.getIndex() == Enemy.BIRD) {
 			die = new DieBird(e.getx(), e.gety());
 		} else if (e.getIndex() == Enemy.HATMONKEY) {
-			die = new entities.enemies.die.DieHatMonkey(e.getx(), e.gety());
+			die = new DieHatMonkey(e.getx(), e.gety());
 		} else if (e.getIndex() == Enemy.SLUGGER) {
 			die = new DieSlugger(e.getx(), e.gety());
 		} else if (e.getIndex() == Enemy.MUSHROOM) {
 //                        die = new BurningMushroom(e.getx(), e.gety()); sẽ là con mushroom của N nha
 		} else if (e.getIndex() == Enemy.BOSS) {
 			die = new DieBoss(e.getx(), e.gety());
+		}
+		else if (e.getIndex() == Enemy.ARACHNIK) {
+			die = new DieArachnik(e.getx(), e.gety());
 		}
 
 		return die;

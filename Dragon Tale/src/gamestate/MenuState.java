@@ -1,13 +1,10 @@
 package gamestate;
 
-import java.awt.Color;
+import tilemap.Background;
 
-import java.awt.Font;
-import java.awt.Graphics2D;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
-
-import tilemap.Background;
 
 public class MenuState extends GameState{
 	
@@ -69,7 +66,7 @@ public class MenuState extends GameState{
 			} else {
 				g.setColor(Color.RED);
 			}
-			g.drawString(options[i], 145, 140 + i * 15);
+			g.drawString(options[i], 145, 110 + i * 18);
 		}
 	}
 
@@ -79,6 +76,8 @@ public class MenuState extends GameState{
 		} 
 		if(currentChoice == 1) {
 			// help
+			// Set the state to HelpState when "Help" is selected
+			gsm.setState(GameStateManager.HELPSTATE);
 		} 
 		if(currentChoice == 2) {
 			System.exit(0);

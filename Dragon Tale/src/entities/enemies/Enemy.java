@@ -14,6 +14,7 @@ public class Enemy extends MapObject {
 	public static int SLUGGER = 3;
 	public static int MUSHROOM = 4; // con này là của Nguyên sau Nguyên thêm vào nha
 	public static int BOSS = 5;
+	public static int ARACHNIK = 6;
 	
 	protected int health;
 	protected int maxHealth;
