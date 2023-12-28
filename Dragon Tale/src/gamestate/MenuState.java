@@ -1,6 +1,7 @@
 package gamestate;
 
 import tilemap.Background;
+import ui.LoadBackground;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -21,8 +22,8 @@ public class MenuState extends GameState{
 	public MenuState(GameStateManager gsm) {
 		
 		this.gsm = gsm;
-		try {
-		bg = new Background(new File("resources/Backgrounds/menubg.gif"), 1);
+
+		bg = LoadBackground.loadBackground(LoadBackground.MENUBACKGROUND);
 		bg.setVector(-0.1, 0);
 		
 		titleColor = new Color(128, 0, 0);
@@ -30,10 +31,8 @@ public class MenuState extends GameState{
 							Font.PLAIN, 
 							28);
 		font = new Font("Arial", Font.PLAIN, 12);
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
 	}
+
 	
 
 	@Override
