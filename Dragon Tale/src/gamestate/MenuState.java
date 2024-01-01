@@ -24,7 +24,6 @@ public class MenuState extends GameState{
 		this.gsm = gsm;
 
 		bg = LoadBackground.loadBackground(LoadBackground.MENUBACKGROUND);
-		bg.setVector(-0.1, 0);
 		
 		titleColor = new Color(128, 0, 0);
 		titleFont = new Font("Century Gothic", 
