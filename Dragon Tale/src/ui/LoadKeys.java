@@ -8,10 +8,10 @@ import java.awt.event.KeyEvent;
 
 public class LoadKeys {
     public static boolean PRESSED = true;
-
     public static boolean RELEASED = false;
     private static boolean turnOnMusic = true;
     private static AudioPlayer bgMusic;
+
 
 
 
@@ -49,7 +49,6 @@ public class LoadKeys {
 
     public static void ControllingMusic(int k){
         if (k == KeyEvent.VK_M) {
-
             if (turnOnMusic) {
                 System.out.println(1);
                 bgMusic.play();

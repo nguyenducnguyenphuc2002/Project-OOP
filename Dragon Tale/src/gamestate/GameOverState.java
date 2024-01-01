@@ -1,7 +1,8 @@
 package gamestate;
 
 import audio.AudioPlayer;
-import storage.LoadEntities;
+import ui.LoadBackground;
+import ui.LoadEntities;
 import tilemap.Background;
 
 import java.awt.*;
@@ -14,77 +15,42 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 
 
-public class GameOverState extends GameState{
+public class GameOverState extends GameState {
 
     private Background bg;
-
-    private int currentChoice = 0;
-    private String[] options = {"Return to menu", "Audio Toggle"};
 
     private Color titleColor;
     private Font titleFont;
 
     private Font font;
 
-    private AudioPlayer audioPlayer;
-    private boolean isAudioPlaying;
 
 
-    private int coinsCollected;
-    private int totalMonstersKilled;
-    private int sluggerKills;
-    private int arachnikKills;
-    private int monkeyKills;
-    private SharedData sharedData;
 
 
     // Setter methods for the kill counters
-    public void setCoinsCollected(int coinsCollected) {
-        this.coinsCollected = coinsCollected;
-    }
-    public void setTotalMonstersKilled(int totalMonstersKilled) {
-        this.totalMonstersKilled = totalMonstersKilled;
-    }
 
-    public void setSluggerKills(int sluggerKills) {
-        this.sluggerKills = sluggerKills;
-    }
 
-    public void setArachnikKills(int arachnikKills) {
-        this.arachnikKills = arachnikKills;
-    }
-
-    public void setMonkeyKills(int monkeyKills) {
-        this.monkeyKills = monkeyKills;
-    }
-
-    public GameOverState(GameStateManager gsm,SharedData sharedData) {
+    public GameOverState(GameStateManager gsm) {
 
         this.gsm = gsm;
-        this.sharedData = sharedData;
-        try {
-            bg = new Background(new File("resources/backgrounds/menubg.gif"), 1);
-            bg.setVector(-0.1, 0);
 
-            titleColor = new Color(128, 0, 0);
-            titleFont = new Font("Century Gothic",
-                    Font.PLAIN,
-                    28);
-            font = new Font("Arial", Font.PLAIN, 12);
+        bg = LoadBackground.loadBackground(LoadBackground.GAMEOVER);
 
-            // add audio player button
-            audioPlayer = new AudioPlayer("resources/music/level1-1.wav");
+        titleColor = new Color(128, 0, 0);
+        titleFont = new Font("Century Gothic",
+                Font.PLAIN,
+                28);
+        font = new Font("Arial", Font.PLAIN, 10);
 
-        } catch(Exception e) {
-            e.printStackTrace();
+
         }
-    }
+
 
 
     @Override
     public void init() {
         // TODO Auto-generated method stub
-
         /*// Start playing the audio
         audioPlayer.play();*/
 
@@ -100,102 +66,66 @@ public class GameOverState extends GameState{
     public void draw(Graphics2D g) {
         // draw bg
         bg.draw(g);
-
-        drawMenuStats(g);
-    }
-
-    public void drawMenuStats(Graphics2D g){
         // draw title
         g.setColor(titleColor);
         g.setFont(titleFont);
         g.drawString("Game Over", 80, 70);
 
-        // draw return to menu option + stats
-        g.setFont(font);
-        for (int i = 0; i < options.length; i++){
-            if (i == currentChoice) {
-                g.setColor(Color.BLACK);
-            } else {
-                g.setColor(Color.RED);
-            }
-            g.drawString(options[i], 120, 190 + i * 15);
-        }
-
-
-        // set value from sharedData
-        setCoinsCollected(sharedData.getCoinsCollected());
-        setArachnikKills(sharedData.getArachnikKills());
-        setMonkeyKills(sharedData.getMonkeyKills());
-        setSluggerKills(sharedData.getSluggerKills());
-        setTotalMonstersKilled(sharedData.getTotalMonstersKilled());
-
         // draw number of coins collected
         g.setFont(font);
         g.setColor(Color.BLACK);
-        g.drawString("Coins Collected: " + coinsCollected, 120, 95);
+        g.drawString("Coins Collected: " + LoadBackground.coinsCollected, 110, 90);
 
         // draw number of monsters killed by type
-        String sluggerText = "x: " + sluggerKills;
-        String arachnikText = "x: " + arachnikKills;
-        String monkeyText = "x: " + monkeyKills;
-        String totalMonstersKilledText = "Total Monsters Killed: " + totalMonstersKilled;
+        String sluggerText = "x: " + LoadBackground.sluggerKills;
+        String arachnikText = "x: " + LoadBackground.arachnikKills;
+        String monkeyText = "x: " + LoadBackground.monkeyKills;
+        String heroText = "x: " + LoadBackground.heroKills;
+        String birdText = "x: " + LoadBackground.birdKills;
+        String bossText = "x: " + LoadBackground.bossKills;
+
 
         int iconSize = 20;
-        int iconX = 120;
-        int iconY = 100;
+        int iconX = 110;
+        int iconY = 90;
 
         // draw slugger icon and text
         g.setColor(Color.BLACK);
-        g.drawString(sluggerText, iconX + iconSize + 5, iconY + iconSize - 5);
-        g.drawImage(Content.Slugger[0][0], iconX, iconY + iconSize * 0 - 5, iconSize, iconSize, null);
+        g.drawString(sluggerText, iconX - iconSize, iconY + iconSize);
+
 
         // draw arachnik icon and text
         g.setColor(Color.BLACK);
-        g.drawString(arachnikText, iconX + iconSize + 5, iconY + 2 * iconSize - 5);
-        g.drawImage(Content.Arachnik[0][0], iconX, iconY + iconSize * 1 - 5, iconSize, iconSize, null);
+        g.drawString(arachnikText, iconX + iconSize*3, iconY + iconSize);
 
         // draw monkey icon and text
         g.setColor(Color.BLACK);
-        g.drawString(monkeyText, iconX + iconSize + 5, iconY + 3 * iconSize - 5);
-        g.drawImage(Content.HatMonkey[0][0], iconX, iconY + 2 * iconSize - 5, iconSize, iconSize, null);
+        g.drawString(monkeyText, iconX + iconSize*7, iconY + iconSize);
 
-        // show total kill
+
+//        // draw hero icon and text
         g.setColor(Color.BLACK);
-        g.drawString(totalMonstersKilledText, iconX , iconY + 4 * iconSize - 5);
+        g.drawString(heroText, iconX - iconSize, iconY + iconSize*3);
+
+//        // draw bird icon and text
+        g.setColor(Color.BLACK);
+        g.drawString(birdText, iconX + iconSize*3, iconY + iconSize*3);
+
+
+        // draw boss icon and text
+        g.setColor(Color.BLACK);
+        g.drawString(bossText, iconX + iconSize*8, iconY + iconSize*3);
+
+
     }
-    private void select() {
-        if(currentChoice == 0) {
-            gsm.setState(GameStateManager.MENUSTATE);
-        }
-        if (currentChoice == 1){
-            if(isAudioPlaying){
-                audioPlayer.stop();
-            }
-            else{
-                audioPlayer.play();
-            }
-            isAudioPlaying = !isAudioPlaying;
-        }
-    }
+
 
     @Override
     public void keyPressed(int k) {
         if (k == KeyEvent.VK_ENTER) {
-            select();
+            // Go back to the main menu when Enter is pressed
+            gsm.setState(GameStateManager.MENUSTATE);
         }
-        if (k == KeyEvent.VK_UP) {
-            currentChoice--;
-            if(currentChoice == -1) {
-                currentChoice = options.length - 1;
-            }
-        }
-        if (k == KeyEvent.VK_DOWN) {
-            currentChoice++;
-            if(currentChoice == options.length) {
-                currentChoice = 0;
-            }
-        }
-
     }
 
 
@@ -204,5 +134,4 @@ public class GameOverState extends GameState{
         // TODO Auto-generated method stub
 
     }
-
 }

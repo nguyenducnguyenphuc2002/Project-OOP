@@ -2,10 +2,9 @@ package gamestate;
 
 import tilemap.Background;
 import ui.LoadBackground;
+import ui.LoadKeys;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.io.File;
 
 public class MenuState extends GameState{
 	
@@ -84,21 +83,7 @@ public class MenuState extends GameState{
 	
 	@Override
 	public void keyPressed(int k) {
-		if (k == KeyEvent.VK_ENTER) {
-			select();
-		}
-		if (k == KeyEvent.VK_UP) {
-			currentChoice--;
-			if(currentChoice == -1) {
-				currentChoice = options.length - 1;
-			}
-		}
-		if (k == KeyEvent.VK_DOWN) {
-			currentChoice++;
-			if(currentChoice == options.length) {
-				currentChoice = 0;
-			}
-		}
+		LoadKeys.ChooseOptions(k, this);
 		
 	}
 

@@ -1,5 +1,6 @@
 package ui;
 
+import gamestate.Level1State;
 import tilemap.Background;
 
 import javax.imageio.ImageIO;
@@ -12,6 +13,16 @@ public class LoadBackground {
     public static String MENUBACKGROUND = "menubg";
     public static String HELPBACKGROUND = "helpstate (1)";
     public static String LEVEL1STATE = "grassbg1";
+    public static String GAMEOVER = "GameOverBG";
+
+
+    public static int coinsCollected = Level1State.endScore;
+    public static int sluggerKills = 0;
+    public static int arachnikKills = 0;
+    public static int monkeyKills = 0;
+    public static int heroKills = 0;
+    public static int birdKills = 0;
+    public static int bossKills = 0;
 
 
 
