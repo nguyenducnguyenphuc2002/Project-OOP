@@ -6,10 +6,7 @@ import entities.collectable.Collectable;
 import entities.enemies.Enemy;
 import entities.enemies.boss.Boss;
 import entities.enemies.die.*;
-import entities.enemies.minimonsters.Arachnik;
-import entities.enemies.minimonsters.Bird;
-import entities.enemies.minimonsters.HatMonkey;
-import entities.enemies.minimonsters.Slugger;
+import entities.enemies.minimonsters.*;
 import entities.player.Player;
 import objects.HUD;
 import ui.LoadBackground;
@@ -33,6 +30,8 @@ public class Level1State extends GameState {
 	private HUD hud;
 
 	private ArrayList<Teleport> teleports;
+	private boolean bossDefeated = false;
+
 
 	public Level1State(GameStateManager gsm) {
 		this.gsm = gsm;
@@ -84,10 +83,8 @@ public class Level1State extends GameState {
 				new Point(200, 100),
 				new Point(860, 200),
 				new Point(960, 200),
-				new Point(1550, 200),
-				new Point(1680, 200),
-				new Point(1800, 200)};
-
+				new Point(1550, 200)
+		};
 		for (Point value : points1) {
 			Slugger s = new Slugger(tileMap);
 			s.setPosition( value.x, value.y);
@@ -97,7 +94,6 @@ public class Level1State extends GameState {
 		Point[] points2 = new Point[]{
 				new Point(200, 100),
 				new Point(860, 200),
-//				new Point(960, 200),
 				new Point(1550, 200),
 				new Point(1680, 200),
 				new Point(1800, 200)};
@@ -112,7 +108,7 @@ public class Level1State extends GameState {
 				new Point(100, 50),
 				new Point(860, 155),
 				new Point(960, 100),
-				new Point(2500, 150)
+				new Point(2500, 70)
 		};
 		for (Point point : points3) {
 			Bird b = new Bird(tileMap);
@@ -138,12 +134,24 @@ public class Level1State extends GameState {
 		boss.setPosition(points5.x, points5.y);
 		enemies.add(boss);
 
-		Point point6 = new Point(3150, 200);
+		//teleport
+		Point point6 = new Point(3140, 190);
 
 		Teleport teleport = new Teleport(tileMap);
 		teleport.setPosition(point6.x, point6.y);
 		teleports.add(teleport);
 
+		Point[] points7 = new Point[]{
+				new Point(400, 150),
+				new Point(720, 150),
+				new Point(1920, 112),
+				new Point(2270, 150)
+		};
+		for (Point point : points7) {
+			Hero hero = new Hero(tileMap);
+			hero.setPosition(point.x, point.y);
+			enemies.add(hero);
+		}
 	}
 
 	public void update() {
@@ -168,6 +176,10 @@ public class Level1State extends GameState {
 				enemies.remove(i);
 				--i;
 				dieEnemies.add(getDie(e));
+				//check bossdie
+				if (e instanceof Boss) {
+					bossDefeated = true;
+				}
 			}
 		}
 
@@ -197,15 +209,15 @@ public class Level1State extends GameState {
 				j--;
 			}
 		}
-
-
 		for (Teleport teleport: teleports) {
-			if (enemies.isEmpty()) {
+			if (bossDefeated) {
 				teleport.update();
 			}
 		}
 
+
 	}
+
 
 	public void draw(Graphics2D g) {
 		bg.draw(g);
@@ -230,7 +242,7 @@ public class Level1State extends GameState {
 		for (Collectable coin : coins) {
 			coin.draw(g);
 		}
-		if (enemies.isEmpty()) {
+		if (bossDefeated) {
 			for (Teleport teleport: teleports) {
 				teleport.draw(g);
 			}
@@ -258,13 +270,12 @@ public class Level1State extends GameState {
 			die = new DieHatMonkey(e.getx(), e.gety());
 		} else if (e.getIndex() == Enemy.SLUGGER) {
 			die = new DieSlugger(e.getx(), e.gety());
-		} else if (e.getIndex() == Enemy.MUSHROOM) {
-//                        die = new BurningMushroom(e.getx(), e.gety()); sẽ là con mushroom của N nha
 		} else if (e.getIndex() == Enemy.BOSS) {
 			die = new DieBoss(e.getx(), e.gety());
-		}
-		else if (e.getIndex() == Enemy.ARACHNIK) {
+		} else if (e.getIndex() == Enemy.ARACHNIK) {
 			die = new DieArachnik(e.getx(), e.gety());
+		} else if (e.getIndex() == Enemy.HERO) {
+			die = new DieHero(e.getx(), e.gety());
 		}
 
 		return die;

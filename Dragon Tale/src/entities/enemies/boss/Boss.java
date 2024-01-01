@@ -32,7 +32,7 @@ public class Boss extends Enemy {
 
 
 
-        health = maxHealth = 100;
+        health = maxHealth = 40;
         damage = 5;
         venomDamage = 3;
 

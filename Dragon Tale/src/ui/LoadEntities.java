@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class LoadEntities {
+    public static String HERO = "enemies/hero.gif";
+    public static String DIEHERO = "enemies/diehero.gif";
     public static String ARACHNIK = "enemies/arachnik.gif";
     public static String DIEARACHNIK = "enemies/diearachnik.gif";
     public static String SLUGGER = "enemies/slugger.gif";
