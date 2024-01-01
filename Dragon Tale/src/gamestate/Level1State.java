@@ -34,8 +34,10 @@ public class Level1State extends GameState {
 
 	private ArrayList<Teleport> teleports;
 
+	private SharedData sharedData;
 	public Level1State(GameStateManager gsm) {
 		this.gsm = gsm;
+		this.sharedData = gsm.getSharedData();
 		init();
 	}
 
