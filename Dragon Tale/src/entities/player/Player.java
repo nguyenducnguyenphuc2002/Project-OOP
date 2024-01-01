@@ -2,6 +2,7 @@ package entities.player;
 
 import audio.AudioPlayer;
 import entities.ExplosionFireVenom;
+import entities.Teleport;
 import entities.enemies.Enemy;
 import entities.collectable.Collectable;
 import objects.Animation;
@@ -78,7 +79,14 @@ public class Player extends MapObject {
 		sfx.put(LoadAudio.SCRATCH, LoadAudio.loadKill(LoadAudio.SCRATCH));
 	}
 
-
+	public boolean intersectsTeleports(ArrayList<Teleport> teleports) {
+		for (Teleport teleport : teleports) {
+			if (this.intersects(teleport)) {
+				return true;
+			}
+		}
+		return false;
+	}
 	public double getHealth() {
 		return health;
 	}

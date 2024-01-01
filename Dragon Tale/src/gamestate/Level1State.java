@@ -31,6 +31,7 @@ public class Level1State extends GameState {
 
 	private ArrayList<Teleport> teleports;
 	private boolean bossDefeated = false;
+	public static int endScore;
 
 
 	private SharedData sharedData;
@@ -211,6 +212,14 @@ public class Level1State extends GameState {
 				j--;
 			}
 		}
+
+		//if player is dead or enters portal
+		if (player.getHealth() <= 0 || player.notOnScreen() || player.intersectsTeleports(teleports)) {
+			endScore = player.getScore();
+			player.isDead();
+			gsm.setState(GameStateManager.GAMEOVERSTATE);
+		}
+
 		for (Teleport teleport: teleports) {
 			if (bossDefeated) {
 				teleport.update();

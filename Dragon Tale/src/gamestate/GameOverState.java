@@ -1,7 +1,7 @@
 package gamestate;
 
 import audio.AudioPlayer;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.Background;
 
 import java.awt.*;
@@ -35,6 +35,7 @@ public class GameOverState extends GameState{
     private int sluggerKills;
     private int arachnikKills;
     private int monkeyKills;
+    private int heroKills;
     private SharedData sharedData;
 
 
@@ -56,6 +57,9 @@ public class GameOverState extends GameState{
 
     public void setMonkeyKills(int monkeyKills) {
         this.monkeyKills = monkeyKills;
+    }
+    public void setHeroKills(int heroKills){
+        this.heroKills = heroKills;
     }
 
     public GameOverState(GameStateManager gsm,SharedData sharedData) {
@@ -127,6 +131,7 @@ public class GameOverState extends GameState{
         setArachnikKills(sharedData.getArachnikKills());
         setMonkeyKills(sharedData.getMonkeyKills());
         setSluggerKills(sharedData.getSluggerKills());
+        setHeroKills(sharedData.getHeroKills());
         setTotalMonstersKilled(sharedData.getTotalMonstersKilled());
 
         // draw number of coins collected
@@ -138,6 +143,8 @@ public class GameOverState extends GameState{
         String sluggerText = "x: " + sluggerKills;
         String arachnikText = "x: " + arachnikKills;
         String monkeyText = "x: " + monkeyKills;
+        String heroText = "x: " + heroKills;
+
         String totalMonstersKilledText = "Total Monsters Killed: " + totalMonstersKilled;
 
         int iconSize = 20;
@@ -147,17 +154,26 @@ public class GameOverState extends GameState{
         // draw slugger icon and text
         g.setColor(Color.BLACK);
         g.drawString(sluggerText, iconX + iconSize + 5, iconY + iconSize - 5);
-        g.drawImage(Content.Slugger[0][0], iconX, iconY + iconSize * 0 - 5, iconSize, iconSize, null);
+        Image sluggerImage = LoadEntities.LoadIcon(LoadEntities.SLUGGER);
+        g.drawImage(sluggerImage, iconX, iconY + iconSize * 0 - 5, iconSize, iconSize, null);
 
         // draw arachnik icon and text
         g.setColor(Color.BLACK);
         g.drawString(arachnikText, iconX + iconSize + 5, iconY + 2 * iconSize - 5);
-        g.drawImage(Content.Arachnik[0][0], iconX, iconY + iconSize * 1 - 5, iconSize, iconSize, null);
+        Image arachnikImage = LoadEntities.LoadIcon(LoadEntities.ARACHNIK);
+        g.drawImage(arachnikImage, iconX, iconY + iconSize * 1 - 5, iconSize, iconSize, null);
 
         // draw monkey icon and text
         g.setColor(Color.BLACK);
         g.drawString(monkeyText, iconX + iconSize + 5, iconY + 3 * iconSize - 5);
-        g.drawImage(Content.HatMonkey[0][0], iconX, iconY + 2 * iconSize - 5, iconSize, iconSize, null);
+        Image hatMonkeyImage = LoadEntities.LoadIcon(LoadEntities.HATMONKEY);
+        g.drawImage(hatMonkeyImage, iconX, iconY + 2 * iconSize - 5, iconSize, iconSize, null);
+
+        // draw hero icon and text
+        g.setColor(Color.BLACK);
+        g.drawString(heroText, iconX + iconSize + 5, iconY + 3 * iconSize - 5);
+        Image heroImage = LoadEntities.LoadIcon(LoadEntities.HERO);
+        g.drawImage(heroImage, iconX, iconY + 2 * iconSize - 5, iconSize, iconSize, null);
 
         // show total kill
         g.setColor(Color.BLACK);

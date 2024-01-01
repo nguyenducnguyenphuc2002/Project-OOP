@@ -6,6 +6,7 @@ public class SharedData {
     private int sluggerKills;
     private int arachnikKills;
     private int monkeyKills;
+    private int heroKills;
     private int coinsCollected;
 
     public int getTotalMonstersKilled() {
@@ -54,5 +55,13 @@ public class SharedData {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    public int getHeroKills() {
+        return heroKills;
+    }
+
+    public void setHeroKills(int heroKills) {
+        this.heroKills = heroKills;
     }
 }
