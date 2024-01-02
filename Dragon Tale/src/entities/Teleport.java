@@ -32,7 +32,7 @@ public class Teleport extends MapObject {
 
     public void draw(Graphics2D g) {
         setMapPosition();
-
+        setMapPosition(tileMap.getx(), tileMap.gety());
         super.draw(g);
     }
 }

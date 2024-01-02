@@ -26,7 +26,7 @@ public class LoadEntities {
     public static String BOSS = "enemies/boss3green.gif";
     public static String BOSSDIE = "enemies/bossdie3green.gif";
     public static String VENOM = "enemies/venom.gif";
-    public static String TELEPORT = "/portal.gif";
+    public static String TELEPORT = "/portalPurple.gif";
     public static String EXPLOSIONFIREVENOM = "enemies/explosionfirevenom.gif";
     public static String ICON = "player/iconplayer.gif";
 
