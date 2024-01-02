@@ -32,8 +32,6 @@ public class Level1State extends GameState {
 	private ArrayList<Teleport> teleports;
 	private boolean bossDefeated = false;
 
-
-	private SharedData sharedData;
 	public static int endScore;
 
 	public Level1State(GameStateManager gsm) {
