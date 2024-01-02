@@ -33,7 +33,6 @@ public class Level1State extends GameState {
 	private boolean bossDefeated = false;
 
 
-	private SharedData sharedData;
 	public static int endScore;
 
 	public Level1State(GameStateManager gsm) {
@@ -50,7 +49,7 @@ public class Level1State extends GameState {
 
 		player = new Player(tileMap);
 		player.setPosition(100, 100);
-//        player.setPosition(2600,150);
+//        player.setPosition(2700,200);
 
 		dieEnemies = new ArrayList<>();
 		populateEnemies();
@@ -212,17 +211,20 @@ public class Level1State extends GameState {
 				j--;
 			}
 		}
-		//if player is dead or enters portal
-		if (player.getHealth() <= 0 || player.notOnScreen() || player.intersectsTeleports(teleports) || player.isDead()) {
-			endScore = player.getScore();
 
-			gsm.setState(GameStateManager.GAMEOVERSTATE);
-		}
 		for (Teleport teleport: teleports) {
 			if (bossDefeated) {
 				teleport.update();
 			}
 		}
+
+		//if player is dead or enters portal
+		if (player.intersectsTeleports(teleports) || player.isDead()) {
+			endScore = player.getScore();
+
+			gsm.setState(GameStateManager.GAMEOVERSTATE);
+		}
+
 
 
 	}
@@ -251,10 +253,10 @@ public class Level1State extends GameState {
 		for (Collectable coin : coins) {
 			coin.draw(g);
 		}
-		if (bossDefeated) {
-			for (Teleport teleport: teleports) {
-				teleport.draw(g);
-			}
+
+		for (Teleport teleport: teleports) {
+			teleport.draw(g);
+
 		}
 
 		hud.draw(g);
@@ -275,16 +277,22 @@ public class Level1State extends GameState {
 		DieEnemies die = null;
 		if (e.getIndex() == Enemy.BIRD) {
 			die = new DieBird(e.getx(), e.gety());
+			LoadBackground.birdKills++;
 		} else if (e.getIndex() == Enemy.HATMONKEY) {
 			die = new DieHatMonkey(e.getx(), e.gety());
+			LoadBackground.monkeyKills++;
 		} else if (e.getIndex() == Enemy.SLUGGER) {
 			die = new DieSlugger(e.getx(), e.gety());
+			LoadBackground.sluggerKills++;
 		} else if (e.getIndex() == Enemy.BOSS) {
 			die = new DieBoss(e.getx(), e.gety());
+			LoadBackground.bossKills++;
 		} else if (e.getIndex() == Enemy.ARACHNIK) {
 			die = new DieArachnik(e.getx(), e.gety());
+			LoadBackground.arachnikKills++;
 		} else if (e.getIndex() == Enemy.HERO) {
 			die = new DieHero(e.getx(), e.gety());
+			LoadBackground.arachnikKills++;
 		}
 
 		return die;

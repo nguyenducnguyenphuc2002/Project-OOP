@@ -6,7 +6,6 @@ public class GameStateManager {
 	
 	private ArrayList<GameState> gameStates;
 	private int currentState;
-	private SharedData sharedData;
 	
 	public static final int MENUSTATE = 0;
 	public static final int LEVEL1STATE = 1;
