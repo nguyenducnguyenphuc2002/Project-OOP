@@ -225,7 +225,11 @@ public class Level1State extends GameState {
 			gsm.setState(GameStateManager.GAMEOVERSTATE);
 		}
 
+		else if (player.intersectsTeleports(teleports)) {
+			endScore = player.getScore();
 
+			gsm.setState(GameStateManager.WINNERSTATE);
+		}
 
 	}
 

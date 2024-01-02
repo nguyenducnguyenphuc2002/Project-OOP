@@ -16,7 +16,7 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 
 
-public class GameOverState extends GameState {
+public class WinnerState extends GameState {
 
     private Background bg;
     private Color titleColor;
@@ -24,20 +24,20 @@ public class GameOverState extends GameState {
     private Font font;
 
 
-    public GameOverState(GameStateManager gsm) {
+    public WinnerState(GameStateManager gsm) {
 
         this.gsm = gsm;
 
         bg = LoadBackground.loadBackground(LoadBackground.GAMEOVER);
 
-        titleColor = new Color(128, 0, 0);
+        titleColor = new Color(128, 4, 0);
         titleFont = new Font("Century Gothic",
                 Font.PLAIN,
                 28);
         font = new Font("Arial", Font.PLAIN, 10);
 
 
-        }
+    }
 
 
 
@@ -63,7 +63,7 @@ public class GameOverState extends GameState {
         g.setColor(titleColor);
         g.setFont(titleFont);
 
-        g.drawString("Game Over", 80, 70);
+        g.drawString("You Win", 80, 70);
 
         // draw number of coins collected
         g.setFont(font);
