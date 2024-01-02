@@ -29,7 +29,6 @@ public class LoadEntities {
     public static String TELEPORT = "/portal.gif";
     public static String EXPLOSIONFIREVENOM = "enemies/explosionfirevenom.gif";
     public static String ICON = "player/iconplayer.gif";
-    public static String ICONHATMONKEY = "player/iconhatmonkey.gif";
 
 
 

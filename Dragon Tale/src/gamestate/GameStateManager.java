@@ -6,15 +6,20 @@ public class GameStateManager {
 	
 	private ArrayList<GameState> gameStates;
 	private int currentState;
+	private SharedData sharedData;
 	
 	public static final int MENUSTATE = 0;
 	public static final int LEVEL1STATE = 1;
 	public static final int HELPSTATE = 2;
 	public static final int GAMEOVERSTATE = 3;
 
+//	public SharedData getSharedData() {
+//		return sharedData;
+//	}
 	public GameStateManager() {
 		
 		gameStates = new ArrayList<GameState>();
+		
 		currentState = MENUSTATE;
 		gameStates.add(new MenuState(this));
 		gameStates.add(new Level1State(this));
@@ -27,7 +32,7 @@ public class GameStateManager {
 		currentState = state;
 		gameStates.get(currentState).init();
 	}
-
+	
 	public void update() {
 		gameStates.get(currentState).update();
 	}
