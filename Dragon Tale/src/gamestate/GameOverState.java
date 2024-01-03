@@ -22,7 +22,7 @@ public class GameOverState extends GameState {
     private Background bg;
     private Color titleColor;
     private Font titleFont;
-    private Font font;
+
 
 
     public GameOverState(GameStateManager gsm) {
@@ -35,8 +35,7 @@ public class GameOverState extends GameState {
         titleFont = new Font("Century Gothic",
                 Font.PLAIN,
                 28);
-
-        }
+    }
 
 
 

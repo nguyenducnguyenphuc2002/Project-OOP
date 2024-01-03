@@ -22,7 +22,6 @@ public class WinnerState extends GameState {
     private Background bg;
     private Color titleColor;
     private Font titleFont;
-    private Font font;
 
 
     public WinnerState(GameStateManager gsm) {
@@ -35,9 +34,6 @@ public class WinnerState extends GameState {
         titleFont = new Font("Century Gothic",
                 Font.PLAIN,
                 28);
-        font = new Font("Arial", Font.PLAIN, 10);
-
-
     }
 
 
