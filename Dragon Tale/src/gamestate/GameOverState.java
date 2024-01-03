@@ -1,7 +1,6 @@
 package gamestate;
 
 import audio.AudioPlayer;
-import entities.player.Player;
 import ui.LoadBackground;
 import ui.LoadEntities;
 import tilemap.Background;
@@ -22,8 +21,6 @@ public class GameOverState extends GameState {
     private Color titleColor;
     private Font titleFont;
     private Font font;
-    private Player player;
-
 
     public GameOverState(GameStateManager gsm) {
 
