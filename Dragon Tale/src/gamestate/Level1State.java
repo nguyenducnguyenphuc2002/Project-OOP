@@ -211,12 +211,19 @@ public class Level1State extends GameState {
 			}
 		}
 		//if player is dead or enters portal
+		if (player.getHealth() <= 0 || player.notOnScreen() || player.intersectsTeleports(teleports) || player.isDead()) {
+			endScore = player.getScore();
 
+			gsm.setState(GameStateManager.GAMEOVERSTATE);
+		}
 		for (Teleport teleport: teleports) {
 			if (bossDefeated) {
 				teleport.update();
 			}
 		}
+
+
+		//if player is dead or enters portal
 		if (player.intersectsTeleports(teleports) || player.isDead()) {
 			endScore = player.getScore();
 
