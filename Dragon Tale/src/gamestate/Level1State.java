@@ -33,8 +33,6 @@ public class Level1State extends GameState {
 	private boolean bossDefeated = false;
 
 
-	public static int endScore;
-
 	public Level1State(GameStateManager gsm) {
 		this.gsm = gsm;
 		init();
@@ -50,7 +48,6 @@ public class Level1State extends GameState {
 		player = new Player(tileMap);
 		player.setPosition(100, 100);
 //        player.setPosition(2700,200);
-
 		dieEnemies = new ArrayList<>();
 		populateEnemies();
 		populateCollectables();
@@ -220,13 +217,13 @@ public class Level1State extends GameState {
 
 		//if player is dead or enters portal
 		if (player.intersectsTeleports(teleports) || player.isDead()) {
-			endScore = player.getScore();
+			LoadBackground.coinsCollected = player.getScore();
 
 			gsm.setState(GameStateManager.GAMEOVERSTATE);
 		}
 
 		else if (player.intersectsTeleports(teleports)) {
-			endScore = player.getScore();
+			LoadBackground.coinsCollected = player.getScore();
 
 			gsm.setState(GameStateManager.WINNERSTATE);
 		}
@@ -296,7 +293,7 @@ public class Level1State extends GameState {
 			LoadBackground.arachnikKills++;
 		} else if (e.getIndex() == Enemy.HERO) {
 			die = new DieHero(e.getx(), e.gety());
-			LoadBackground.arachnikKills++;
+			LoadBackground.heroKills++;
 		}
 
 		return die;
