@@ -1,11 +1,7 @@
 package entities.enemies.die;
 
 
-import objects.Animation;
-import storage.LoadEntities;
-
-import java.awt.*;
-import java.awt.image.BufferedImage;
+import ui.LoadEntities;
 
 public class DieSlugger extends DieEnemies{
 

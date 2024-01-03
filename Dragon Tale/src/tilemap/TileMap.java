@@ -4,10 +4,9 @@ import java.awt.*;
 import java.awt.image.*;
 
 import java.io.*;
-import javax.imageio.ImageIO;
 
 import main.GamePanel;
-import storage.LoadTileMap;
+import ui.LoadTileMap;
 
 public class TileMap {
 	

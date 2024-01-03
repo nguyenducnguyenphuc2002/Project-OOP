@@ -1,7 +1,7 @@
 package entities.enemies.minimonsters;
 import entities.enemies.Enemy;
 import objects.Animation;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 
 import java.awt.*;
@@ -15,13 +15,12 @@ public class Hero extends Enemy {
     public Hero(TileMap tm) {
         super(tm);
 
-
-        moveSpeed = 1.0;
-        maxSpeed = 1.0;
-        fallSpeed = 0.15;
+        moveSpeed = 0.6;
+        maxSpeed = 1.2;
+        fallSpeed = 0.6;
         maxFallSpeed = 4.0;
-        jumpStart = -4.8;
-        stopJumpSpeed = 1.0;
+        jumpStart = -16;
+        stopJumpSpeed = 0.5;
         maxJumpHeight = (int)y + 200;
 
         width = 30;
@@ -36,33 +35,40 @@ public class Hero extends Enemy {
         sprites = LoadEntities.loadLine(LoadEntities.HERO, this.width, this.height);
         animation = new Animation();
         animation.setFrames(sprites);
-        animation.setDelay(300);
+        animation.setDelay(100);
 
         up = true;
     }
 
     private void getNextPosition() {
-        //movement
-
-        //jumping
+        // jumping
         if (up) {
-            down = false;
-            dy = jumpStart;
-            jumpHeight = gety();
+            if (!jumping && !falling) {
+                dy = jumpStart;
+                jumping = true;
+                jumpHeight = (int) y;
+            }
+
+            if (jumping && dy < 0) {
+                dy += stopJumpSpeed; // reduce jump speed when the key is released
+            }
+
+            if (jumping && dy >= 0) {
+                jumping = false;
+                falling = true;
+            }
         }
 
-        //falling
-        if (jumpHeight == maxJumpHeight) {
-            up = false;
-            down = true;
+        // falling
+        if (falling) {
             dy += fallSpeed;
 
-            if (dy > 0) up = false;
-            if (dy < 0 && up) dy += stopJumpSpeed;
-
-            if (dy > maxFallSpeed) dy = maxFallSpeed;
+            if (dy > maxFallSpeed) {
+                dy = maxFallSpeed;
+            }
         }
     }
+
 
     public void update() {
         //update position

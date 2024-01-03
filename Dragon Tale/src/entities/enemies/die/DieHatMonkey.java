@@ -1,8 +1,6 @@
 package entities.enemies.die;
 
-import storage.LoadEntities;
-
-import java.awt.*;
+import ui.LoadEntities;
 
 public class DieHatMonkey extends DieEnemies {
 	public DieHatMonkey(int x, int y) {

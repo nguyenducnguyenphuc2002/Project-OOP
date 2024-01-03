@@ -2,14 +2,11 @@ package entities.enemies.minimonsters;
 
 import entities.enemies.Enemy;
 import objects.Animation;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.awt.Graphics2D;
-
-import javax.imageio.ImageIO;
 
 public class Slugger extends Enemy {
 	

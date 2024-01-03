@@ -1,7 +1,7 @@
 package objects;
 
 import entities.player.Player;
-import storage.LoadHUD;
+import ui.LoadHUD;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

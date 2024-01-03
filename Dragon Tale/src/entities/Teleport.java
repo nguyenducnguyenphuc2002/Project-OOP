@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import objects.Animation;
 import objects.MapObject;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 
 public class Teleport extends MapObject {
@@ -32,7 +32,7 @@ public class Teleport extends MapObject {
 
     public void draw(Graphics2D g) {
         setMapPosition();
-
+        setMapPosition(tileMap.getx(), tileMap.gety());
         super.draw(g);
     }
 }

@@ -1,6 +1,6 @@
 package main;
 
-import storage.LoadEntities;
+import ui.LoadEntities;
 
 import javax.swing.JFrame;
 
@@ -22,5 +22,5 @@ public class Game{
 	
 	
 		
-	}
+}
 

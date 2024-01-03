@@ -1,6 +1,6 @@
 package entities.enemies.die;
 
-import storage.LoadEntities;
+import ui.LoadEntities;
 
 import java.awt.*;
 

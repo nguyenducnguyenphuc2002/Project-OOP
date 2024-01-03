@@ -1,7 +1,7 @@
 package entities.enemies.minimonsters;
 import entities.enemies.Enemy;
 import objects.Animation;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 
 import java.awt.*;

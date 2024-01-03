@@ -3,7 +3,7 @@ package entities.enemies.boss;
 import objects.Animation;
 import entities.enemies.Enemy;
 import entities.player.Player;
-import storage.LoadEntities;
+import ui.LoadEntities;
 import tilemap.TileMap;
 
 import java.awt.*;
@@ -32,7 +32,7 @@ public class Boss extends Enemy {
 
 
 
-        health = maxHealth = 100;
+        health = maxHealth = 40;
         damage = 5;
         venomDamage = 3;
 

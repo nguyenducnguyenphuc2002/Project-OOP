@@ -1,6 +1,6 @@
 package entities.enemies.die;
 
-import storage.LoadEntities;
+import ui.LoadEntities;
 
 public class DieHero extends DieEnemies {
     public DieHero(int x, int y) {

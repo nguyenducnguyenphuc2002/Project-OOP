@@ -2,12 +2,13 @@ package entities.player;
 
 import audio.AudioPlayer;
 import entities.ExplosionFireVenom;
+import entities.Teleport;
 import entities.enemies.Enemy;
 import entities.collectable.Collectable;
 import objects.Animation;
 import objects.MapObject;
-import storage.LoadAudio;
-import storage.LoadEntities;
+import ui.LoadAudio;
+import ui.LoadEntities;
 import tilemap.TileMap;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -40,7 +41,6 @@ public class Player extends MapObject {
 	private static final int FIREBALL = 5;
 	private static final int SCRATCHING = 6;
 	private final HashMap<String, AudioPlayer> sfx;
-
 	private final ArrayList<ExplosionFireVenom> explosionsFireVenom;
 
 
@@ -67,6 +67,7 @@ public class Player extends MapObject {
 		scratchRange = 40;
 		explosionsFireVenom = new ArrayList<>();
 
+
 		sprites = LoadEntities.loadMatrix(LoadEntities.PLAYER, numFrames, width, height);
 		animation = new Animation();
 		currentAction = IDLE;
@@ -78,7 +79,14 @@ public class Player extends MapObject {
 		sfx.put(LoadAudio.SCRATCH, LoadAudio.loadKill(LoadAudio.SCRATCH));
 	}
 
-
+	public boolean intersectsTeleports(ArrayList<Teleport> teleports) {
+		for (Teleport teleport : teleports) {
+			if (this.intersects(teleport)) {
+				return true;
+			}
+		}
+		return false;
+	}
 	public double getHealth() {
 		return health;
 	}
@@ -165,14 +173,17 @@ public class Player extends MapObject {
 
 			if (e.isDead()) {
 				if (e.getIndex() == Enemy.BIRD ||
-						e.getIndex() == Enemy.MUSHROOM ||
+						e.getIndex() == Enemy.HERO ||
 						e.getIndex() == Enemy.HATMONKEY ||
-						e.getIndex() == Enemy.HATMONKEY) {
+						e.getIndex() == Enemy.ARACHNIK ||
+						e.getIndex() == Enemy.SLUGGER) {
 					coinAmount++;
 					score += 200;
+
 				} else if (e.getIndex() == Enemy.BOSS) {
 					coinAmount++;
 					score += 500;
+
 				}
 			}
 		}
@@ -387,6 +398,7 @@ public class Player extends MapObject {
 			if (intersects(coin)) {
 				coinAmount++;
 				score += 100;
+
 			}
 		}
 
@@ -399,5 +411,6 @@ public class Player extends MapObject {
 	public ArrayList<ExplosionFireVenom> getExplosionsFireVenom() {
 		return explosionsFireVenom;
 	}
+
 
 }
