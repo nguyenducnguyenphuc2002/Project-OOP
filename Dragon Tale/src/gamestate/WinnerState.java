@@ -3,6 +3,7 @@ package gamestate;
 import audio.AudioPlayer;
 import entities.player.Player;
 import ui.LoadBackground;
+import ui.LoadEndGame;
 import ui.LoadEntities;
 import tilemap.Background;
 
@@ -28,7 +29,7 @@ public class WinnerState extends GameState {
 
         this.gsm = gsm;
 
-        bg = LoadBackground.loadBackground(LoadBackground.GAMEOVER);
+        bg = LoadEndGame.loadEndGame(LoadEndGame.ENDGAME);
 
         titleColor = new Color(128, 4, 0);
         titleFont = new Font("Century Gothic",
@@ -68,15 +69,15 @@ public class WinnerState extends GameState {
         // draw number of coins collected
         g.setFont(font);
         g.setColor(Color.BLACK);
-        g.drawString("Coins Collected: " + LoadBackground.coinsCollected, 110, 90);
+        g.drawString("Coins Collected: " + LoadEndGame.coinsCollected, 110, 90);
 
         // draw number of monsters killed by type
-        String sluggerText = "x: " + LoadBackground.sluggerKills;
-        String arachnikText = "x: " + LoadBackground.arachnikKills;
-        String monkeyText = "x: " + LoadBackground.monkeyKills;
-        String heroText = "x: " + LoadBackground.heroKills;
-        String birdText = "x: " + LoadBackground.birdKills;
-        String bossText = "x: " + LoadBackground.bossKills;
+        String sluggerText = "x: " + LoadEndGame.sluggerKills;
+        String arachnikText = "x: " + LoadEndGame.arachnikKills;
+        String monkeyText = "x: " + LoadEndGame.monkeyKills;
+        String heroText = "x: " + LoadEndGame.heroKills;
+        String birdText = "x: " + LoadEndGame.birdKills;
+        String bossText = "x: " + LoadEndGame.bossKills;
 
 
         int iconSize = 20;

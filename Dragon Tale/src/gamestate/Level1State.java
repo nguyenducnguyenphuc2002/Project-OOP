@@ -10,6 +10,7 @@ import entities.enemies.minimonsters.*;
 import entities.player.Player;
 import objects.HUD;
 import ui.LoadBackground;
+import ui.LoadEndGame;
 import ui.LoadKeys;
 import ui.LoadTileMap;
 import tilemap.Background;
@@ -217,13 +218,13 @@ public class Level1State extends GameState {
 
 		//if player is dead or enters portal
 		if (player.intersectsTeleports(teleports) || player.isDead()) {
-			LoadBackground.coinsCollected = player.getScore();
+			LoadEndGame.coinsCollected = player.getScore();
 
 			gsm.setState(GameStateManager.GAMEOVERSTATE);
 		}
 
 		else if (player.intersectsTeleports(teleports)) {
-			LoadBackground.coinsCollected = player.getScore();
+			LoadEndGame.coinsCollected = player.getScore();
 
 			gsm.setState(GameStateManager.WINNERSTATE);
 		}
@@ -278,22 +279,22 @@ public class Level1State extends GameState {
 		DieEnemies die = null;
 		if (e.getIndex() == Enemy.BIRD) {
 			die = new DieBird(e.getx(), e.gety());
-			LoadBackground.birdKills++;
+			LoadEndGame.birdKills++;
 		} else if (e.getIndex() == Enemy.HATMONKEY) {
 			die = new DieHatMonkey(e.getx(), e.gety());
-			LoadBackground.monkeyKills++;
+			LoadEndGame.monkeyKills++;
 		} else if (e.getIndex() == Enemy.SLUGGER) {
 			die = new DieSlugger(e.getx(), e.gety());
-			LoadBackground.sluggerKills++;
+			LoadEndGame.sluggerKills++;
 		} else if (e.getIndex() == Enemy.BOSS) {
 			die = new DieBoss(e.getx(), e.gety());
-			LoadBackground.bossKills++;
+			LoadEndGame.bossKills++;
 		} else if (e.getIndex() == Enemy.ARACHNIK) {
 			die = new DieArachnik(e.getx(), e.gety());
-			LoadBackground.arachnikKills++;
+			LoadEndGame.arachnikKills++;
 		} else if (e.getIndex() == Enemy.HERO) {
 			die = new DieHero(e.getx(), e.gety());
-			LoadBackground.heroKills++;
+			LoadEndGame.heroKills++;
 		}
 
 		return die;
