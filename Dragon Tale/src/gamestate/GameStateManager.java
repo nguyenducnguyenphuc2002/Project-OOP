@@ -11,10 +11,8 @@ public class GameStateManager {
 	public static final int LEVEL1STATE = 1;
 	public static final int HELPSTATE = 2;
 	public static final int GAMEOVERSTATE = 3;
+	public static final int WINNERSTATE = 4;
 
-//	public SharedData getSharedData() {
-//		return sharedData;
-//	}
 	public GameStateManager() {
 		
 		gameStates = new ArrayList<GameState>();
@@ -24,6 +22,7 @@ public class GameStateManager {
 		gameStates.add(new Level1State(this));
 		gameStates.add(new HelpState(this)); // Add HelpState to gameStates
 		gameStates.add(new GameOverState(this));
+		gameStates.add(new WinnerState(this));
 
 	}
 	
