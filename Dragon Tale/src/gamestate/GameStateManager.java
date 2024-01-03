@@ -1,5 +1,7 @@
 package gamestate;
 
+import entities.player.Player;
+
 import java.util.ArrayList;
 
 public class GameStateManager {

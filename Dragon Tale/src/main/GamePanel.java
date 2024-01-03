@@ -8,8 +8,6 @@ import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 
 import gamestate.GameStateManager;
-
-@SuppressWarnings("serial")
 public class GamePanel extends JPanel 
 	implements Runnable, KeyListener{
 	

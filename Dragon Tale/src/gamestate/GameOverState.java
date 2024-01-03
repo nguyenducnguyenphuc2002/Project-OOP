@@ -68,7 +68,7 @@ public class GameOverState extends GameState {
         // draw number of coins collected
         g.setFont(font);
         g.setColor(Color.BLACK);
-        g.drawString("Coins Collected: " + LoadBackground.coinsCollected, 110, 90);
+        g.drawString("Your Scores: " + LoadBackground.coinsCollected, 110, 90);
 
         // draw number of monsters killed by type
         String sluggerText = "x: " + LoadBackground.sluggerKills;

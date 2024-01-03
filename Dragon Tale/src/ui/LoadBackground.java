@@ -16,7 +16,7 @@ public class LoadBackground {
     public static String GAMEOVER = "GameOverBG";
 
 
-    public static int coinsCollected = Level1State.endScore;
+    public static int coinsCollected = 0;
     public static int sluggerKills = 0;
     public static int arachnikKills = 0;
     public static int monkeyKills = 0;
