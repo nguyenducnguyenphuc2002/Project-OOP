@@ -22,6 +22,7 @@ public class GameOverState extends GameState {
     private Color titleColor;
     private Font titleFont;
     private Font font;
+    private Player player;
 
 
     public GameOverState(GameStateManager gsm) {
@@ -34,12 +35,8 @@ public class GameOverState extends GameState {
         titleFont = new Font("Century Gothic",
                 Font.PLAIN,
                 28);
-        font = new Font("Arial", Font.PLAIN, 10);
-
-
+        font = new Font("Arial", Font.PLAIN, 12);
         }
-
-
 
     @Override
     public void init() {
@@ -63,20 +60,20 @@ public class GameOverState extends GameState {
         g.setColor(titleColor);
         g.setFont(titleFont);
 
-        g.drawString("Game Over", 80, 70);
+        g.drawString("Game Over", 80, 55);
 
         // draw number of coins collected
         g.setFont(font);
         g.setColor(Color.BLACK);
-        g.drawString("Coins Collected: " + LoadBackground.coinsCollected, 110, 90);
+        g.drawString("Your Score: " + Level1State.endScore, 115, 78);
 
         // draw number of monsters killed by type
         String sluggerText = "x: " + LoadBackground.sluggerKills;
-        String arachnikText = "x: " + LoadBackground.arachnikKills;
+        String arachnikText = " x: " + LoadBackground.arachnikKills;
         String monkeyText = "x: " + LoadBackground.monkeyKills;
         String heroText = "x: " + LoadBackground.heroKills;
         String birdText = "x: " + LoadBackground.birdKills;
-        String bossText = "x: " + LoadBackground.bossKills;
+        String bossText = " x: " + LoadBackground.bossKills;
 
 
         int iconSize = 20;
