@@ -57,7 +57,7 @@ git status
 ```
 git checkout 'branch name'
 ```
-## METHODOLOGY <a name ="METHODOLOGY"></a>
+## METHODOLOGY <a name ="METHODOLOGY"></a>🔦
 ### HOW TO PLAY 💡
 
 The team made an effort to change the game's original regulations. The key points are summarized as follows:
