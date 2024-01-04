@@ -1,18 +1,14 @@
-<div id="top" align="center">
-![Image](![Uploading image.png…]()
-”)
-</div>
+![VTkAtJm](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/449e9f4a-2541-48a6-92fd-18dfe5e8c91d)
 
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-</div>
 
 <!-- PROJECT LOGO -->
 <div align="center">
-<h1 align="center">DRAGON TALE</h1>
+<h1 align="center">Dragon Tale</h1>
   <h3 align="center">
     A Java game developed for OOP Course at International University - VNU
     <br />
@@ -22,7 +18,14 @@
     <a href="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/issues">Request Feature</a>
   </h3>
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
+
+</div>
+
 <!-- TABLE OF CONTENTS -->
+
 # Table of contents :round_pushpin:
 1. [Introduction](#Introduction)
 2. [Methodology](#Methodology)
@@ -33,8 +36,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Introduction <a name="Introduction"></a> 
+This is our game project for our final lab in our Object-Oriented Programming course. It's a standalone game that doesn't demand exceptional skills or sophisticated technology. This simple yet engaging game is suitable for individuals of all age groups.Dragon Tale presents an exciting 2D adventure where players take charge of a dragon maneuvering through dangerous landscapes, engaging in battles with various foes, and collecting coins to accumulate points. The main goal is to defeat monsters and gather coins to increase the player's score. Through our efforts, we've designed a user-friendly program aimed at providing users with the most enjoyable experiences possible.
 
-### Team Members
+### Team Members 👩‍👩‍👧‍👦
 
 | No.| Full Name |Student's ID | Email | Roles | Contribution |
 |:--:| :-------------------: | :---------: | :------------------------------: | :-----------------------------: | :--------------------: |
@@ -42,3 +46,14 @@
 | 2 | Phan Bao Tran | ITDSIU21125 | ITDSIU211250@student.hcmiu.edu.vn | GameState, Entities, PowerPoint | 25% |
 | 3 | Nguyen Duc Nguyen Phuc | ITDSIU21108 | ITDSIU21108@student.hcmiu.edu.vn | GameState, Entities, UML | 25% |
 | 4 | Le Huynh Nha Nguyen | ITDSIU21058 | ITDSIU21058@student.hcmiu.edu.vn | Entities, Rules, Desgin, PowerPoint | 25% |
+
+### Installation 🛠️
+1. Open the termial on your IDE
+2. Clone the repository Git clone https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git
+3. Check the file status
+4. Change branch
+
+
+
+
+
