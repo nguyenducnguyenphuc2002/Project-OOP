@@ -109,7 +109,7 @@ The team made an effort to change the game's original regulations. The key point
 
 **__COINS AND POINTS__:** You get an extra coin and 100 points for eliminating an adversary. These are the same coins that are found on the streets.
 
-  ![helpstate (1)](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/fef4ea27-d970-4882-b754-3888962da693)
+<img width="718" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/35634e60-434b-44cc-8b08-059dca79bbc9">
 
 ### DESIGN🏷
 #### 1. THE UX/UI
