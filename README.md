@@ -46,9 +46,17 @@ This is our game project for our final lab in our Object-Oriented Programming co
 ### Installation 🛠️
 1. Open the termial on your IDE
 2. Clone the repository
+```
    [git clone] {https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git}
+```
 4. Check the file status
-5. Change branch
+```
+git status
+```
+6. Change branch
+```
+git checkout 'Branch name'
+```
 
 
 
