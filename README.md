@@ -21,6 +21,7 @@
   </h3>
 
 <!-- TABLE OF CONTENTS -->
+<div align="left">
 # Table of contents :round_pushpin:
 1. [Introduction](#Introduction)
 2. [Methodology](#Methodology)
