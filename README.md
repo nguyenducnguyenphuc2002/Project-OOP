@@ -18,10 +18,6 @@
     <a href="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/issues">Request Feature</a>
   </h3>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-
 </div>
 
 <!-- TABLE OF CONTENTS -->
