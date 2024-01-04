@@ -1,14 +1,8 @@
 ![VTkAtJm](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/449e9f4a-2541-48a6-92fd-18dfe5e8c91d)
 
-<p align="center"> 
-  <img src = "https://img.shields.io/github/contributors/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt = "Contributors">
-  <img src = "https://img.shields.io/github/forks/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt = "Forks">
-  <img src = "https://img.shields.io/github/issues/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt = "Issues">
-  <img src = "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt = "Java">
-</p>
 <p align="center">
-  <a href="(https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/graphs/contributors)">
-    <img src="(https://img.shields.io/github/contributors/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge)" alt="Contributors">
+  <a href="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt="Contributors">
   </a>
   <a href="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/forks">
     <img src="https://img.shields.io/github/forks/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt="Forks">
@@ -17,7 +11,7 @@
     <img src="https://img.shields.io/github/issues/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt="Issues">
   </a>
   <a href="https://github.com/search?q=Object+Oriented+Programming+language%3AJava&type=repositories&l=Java&p=1">
-    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java -- Object Oriented Programing">
   </a>
 </p>
 
