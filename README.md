@@ -96,11 +96,11 @@ The following screenshots show some examples of the game states in the current b
 
 - [X]	Game start
 
-<img width="480" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/1b20d01e-dac7-495a-9ca8-d17d63a00030">
+<img width="716" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/642a0046-310c-4dee-9eb1-336cd5091422">
 
 - [X]	Game playing
 
-<img width="254" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/89b92d62-e0a5-4a8b-8913-6d5e3c8c0045">
+![Thiết kế chưa có tên (1)](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/4284bc37-cda5-4287-8982-e9fe84a60394)
 
 - [X]	Game Over Screen
 <img width="719" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/61dec428-6cdb-4ddb-93cc-521e2463b6c7">
