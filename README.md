@@ -209,7 +209,7 @@ The classes we teach can be arranged into distinct groups, like:
 
 
 <!-- RESULT -->
-# DEMO - RESULT <a name ="DEMO - RESULT"></a>
+## DEMO - RESULT <a name ="DEMO - RESULT"></a>
 The following screenshots show some examples of the game states in the current build:
 
 - [X]	The menu when running game
