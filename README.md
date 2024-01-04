@@ -25,7 +25,7 @@
 <!-- TABLE OF CONTENTS -->
 
 # Table of contents :round_pushpin:
-1. [Introduction](#Introduction)
+1. [Introduction](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/tree/main?tab=readme-ov-file#introduction-)
 2. [Methodology](#Methodology)
 3. [Demo-Result](#Demo-Result)
 4. [Acknowledgments](#Acknowledgments)
