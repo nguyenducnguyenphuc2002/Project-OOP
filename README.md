@@ -29,12 +29,12 @@
 2. [Methodology](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/tree/main?tab=readme-ov-file#methodology-)
 3. [Demo-Result](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/tree/main?tab=readme-ov-file#demo---result-)
 4. [Acknowledgments](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/tree/main?tab=readme-ov-file#acknowledgements-)
-5. [References](https://github.com/topics/education-website)
+5. [References](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/tree/main?tab=readme-ov-file#references-)
 
 
 <!-- ABOUT THE PROJECT -->
 ## Introduction <a name="Introduction"></a> 
-This is our game project for our final lab in our Object-Oriented Programming course. It's a standalone game that doesn't demand exceptional skills or sophisticated technology. This simple yet engaging game is suitable for individuals of all age groups. Dragon Tale presents an exciting 2D adventure where players take charge of a dragon maneuvering through dangerous landscapes, engaging in battles with various foes, and collecting coins to accumulate points. The main goal is to defeat monsters and gather coins to increase the player's score. Through our efforts, we've designed a user-friendly program aimed at providing users with the most enjoyable experiences possible.
+This is our game project for our final lab in our Object-Oriented Programming course. It's a standalone game that doesn't demand exceptional skills or sophisticated technology. This simple yet engaging game is suitable for individuals of all age groups. Dragon Tale presents an exciting 2D adventure where players take charge of a dragon manoeuvring through dangerous landscapes, engaging in battles with various foes, and collecting coins to accumulate points. The main goal is to defeat monsters and gather coins to increase the player's score. Through our efforts, we've designed a user-friendly program aimed at providing users with the most enjoyable experiences possible.
 
 ### Team Members 👩‍👩‍👧‍👦
 
