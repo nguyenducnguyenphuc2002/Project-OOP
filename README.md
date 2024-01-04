@@ -100,7 +100,7 @@ The team made an effort to change the game's original regulations. The key point
 
   ![helpstate (1)](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/fef4ea27-d970-4882-b754-3888962da693)
 
-### DESIGN
+### DESIGN🏷
 #### 1. THE UX/UI
 Since UI/UX has always been our main focus before we launched the game, we have received a lot of input from other people to establish a pattern. 
 
