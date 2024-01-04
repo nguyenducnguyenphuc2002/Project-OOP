@@ -1,6 +1,5 @@
 <div id="top" align="right">
-![Image](![Uploading image.png…]()
-”)
+![VTkAtJm](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/449e9f4a-2541-48a6-92fd-18dfe5e8c91d)
 </div>
 
 
@@ -8,7 +7,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-</div>
 
 <!-- PROJECT LOGO -->
 <div align="center">
