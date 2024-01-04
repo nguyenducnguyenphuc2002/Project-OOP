@@ -47,7 +47,7 @@ This is our game project for our final lab in our Object-Oriented Programming co
 1. Open the termial on your IDE
 2. Clone the repository
 ```
-   [git clone] {https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git}
+[git clone] {https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git}
 ```
 4. Check the file status
 ```
@@ -55,7 +55,7 @@ git status
 ```
 6. Change branch
 ```
-git checkout 'Branch name'
+git checkout 'branch name'
 ```
 
 
