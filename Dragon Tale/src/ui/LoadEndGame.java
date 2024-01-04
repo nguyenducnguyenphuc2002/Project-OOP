@@ -23,10 +23,10 @@ public class LoadEndGame {
     }
 
     public static void LoadInfo(Graphics2D g){
-        font = new Font("Arial", Font.PLAIN, 10);
+        font = new Font("Arial", Font.PLAIN, 12);
         g.setFont(font);
         g.setColor(Color.BLACK);
-        g.drawString("Your Scores: " + LoadEndGame.coinsCollected, 110, 90);
+        g.drawString("Your Scores: " + LoadEndGame.coinsCollected, 115, 78);
 
         // draw number of monsters killed by type
         String sluggerText = "x: " + LoadEndGame.sluggerKills;

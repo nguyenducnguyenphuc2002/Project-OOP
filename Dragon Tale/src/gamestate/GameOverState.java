@@ -61,7 +61,7 @@ public class GameOverState extends GameState {
         g.setColor(titleColor);
         g.setFont(titleFont);
 
-        g.drawString("Game Over", 80, 70);
+        g.drawString("Game Over", 80, 55);
 
         LoadEndGame.LoadInfo(g);
     }

@@ -5,7 +5,6 @@ import ui.LoadEntities;
 import javax.swing.JFrame;
 
 public class Game{
-	
 	public static void main(String[] args) {
 
 		JFrame window = new JFrame("Dragon Tale"); // tên cửa sổ
@@ -15,12 +14,8 @@ public class Game{
 		window.setResizable(false);  // false có thể thay đổi kích thước 
 		window.pack(); 
 		window.setVisible(true); // hiển thị ra
-		
-		
+
 	}
-	
-	
-	
-		
+
 }
 

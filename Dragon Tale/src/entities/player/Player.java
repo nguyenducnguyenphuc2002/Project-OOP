@@ -177,7 +177,7 @@ public class Player extends MapObject {
 						e.getIndex() == Enemy.HATMONKEY ||
 						e.getIndex() == Enemy.ARACHNIK ||
 						e.getIndex() == Enemy.SLUGGER) {
-					coinAmount++;
+
 					score += 200;
 
 				} else if (e.getIndex() == Enemy.BOSS) {
