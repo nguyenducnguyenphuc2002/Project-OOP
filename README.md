@@ -1,21 +1,12 @@
 ![VTkAtJm](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/449e9f4a-2541-48a6-92fd-18dfe5e8c91d)
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Issues][issues-shield]][issues-url]
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+<p align="center"> 
+  <img src = "https://img.shields.io/github/contributors/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt = "Contributors">
+  <img src = "https://img.shields.io/github/forks/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt = "Forks">
+  <img src = "https://img.shields.io/github/issues/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt = "Issues">
+  <img src = "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt = "Java">
+</p>
 
-[contributors-shield]: https://img.shields.io/github/contributors/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge
-
-[contributors-url]: https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/graphs/contributors
-
-[forks-shield]: https://img.shields.io/github/forks/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge
-
-[forks-url]: https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/network/members
-
-[issues-shield]: https://img.shields.io/github/issues/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge
-
-[issues-url]: https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/issues
 
 <!-- PROJECT LOGO -->
 <div align="center">
