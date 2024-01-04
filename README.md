@@ -29,7 +29,7 @@
 2. [Methodology](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/tree/main?tab=readme-ov-file#methodology-)
 3. [Demo-Result](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/tree/main?tab=readme-ov-file#demo---result-)
 4. [Acknowledgments](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/tree/main?tab=readme-ov-file#acknowledgements-)
-5. [References](#References)
+5. [References](https://github.com/topics/education-website)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -240,12 +240,12 @@ We would like to convey our deepest appreciation to our instructor and the indiv
 - []()	The README.md template from **[othneildrew](https://github.com/othneildrew/Best-README-Template)**
 
 ## REFERENCES <a name ="REFERENCES"></a>
-[Khan Academy](https://blog.khanacademy.org/introducingthe-learning-dashboard/)
-[Cousera](https://www.coursera.org/courses?query=object-oriented%20programming%20(oop))
-[Codecademy](https://www.codecademy.com/resources/docs/java)
-[Object-oriented Programming in JavaTM Textbook](https://computing.southern.edu/halterman/OOPJ/)
-[MIT OpenCourseware](https://web.mit.edu/search/?q=Object+Oriented+Programing#gsc.tab=0&gsc.q=Object%20Oriented%20Programing&gsc.page=1)
-[Udacity](https://www.classcentral.com/course/object-oriented-java-4212)
-[Udemy](https://www.udemy.com/courses/search/?courseLabel=6336&q=object+oriented+programming&sort=relevance&src=sac)
-[Stack Overflow](https://stackoverflow.com/)
-[Github For Education](https://github.com/topics/education-website)
+- [x] [Khan Academy](https://blog.khanacademy.org/introducingthe-learning-dashboard/)
+- [x] [Cousera](https://www.coursera.org/courses?query=object-oriented%20programming%20(oop))
+- [x] [Codecademy](https://www.codecademy.com/resources/docs/java)
+- [x] [Object-oriented Programming in JavaTM Textbook](https://computing.southern.edu/halterman/OOPJ/)
+- [x] [MIT OpenCourseware](https://web.mit.edu/search/?q=Object+Oriented+Programing#gsc.tab=0&gsc.q=Object%20Oriented%20Programing&gsc.page=1)
+- [x] [Udacity](https://www.classcentral.com/course/object-oriented-java-4212)
+- [x] [Udemy](https://www.udemy.com/courses/search/?courseLabel=6336&q=object+oriented+programming&sort=relevance&src=sac)
+- [x] [Stack Overflow](https://stackoverflow.com/)
+- [x] [Github For Education](https://github.com/topics/education-website)
