@@ -6,6 +6,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+</div>
 
 <!-- PROJECT LOGO -->
 <div align="center">
@@ -26,6 +27,7 @@
 3. [Demo-Result](#Demo-Result)
 4. [Acknowledgments](#Acknowledgments)
 5. [References](#References)
+
 
 <!-- ABOUT THE PROJECT -->
 ## Introduction <a name="Introduction"></a> 
