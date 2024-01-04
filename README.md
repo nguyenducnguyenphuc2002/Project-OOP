@@ -64,7 +64,7 @@ The team made an effort to change the game's original regulations. The key point
 
 **__GAME AIMS__:** to slay every monster and collect coins along the way to obtain the greatest number of points and coins possible.
 
-**__BEGINNING PLAYER __:** begins with 10 health, 25 fireballs that reload after firing, and no cash or points.
+**__BEGINNING PLAYER__:** begins with 10 health, 25 fireballs that reload after firing, and no cash or points.
 
 **__THE PLAYER__:** battles against a variety of adversaries, such as money, birds, sluggers, danger zones, mushrooms, and a monster (spider), the user controls the Dragon Tale.
 
