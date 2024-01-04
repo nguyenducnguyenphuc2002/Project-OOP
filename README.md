@@ -25,7 +25,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/">
+  <a href="https://github.com/search?q=Game2D+OOP&type=repositories">
     <img src="https://img.shields.io/badge/Object Oriented Programming-Game 2D-blue.svg" alt="Game 2D Object Oriented Programming">
   </a>
 </p>
