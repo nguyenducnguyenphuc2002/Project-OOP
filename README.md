@@ -1,6 +1,4 @@
-<div style="float: right;">
-    <img src="https://imgur.com/gallery/87ThFnA" alt="87ThFnA">
-</div>
+![VTkAtJm](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/449e9f4a-2541-48a6-92fd-18dfe5e8c91d)
 
 
 [![Contributors][contributors-shield]][contributors-url]
