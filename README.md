@@ -46,3 +46,14 @@ This is our game project for our final lab in our Object-Oriented Programming co
 | 2 | Phan Bao Tran | ITDSIU21125 | ITDSIU211250@student.hcmiu.edu.vn | GameState, Entities, PowerPoint | 25% |
 | 3 | Nguyen Duc Nguyen Phuc | ITDSIU21108 | ITDSIU21108@student.hcmiu.edu.vn | GameState, Entities, UML | 25% |
 | 4 | Le Huynh Nha Nguyen | ITDSIU21058 | ITDSIU21058@student.hcmiu.edu.vn | Entities, Rules, Desgin, PowerPoint | 25% |
+
+### Installation 🛠️
+1. Open the termial on your IDE
+2. Clone the repository Git clone https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git
+3. Check the file status
+4. Change branch
+
+
+
+
+
