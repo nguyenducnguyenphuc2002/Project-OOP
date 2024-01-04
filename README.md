@@ -239,4 +239,13 @@ We would like to convey our deepest appreciation to our instructor and the indiv
 - []()	The sites [Geeksforgeeks](https://www.geeksforgeeks.org/java/?ref=shm_outind), [Javapoints](https://www.javatpoint.com/uml-diagrams), and so on
 - []()	The README.md template from **[othneildrew](https://github.com/othneildrew/Best-README-Template)**
 
-
+## REFERENCES <a name ="REFERENCES"></a>
+[Khan Academy](https://blog.khanacademy.org/introducingthe-learning-dashboard/)
+[Cousera](https://www.coursera.org/courses?query=object-oriented%20programming%20(oop))
+[Codecademy](https://www.codecademy.com/resources/docs/java)
+[Object-oriented Programming in JavaTM Textbook](https://computing.southern.edu/halterman/OOPJ/)
+[MIT OpenCourseware](https://web.mit.edu/search/?q=Object+Oriented+Programing#gsc.tab=0&gsc.q=Object%20Oriented%20Programing&gsc.page=1)
+[Udacity](https://www.classcentral.com/course/object-oriented-java-4212)
+[Udemy](https://www.udemy.com/courses/search/?courseLabel=6336&q=object+oriented+programming&sort=relevance&src=sac)
+[Stack Overflow](https://stackoverflow.com/)
+[Github For Education](https://github.com/topics/education-website)
