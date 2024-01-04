@@ -1,5 +1,5 @@
 <div id="top" align="center">
-<img src="Resources/cover.png" alt="Banner">
+<img src="https://imgur.com/NIa9tCx" alt="Banner">
 </div>
 
 [![Contributors][contributors-shield]][contributors-url]
