@@ -57,7 +57,7 @@ git status
 ```
 git checkout 'branch name'
 ```
-
+## METHODOLOGY <a name ="METHODOLOGY"></a>
 ### HOW TO PLAY 
 
 
