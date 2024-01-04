@@ -209,7 +209,7 @@ The classes we teach can be arranged into distinct groups, like:
 
 
 <!-- RESULT -->
-## DEMO - RESULT <a name ="DEMO - RESULT"></a>
+# DEMO - RESULT <a name ="DEMO - RESULT"></a>
 The following screenshots show some examples of the game states in the current build:
 
 - [X]	The menu when running game
@@ -231,8 +231,7 @@ The following screenshots show some examples of the game states in the current b
 - [X]	Game Over Screen
 <img width="719" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/61dec428-6cdb-4ddb-93cc-521e2463b6c7">
 
-# ACKNOWLEDGEMENTS
-## ACKNOWLEDGEMENTS <a name ="ACKNOWLEDGEMENTST"></a>
+## ACKNOWLEDGEMENTS <a name ="ACKNOWLEDGEMENTS"></a>
 We would like to convey our deepest appreciation to our instructor and the individuals who assisted us in reaching the goals of this project:
 - []()	Dr. Tran Thanh Tung
 - []()	MSc. Nguyen Quang Phu
