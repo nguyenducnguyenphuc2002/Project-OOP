@@ -11,7 +11,16 @@
     <img src="https://img.shields.io/github/issues/nguyenducnguyenphuc2002/OOP-DragonTale-Game?style=for-the-badge" alt="Issues">
   </a>
   <a href="https://github.com/search?q=Object+Oriented+Programming+language%3AJava&type=repositories&l=Java&p=1">
-    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java -- Object Oriented Programing">
+    <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+  </a>
+  <a href="https://www.jetbrains.com/idea/">
+    <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" alt="IntelliJ_IDEA">
+  </a>
+  <a href="https://github.com/">
+    <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="GIT">
+  </a>
+  <a href="https://github.com/">
+    <img src="https://img.shields.io/badge/Object Oriented Programming-Game 2D-blue.svg" alt="Game 2D Object Oriented Programming">
   </a>
 </p>
 
