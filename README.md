@@ -62,3 +62,7 @@ git checkout 'branch name'
 
 
 
+### UML CLASS DIAGRAM 
+1. GAMESTATE
+2. ENEMY
+   ![Enemy](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/a566b420-c38f-4d4a-8b37-0ffa6d98263c)
