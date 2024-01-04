@@ -1,5 +1,5 @@
-<div id="top" align="right">
-![VTkAtJm](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/449e9f4a-2541-48a6-92fd-18dfe5e8c91d)
+<div style="float: right;">
+    <img src="https://raw.githubusercontent.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/449e9f4a-2541-48a6-92fd-18dfe5e8c91d" alt="VTkAtJm">
 </div>
 
 
