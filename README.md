@@ -1,6 +1,7 @@
 <div id="top" align="center">
-<img src="https://imgur.com/NIa9tCx" alt="Banner">
+<img src=”https://imgur.com/NIa9tCx” alt=”alt text”>
 </div>
+
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
