@@ -79,3 +79,28 @@ git checkout 'branch name'
 #### 6. Objects
     
    ![Objects](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/aa7bf01a-18a6-4381-88fe-cda79814b811)
+
+
+<!-- RESULT -->
+
+# DEMO - RESULT
+The following screenshots show some examples of the game states in the current build:
+
+- [X]	The menu when running game
+
+<img width="718" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/f68cc8e5-e61d-4633-b73b-48de7ad564e5">
+
+- [X]	Help screen
+
+<img width="718" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/35634e60-434b-44cc-8b08-059dca79bbc9">
+
+- [X]	Game start
+
+<img width="480" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/1b20d01e-dac7-495a-9ca8-d17d63a00030">
+
+- [X]	Game playing
+
+<img width="254" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/89b92d62-e0a5-4a8b-8913-6d5e3c8c0045">
+
+- [X]	Game Over Screen
+<img width="719" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/61dec428-6cdb-4ddb-93cc-521e2463b6c7">
