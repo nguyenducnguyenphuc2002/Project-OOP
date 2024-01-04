@@ -1,5 +1,5 @@
 <div id="top" align="center">
-<img src=”https://imgur.com/NIa9tCx” alt=”alt text”>
+<img src=”https://imgur.com/NIa9tCx” alt=”banner”>
 </div>
 
 
