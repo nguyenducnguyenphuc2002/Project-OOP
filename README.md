@@ -58,6 +58,7 @@ git status
 git checkout 'branch name'
 ```
 
+### HOW TO PLAY 
 
 
 
@@ -69,3 +70,7 @@ git checkout 'branch name'
    ![Enemy](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/a566b420-c38f-4d4a-8b37-0ffa6d98263c)
 3. DIENEMY
    ![DieEnemy](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/73cb58b4-4252-4508-a64c-66bcabf197bf)
+4. PLAYER
+   ![Player](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/43fae2ac-53ca-4819-81c4-1165da408cb3)
+5. Objects
+   ![Objects](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/aa7bf01a-18a6-4381-88fe-cda79814b811)
