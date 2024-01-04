@@ -240,3 +240,12 @@ The following screenshots show some examples of the game states in the current b
 
 - [X]	Game Over Screen
 <img width="719" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/61dec428-6cdb-4ddb-93cc-521e2463b6c7">
+
+# ACKNOWLEDGEMENTS
+
+We would like to convey our deepest appreciation to our instructor and individuals who assisted us in reaching the goals of this project:
+- []()	Dr. Tran Thanh Tung
+- []()	MSc. Nguyen Quang Phu
+- []()	Original code from **[foreignguymike](https://github.com/foreignguymike/legacyYTtutorials/tree/master/dragontale)**
+- []()	The sites [Geeksforgeeks](https://www.geeksforgeeks.org/java/?ref=shm_outind), [Javapoints](https://www.javatpoint.com/uml-diagrams), and so on
+- []()	The README.md template from **[othneildrew](https://github.com/othneildrew/Best-README-Template)**
