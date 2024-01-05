@@ -60,7 +60,7 @@ This is our game project for our final lab in our Object-Oriented Programming co
 
 ### Team Members 👩‍👩‍👧‍👦
 
-| No.| Full Name |Student's ID | Email | Roles | Contribution |
+| No.| Full Name |Student's ID | Email📧 | Roles📦 | Contribution🖊 |
 |:--:| :-------------------: | :---------: | :------------------------------: | :-----------------------------: | :--------------------: |
 | 1 | Pham Trung Tin| ITDSIU19019 | ITDSIU19019@student.hcmiu.edu.vn | GameState | 25% |
 | 2 | Phan Bao Tran | ITDSIU21125 | ITDSIU211250@student.hcmiu.edu.vn | GameState, Entities, PowerPoint | 25% |
@@ -231,7 +231,7 @@ The classes we teach can be arranged into distinct groups, like:
 
 
 <!-- RESULT -->
-## DEMO - RESULT <a name ="DEMO - RESULT"></a>
+## DEMO - RESULT <a name ="DEMO - RESULT"></a> 📝
 The following screenshots show some examples of the game states in the current build:
 
 - [X]	The menu when running game
@@ -253,7 +253,7 @@ The following screenshots show some examples of the game states in the current b
 - [X]	Game Over Screen
 <img width="719" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/61dec428-6cdb-4ddb-93cc-521e2463b6c7">
 
-## ACKNOWLEDGEMENTS <a name ="ACKNOWLEDGEMENTS"></a>
+## ACKNOWLEDGEMENTS <a name ="ACKNOWLEDGEMENTS"></a>✔
 We would like to convey our deepest appreciation to our instructor and the individuals who assisted us in reaching the goals of this project:
 - []()	Dr. Tran Thanh Tung
 - []()	MSc. Nguyen Quang Phu
@@ -261,7 +261,7 @@ We would like to convey our deepest appreciation to our instructor and the indiv
 - []()	The sites [Geeksforgeeks](https://www.geeksforgeeks.org/java/?ref=shm_outind), [Javapoints](https://www.javatpoint.com/uml-diagrams), and so on
 - []()	The README.md template from **[othneildrew](https://github.com/othneildrew/Best-README-Template)**
 
-## REFERENCES <a name ="REFERENCES"></a>
+## REFERENCES <a name ="REFERENCES"></a>📎
 - [x] [Khan Academy](https://blog.khanacademy.org/introducingthe-learning-dashboard/)
 - [x] [Cousera](https://www.coursera.org/courses?query=object-oriented%20programming%20(oop))
 - [x] [Codecademy](https://www.codecademy.com/resources/docs/java)
