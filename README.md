@@ -60,10 +60,10 @@ This is our game project for our final lab in our Object-Oriented Programming co
 
 ### Team Members 👩‍👩‍👧‍👦
 
-| No.| Full Name |Student's ID | Email📧 | Roles📦 | Contribution🖊 |
+| No.| Full Name |Student's ID | Email | Roles | Contribution |
 |:--:| :-------------------: | :---------: | :------------------------------: | :-----------------------------: | :--------------------: |
 | 1 | Pham Trung Tin| ITDSIU19019 | ITDSIU19019@student.hcmiu.edu.vn | GameState | 25% |
-| 2 | Phan Bao Tran | ITDSIU21125 | ITDSIU211250@student.hcmiu.edu.vn | GameState, Entities, PowerPoint | 25% |
+| 2 | Phan Bao Tran | ITDSIU21125 | ITDSIU21125@student.hcmiu.edu.vn | GameState, Entities, PowerPoint | 25% |
 | 3 | Nguyen Duc Nguyen Phuc | ITDSIU21108 | ITDSIU21108@student.hcmiu.edu.vn | GameState, Entities, UML | 25% |
 | 4 | Le Huynh Nha Nguyen | ITDSIU21058 | ITDSIU21058@student.hcmiu.edu.vn | Entities, Rules, Desgin, PowerPoint | 25% |
 
@@ -250,7 +250,7 @@ The following screenshots show some examples of the game states in the current b
 
 ![Thiết kế chưa có tên (1)](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/4284bc37-cda5-4287-8982-e9fe84a60394)
 
-- [X]	Game Over Screen
+- [X]	Game Over screen
 <img width="719" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/61dec428-6cdb-4ddb-93cc-521e2463b6c7">
 
 ## ACKNOWLEDGEMENTS <a name ="ACKNOWLEDGEMENTS"></a>🧠
