@@ -212,7 +212,7 @@ The classes we teach can be arranged into distinct groups, such as:
    
    ![Player](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/43fae2ac-53ca-4819-81c4-1165da408cb3)
    
-- [x] **Objects DIAGRAM**
+- [x] **OBJECTS DIAGRAM**
     
    ![Objects](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/aa7bf01a-18a6-4381-88fe-cda79814b811)
    
