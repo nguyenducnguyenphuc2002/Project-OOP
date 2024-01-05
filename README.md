@@ -271,3 +271,7 @@ We would like to convey our deepest appreciation to our instructor and the indiv
 - [x] [Udemy](https://www.udemy.com/courses/search/?courseLabel=6336&q=object+oriented+programming&sort=relevance&src=sac)
 - [x] [Stack Overflow](https://stackoverflow.com/)
 - [x] [Github For Education](https://github.com/topics/education-website)
+- [x] [Platformer Tutorial](https://youtube.com/playlist?list=PLX0xZJGWHYp2wPT9QLu7uAnDDZeUP9p77&si=dJYgleqP6t5zmvSn)
+- [x] [Foreign GuyM ike](https://www.youtube.com/@ForeignGuyMike)
+- [x] [Java Tutorial](https://youtu.be/xk4_1vDrzzo?si=ykUbCJ9nQ3vvYDaU)
+- [x] [Java Object Oriented Programming Series](https://youtube.com/playlist?list=PL_c9BZzLwBRLW7Kw8bqc_PJqAnjCJI63P&si=Y3fTp-ysrg_7r5gu)
