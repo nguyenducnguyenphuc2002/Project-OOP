@@ -73,16 +73,16 @@ This is our game project for our final lab in our Object-Oriented Programming co
 ```
 [git clone] {https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git}
 ```
-4. Check the file status
+3. Check the file status
 ```
 git status
 ```
-6. Change branch
+4. Change branch
 ```
 git checkout 'branch name'
 ```
 ## METHODOLOGY <a name ="METHODOLOGY"></a>🔦
-### HOW TO PLAY 💡
+### HOW TO PLAY 🎮
 
 The team made an effort to change the game's original regulations. The key points are summarized as follows:
 
@@ -125,7 +125,7 @@ The team made an effort to change the game's original regulations. The key point
 <img width="900" src = "https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/76b86601-80a3-4dbc-939c-361cc1c9da34">
 
 ### DESIGN🏷
-#### 1. THE UX/UI
+#### 1. THE UX/UI🚩
 Since UI/UX has always been our main focus before we launched the game, we have received a lot of input from other people to establish a pattern. 
 
 A 2D adventure and action game is called Dragon Tale. The game narrates the tale of Dragon Tale, a green dragon who is courageous and strong yet also good-natured and giving.
@@ -166,7 +166,7 @@ The following crucial components have been identified to build the UI/UX for the
       * Watch the amount of fireballs below your amount of health as it decreases when you use F.
       * Fight the boss with I without losing health.
       * Keep the boss chasing you to prevent them from healing
-#### 2. GAME ALGORITHM
+#### 2. GAME ALGORITHM💡
 After much iteration and troubleshooting, we now have the project structure as seen in the image below. 
 
 ![Annotation 2024-01-04 221710](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/e56ba842-adfe-46e8-9cb3-c9893e9e6312)
@@ -253,7 +253,7 @@ The following screenshots show some examples of the game states in the current b
 - [X]	Game Over Screen
 <img width="719" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/61dec428-6cdb-4ddb-93cc-521e2463b6c7">
 
-## ACKNOWLEDGEMENTS <a name ="ACKNOWLEDGEMENTS"></a>✔
+## ACKNOWLEDGEMENTS <a name ="ACKNOWLEDGEMENTS"></a>🧠
 We would like to convey our deepest appreciation to our instructor and the individuals who assisted us in reaching the goals of this project:
 - []()	Dr. Tran Thanh Tung
 - []()	MSc. Nguyen Quang Phu
