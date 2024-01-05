@@ -196,35 +196,35 @@ The classes we teach can be arranged into distinct groups, like:
 **__Game and GamePanel__:** is intitaied even controlling the programing. 
 
 ### UML CLASS DIAGRAM📒
-#### 1. GAMESTATE DIAGRAM
+- [x] GAMESTATE DIAGRAM
    
    ![GameState](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/6f9faaba-cb97-42d6-9737-5bc5bfe799c7)
    
-#### 2. ENEMY DIAGRAM
+- [x] ENEMY DIAGRAM
    
    ![Enemy](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/a566b420-c38f-4d4a-8b37-0ffa6d98263c)
    
-#### 4. DIENEMY DIAGRAM
+- [x] DIENEMY DIAGRAM
    
    ![DieEnemy](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/73cb58b4-4252-4508-a64c-66bcabf197bf)
    
-#### 5. PLAYER DIAGRAM
+- [x] PLAYER DIAGRAM
    
    ![Player](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/43fae2ac-53ca-4819-81c4-1165da408cb3)
    
-#### 6. Objects DIAGRAM
+- [x] Objects DIAGRAM
     
    ![Objects](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/aa7bf01a-18a6-4381-88fe-cda79814b811)
    
-#### 7. LEVEL1
+- [x] LEVEL1
 
    ![Level1](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/fd75de38-b730-4664-9d46-270c3f387fc3)
 
-#### 8. UI DIAGRAM
+- [x] UI DIAGRAM
 
    ![UI](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/9f49c2d2-dcb5-44d7-bd31-3c4041ea460b)
    
-#### 9. MAIN DIAGRAM
+- [x] MAIN DIAGRAM
 
    ![main](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/8d6a4a71-0aad-4918-8092-836d0a2bd7bb)
 
