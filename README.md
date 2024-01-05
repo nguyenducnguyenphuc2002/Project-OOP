@@ -55,7 +55,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Introduction <a name="Introduction"></a> 🧱
+## INTRODUCTION <a name="Introduction"></a> 🧱
 This is our game project for our final lab in our Object-Oriented Programming course. It's a standalone game that doesn't demand exceptional skills or sophisticated technology. This simple yet engaging game is suitable for individuals of all age groups. Dragon Tale presents an exciting 2D adventure where players take charge of a dragon manoeuvring through dangerous landscapes, engaging in battles with various foes, and collecting coins to accumulate points. The main goal is to defeat monsters and gather coins to increase the player's score. Through our efforts, we've designed a user-friendly program aimed at providing users with the most enjoyable experiences possible.
 
 ### Team Members 👩‍👩‍👧‍👦
@@ -82,7 +82,7 @@ git status
 git checkout 'branch name'
 ```
 ## METHODOLOGY <a name ="METHODOLOGY"></a>🔦
-### HOW TO PLAY 🎮
+### How To Play 🎮
 
 The team made an effort to change the game's original regulations. The key points are summarized as follows:
 
@@ -124,8 +124,8 @@ The team made an effort to change the game's original regulations. The key point
 
 <img width="900" src = "https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/76b86601-80a3-4dbc-939c-361cc1c9da34">
 
-### DESIGN🏷
-#### THE UX/UI🚩
+### Design🏷
+#### The UX/UI🚩
 Since UI/UX has always been our main focus before we launched the game, we have received a lot of input from other people to establish a pattern. 
 
 A 2D adventure and action game is called Dragon Tale. The game narrates the tale of Dragon Tale, a green dragon who is courageous and strong yet also good-natured and giving.
@@ -166,7 +166,7 @@ The following crucial components have been identified to build the UI/UX for the
       * Watch the amount of fireballs below your amount of health as it decreases when you use F.
       * Fight the boss must avoid touching it and dodge its venom.
       * Should be based on the rugged terrain to kill the boss.
-#### GAME ALGORITHM💡
+#### Game Algorithm💡
 After much iteration and troubleshooting, we now have the project structure as seen in the image below. 
 
 ![Annotation 2024-01-04 221710](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/e56ba842-adfe-46e8-9cb3-c9893e9e6312)
@@ -195,36 +195,36 @@ The classes we teach can be arranged into distinct groups, such as:
 
 **__Game and GamePanel__:** is intitaied even controlling the programing. 
 
-### UML CLASS DIAGRAM📒
-- [x] GAMESTATE DIAGRAM
+### UML Class Diagram📒
+- [x] **GAMESTATE DIAGRAM**
    
    ![GameState](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/6f9faaba-cb97-42d6-9737-5bc5bfe799c7)
    
-- [x] ENEMY DIAGRAM
+- [x] **ENEMY DIAGRAM**
    
    ![Enemy](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/a566b420-c38f-4d4a-8b37-0ffa6d98263c)
    
-- [x] DIENEMY DIAGRAM
+- [x] **DIENEMY DIAGRAM**
    
    ![DieEnemy](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/73cb58b4-4252-4508-a64c-66bcabf197bf)
    
-- [x] PLAYER DIAGRAM
+- [x] **PLAYER DIAGRAM**
    
    ![Player](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/43fae2ac-53ca-4819-81c4-1165da408cb3)
    
-- [x] Objects DIAGRAM
+- [x] **Objects DIAGRAM**
     
    ![Objects](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/aa7bf01a-18a6-4381-88fe-cda79814b811)
    
-- [x] LEVEL1
+- [x] **LEVEL1**
 
    ![Level1](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/fd75de38-b730-4664-9d46-270c3f387fc3)
 
-- [x] UI DIAGRAM
+- [x] **UI DIAGRAM**
 
    ![UI](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/9f49c2d2-dcb5-44d7-bd31-3c4041ea460b)
    
-- [x] MAIN DIAGRAM
+- [x] **MAIN DIAGRAM**
 
    ![main](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/8d6a4a71-0aad-4918-8092-836d0a2bd7bb)
 
