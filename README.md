@@ -71,7 +71,7 @@ This is our game project for our final lab in our Object-Oriented Programming co
 | 4 | Le Huynh Nha Nguyen | ITDSIU21058 | ITDSIU21058@student.hcmiu.edu.vn | Entities, Rules, Design, PowerPoint | 25% |
 
 ### Installation 🛠️
-> $\color{red}{\textrm{🆘NEED USE JDK21 TO RUN PROJECT 🆘}}$  
+> $\color{red}{\textrm{🆘NEED USE JDK21 TO RUN PROJECT 🆘}}$ 
 1. Open the terminal on your IDE
 2. Clone the repository
 ```
