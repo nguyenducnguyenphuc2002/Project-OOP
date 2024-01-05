@@ -65,7 +65,7 @@ This is our game project for our final lab in our Object-Oriented Programming co
 | 1 | Pham Trung Tin| ITDSIU19019 | ITDSIU19019@student.hcmiu.edu.vn | GameState | 25% |
 | 2 | Phan Bao Tran | ITDSIU21125 | ITDSIU21125@student.hcmiu.edu.vn | GameState, Entities, Design Pattern, PowerPoint | 25% |
 | 3 | Nguyen Duc Nguyen Phuc | ITDSIU21108 | ITDSIU21108@student.hcmiu.edu.vn | GameState, Entities, UML, Design Pattern | 25% |
-| 4 | Le Huynh Nha Nguyen | ITDSIU21058 | ITDSIU21058@student.hcmiu.edu.vn | Entities, Rules, Design, PowerPoint | 25% |
+| 4 | Le Huynh Nha Nguyen | ITDSIU21058 | ITDSIU21058@student.hcmiu.edu.vn | Entities, Rules, Design Backgrounds, PowerPoint | 25% |
 
 ### Installation 🛠️
 1. Open the terminal on your IDE
