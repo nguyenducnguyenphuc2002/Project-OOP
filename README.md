@@ -28,6 +28,9 @@
   <a href="https://github.com/search?q=Game2D+OOP&type=repositories">
     <img src="https://img.shields.io/badge/Object Oriented Programming-Game 2D-blue.svg" alt="Game 2D Object Oriented Programming">
   </a>
+  <a href="https://openjdk.org/projects/jdk/21/">
+    <img src="https://img.shields.io/badge/JDK21-8A2BE2" alt="JDK21">
+  </a>
 </p>
 
 <!-- PROJECT LOGO -->
@@ -68,6 +71,7 @@ This is our game project for our final lab in our Object-Oriented Programming co
 | 4 | Le Huynh Nha Nguyen | ITDSIU21058 | ITDSIU21058@student.hcmiu.edu.vn | Entities, Rules, Design, PowerPoint | 25% |
 
 ### Installation 🛠️
+> $\color{red}{\textrm{🆘NEED USE JDK21 TO RUN PROJECT 🆘}}$  
 1. Open the terminal on your IDE
 2. Clone the repository
 ```
