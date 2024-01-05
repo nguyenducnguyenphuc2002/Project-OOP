@@ -125,7 +125,7 @@ The team made an effort to change the game's original regulations. The key point
 <img width="900" src = "https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/76b86601-80a3-4dbc-939c-361cc1c9da34">
 
 ### DESIGN🏷
-#### 1. THE UX/UI🚩
+#### THE UX/UI🚩
 Since UI/UX has always been our main focus before we launched the game, we have received a lot of input from other people to establish a pattern. 
 
 A 2D adventure and action game is called Dragon Tale. The game narrates the tale of Dragon Tale, a green dragon who is courageous and strong yet also good-natured and giving.
@@ -166,7 +166,7 @@ The following crucial components have been identified to build the UI/UX for the
       * Watch the amount of fireballs below your amount of health as it decreases when you use F.
       * Fight the boss with I without losing health.
       * Keep the boss chasing you to prevent them from healing
-#### 2. GAME ALGORITHM💡
+#### GAME ALGORITHM💡
 After much iteration and troubleshooting, we now have the project structure as seen in the image below. 
 
 ![Annotation 2024-01-04 221710](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/e56ba842-adfe-46e8-9cb3-c9893e9e6312)
