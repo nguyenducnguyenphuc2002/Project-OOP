@@ -32,7 +32,7 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-<h1 align="center">Dragon Tale</h1>
+<h1 align="center">DRAGON TALE</h1>
   <h3 align="center">
     A Java game developed for the OOP Course at International University - VNU
     <br />
