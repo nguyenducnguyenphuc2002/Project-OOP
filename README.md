@@ -161,21 +161,21 @@ The following crucial components have been identified to build the UI/UX for the
         | F | FIRING |
         | W+E| FLY|
      
-      * Use <--,--> to move the knight.
+      * Use <--,--> to move the dragon.
       * Use R and F to attack the enemies.
       * Watch the amount of fireballs below your amount of health as it decreases when you use F.
-      * Fight the boss with I without losing health.
-      * Keep the boss chasing you to prevent them from healing
+      * Fight the boss must avoid touching it and dodge its venom.
+      * Should be based on the rugged terrain to kill the boss.
 #### GAME ALGORITHM💡
 After much iteration and troubleshooting, we now have the project structure as seen in the image below. 
 
 ![Annotation 2024-01-04 221710](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/e56ba842-adfe-46e8-9cb3-c9893e9e6312)
 
-The classes we teach can be arranged into distinct groups, like:
+The classes we teach can be arranged into distinct groups, such as:
 
 **__MapObject__:** is the superclass of the classes including the Player class to display the player's information (dragon tale), the Enemies class to describe various monsters in the road, the teleport class, the venom class to describe the enemies' venom to attack the player, and the collectable class to describe the coins in the journey. 
 
-**__Enemies__:** is the superclass of all the classes, which includes the boss category or classes that are similar to mini-monsters like Hero, Slugger, Arachnik, and Hat Monkey.
+**__Enemies__:** is the superclass of all the classes, including the boss category or classes similar to mini-monsters like Hero, Slugger, Arachnik, and Hat Monkey.
 
 **__Die Enemies__:** is the superclass of all the classes, which includes DieBoss, DieHero, DieSlugger, DieArachne, and DieHatMonkey.
 
