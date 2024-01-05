@@ -122,7 +122,7 @@ The team made an effort to change the game's original regulations. The key point
 
 **__COINS AND POINTS__:** You get an extra coin and 100 points for eliminating an adversary. These are the same coins that are found on the streets.
 
-<img width="900" src = "https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/76b86601-80a3-4dbc-939c-361cc1c9da34">
+<img width="1020" src = "https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/76b86601-80a3-4dbc-939c-361cc1c9da34">
 
 ### Design🏷
 #### The UX/UI🚩
@@ -169,7 +169,7 @@ The following crucial components have been identified to build the UI/UX for the
 #### Game Algorithm💡
 After much iteration and troubleshooting, we now have the project structure as seen in the image below. 
 
-![Annotation 2024-01-04 221710](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/e56ba842-adfe-46e8-9cb3-c9893e9e6312)
+<img width="1020" src = "https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/e56ba842-adfe-46e8-9cb3-c9893e9e6312">
 
 The classes we teach can be arranged into distinct groups, such as:
 
@@ -226,7 +226,7 @@ The classes we teach can be arranged into distinct groups, such as:
    
 - [x] **MAIN DIAGRAM**
 
-   ![main](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/8d6a4a71-0aad-4918-8092-836d0a2bd7bb)
+   <img width="1020" src = "https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/125187213/8d6a4a71-0aad-4918-8092-836d0a2bd7bb">
 
 
 
