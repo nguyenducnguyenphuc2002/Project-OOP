@@ -88,6 +88,10 @@ git status
 ```
 git checkout 'branch name'
 ```
+
+### The tool used 🗂️
+
+
 <!-- METHODOLOGY -->
 
 ## METHODOLOGY <a name ="METHODOLOGY"></a>🔦
