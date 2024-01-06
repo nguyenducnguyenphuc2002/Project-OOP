@@ -90,6 +90,8 @@ git checkout 'branch name'
 ```
 
 ### The tool used 🗂️
+1. IDE for programming and debugging: IntelliJ
+
 
 
 <!-- METHODOLOGY -->
