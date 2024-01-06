@@ -1,3 +1,4 @@
+<!-- PROJECT LOGO -->
 ![VTkAtJm](https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/449e9f4a-2541-48a6-92fd-18dfe5e8c91d)
 
 <p align="center">
@@ -86,6 +87,8 @@ git status
 ```
 git checkout 'branch name'
 ```
+<!-- METHODOLOGY -->
+
 ## METHODOLOGY <a name ="METHODOLOGY"></a>🔦
 ### How To Play 🎮
 
@@ -171,6 +174,7 @@ The following crucial components have been identified to build the UI/UX for the
       * Watch the amount of fireballs below your amount of health as it decreases when you use F.
       * Fight the boss must avoid touching it and dodge its venom.
       * Should be based on the rugged terrain to kill the boss.
+        
 #### Game Algorithm💡
 After much iteration and troubleshooting, we now have the project structure as seen in the image below. 
 
@@ -264,6 +268,7 @@ The following screenshots show some examples of the game states in the current b
 - [X]	Game Over screen
 <img width="719" alt="menu" src="https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game/assets/124681260/61dec428-6cdb-4ddb-93cc-521e2463b6c7">
 
+<!-- ACKNOWLEDGEMENTS -->
 ## ACKNOWLEDGEMENTS <a name ="ACKNOWLEDGEMENTS"></a>🧠
 We would like to convey our deepest appreciation to our instructor and the individuals who assisted us in reaching the goals of this project:
 - []()	Dr. Tran Thanh Tung
@@ -272,6 +277,7 @@ We would like to convey our deepest appreciation to our instructor and the indiv
 - []()	The sites [Geeksforgeeks](https://www.geeksforgeeks.org/java/?ref=shm_outind), [Javapoints](https://www.javatpoint.com/uml-diagrams), and so on
 - []()	The README.md template from **[othneildrew](https://github.com/othneildrew/Best-README-Template)**
 
+<!-- REFERENCES -->
 ## REFERENCES <a name ="REFERENCES"></a>📎
 - [x] [Khan Academy](https://blog.khanacademy.org/introducingthe-learning-dashboard/)
 - [x] [Cousera](https://www.coursera.org/courses?query=object-oriented%20programming%20(oop))
