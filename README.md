@@ -91,6 +91,8 @@ git checkout 'branch name'
 
 ### The tool used 🗂️
 1. IDE for programming and debugging: IntelliJ
+2. The mean of code version management: Github
+3. Mean of communication: Facebook, Discord
 
 
 
