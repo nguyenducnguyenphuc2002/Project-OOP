@@ -81,7 +81,7 @@ This is our game project for our final lab in our Object-Oriented Programming co
 git clone https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git
 ```
 3. Open in a Java IDE
-4. Choose Main.java and click RUN to play the game
+4. Choose game.java in package main and click RUN to play the game
 
 ### The tool used 🗂️
 1. IDE for programming and debugging: IntelliJ
