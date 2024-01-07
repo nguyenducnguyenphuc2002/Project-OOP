@@ -73,21 +73,15 @@ This is our game project for our final lab in our Object-Oriented Programming co
 | 4 | Le Huynh Nha Nguyen | ITDSIU21058 | ITDSIU21058@student.hcmiu.edu.vn | Entities, Rules, Design, PowerPoint | 25% |
 
 ### Installation 🛠️
-> $\color{red}{\textrm{🆘 MUST INSTALL JDK21 TO RUN THE PROJECT 🆘}}$
+> $\color{red}{\textrm{🆘 MUST INSTALL JDK21 TO RUN THE GAME 🆘}}$
 
 1. Open the terminal on your IDE
 2. Clone the repository
 ```
 [git clone] {https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git}
 ```
-3. Check the file status
-```
-git status
-```
-4. Change branch
-```
-git checkout 'branch name'
-```
+3. Open in a Java IDE
+4. Main.java and click RUN to play the game
 
 ### The tool used 🗂️
 1. IDE for programming and debugging: IntelliJ
