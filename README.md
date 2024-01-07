@@ -78,7 +78,7 @@ This is our game project for our final lab in our Object-Oriented Programming co
 1. Open the terminal on your IDE
 2. Clone the repository
 ```
-[git clone] {https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git}
+git clone https://github.com/nguyenducnguyenphuc2002/OOP-DragonTale-Game.git
 ```
 3. Open in a Java IDE
 4. Choose Main.java and click RUN to play the game
