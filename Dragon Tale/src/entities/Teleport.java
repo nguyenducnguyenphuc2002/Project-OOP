@@ -21,7 +21,7 @@ public class Teleport extends MapObject {
         sprites = LoadEntities.loadLine(LoadEntities.TELEPORT, width, height);
         animation = new Animation();
         animation.setFrames(sprites);
-        animation.setDelay(1);
+        animation.setDelay(100L);
     }
 
     public void update() {

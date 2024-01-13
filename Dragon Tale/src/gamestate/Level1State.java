@@ -48,7 +48,7 @@ public class Level1State extends GameState {
 
 		player = new Player(tileMap);
 		player.setPosition(100, 100);
-//        player.setPosition(2700,200);
+        player.setPosition(2700,200);
 		dieEnemies = new ArrayList<>();
 		populateEnemies();
 		populateCollectables();
@@ -73,6 +73,18 @@ public class Level1State extends GameState {
 			c.setPosition(coinPoint.x, coinPoint.y);
 			coins.add(c);
 		}
+
+	}
+
+	private void populateTeleport(){
+		//teleport
+		Point point = new Point(3140, 190);
+
+		Teleport teleport = new Teleport(tileMap);
+		teleport.setPosition(point.x, point.y);
+
+
+		teleports.add(teleport);
 
 	}
 
@@ -134,20 +146,15 @@ public class Level1State extends GameState {
 		boss.setPosition(points5.x, points5.y);
 		enemies.add(boss);
 
-		//teleport
-		Point point6 = new Point(3140, 190);
 
-		Teleport teleport = new Teleport(tileMap);
-		teleport.setPosition(point6.x, point6.y);
-		teleports.add(teleport);
 
-		Point[] points7 = new Point[]{
+		Point[] points6 = new Point[]{
 				new Point(400, 150),
 				new Point(720, 150),
 				new Point(1920, 112),
 				new Point(2270, 150)
 		};
-		for (Point point : points7) {
+		for (Point point : points6) {
 			Hero hero = new Hero(tileMap);
 			hero.setPosition(point.x, point.y);
 			enemies.add(hero);
@@ -178,7 +185,7 @@ public class Level1State extends GameState {
 				dieEnemies.add(getDie(e));
 				//check bossdie
 				if (e instanceof Boss) {
-					bossDefeated = true;
+					populateTeleport();
 				}
 			}
 		}
@@ -210,16 +217,14 @@ public class Level1State extends GameState {
 			}
 		}
 
+
 		for (Teleport teleport: teleports) {
-			if (bossDefeated) {
-				teleport.update();
-			}
+			teleport.update();
 		}
 
-		//if player is dead or enters portal
-		if (player.intersectsTeleports(teleports) || player.isDead()) {
-			LoadEndGame.coinsCollected = player.getScore();
 
+		if (player.isDead()) {
+			LoadEndGame.coinsCollected = player.getScore();
 			gsm.setState(GameStateManager.GAMEOVERSTATE);
 		}
 
@@ -258,8 +263,8 @@ public class Level1State extends GameState {
 
 		for (Teleport teleport: teleports) {
 			teleport.draw(g);
-
 		}
+
 
 		hud.draw(g);
 	}

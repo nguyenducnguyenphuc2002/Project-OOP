@@ -60,7 +60,7 @@ public class WinnerState extends GameState {
         g.setColor(titleColor);
         g.setFont(titleFont);
 
-        g.drawString("You Win", 80, 70);
+        g.drawString("You Win", 95, 55);
 
         // draw number of coins collected
         LoadEndGame.LoadInfo(g);
