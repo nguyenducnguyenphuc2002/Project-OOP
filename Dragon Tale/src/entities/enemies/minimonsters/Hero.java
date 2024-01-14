@@ -29,7 +29,7 @@ public class Hero extends Enemy {
         cheight = 20;
 
         health = maxHealth = 2;
-        damage = 1;
+        damage = 3;
 
 
         sprites = LoadEntities.loadLine(LoadEntities.HERO, this.width, this.height);
