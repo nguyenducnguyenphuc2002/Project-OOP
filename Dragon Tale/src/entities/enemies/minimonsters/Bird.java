@@ -23,7 +23,7 @@ public class Bird extends Enemy {
         cwidth = 10;
         cheight = 10;
         health = maxHealth = 3;
-        damage = 4;
+        damage = 2;
 
 
         sprites = LoadEntities.loadLine(LoadEntities.BIRD, width,height); // load bird
