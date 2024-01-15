@@ -31,7 +31,6 @@ public class Level1State extends GameState {
 	private HUD hud;
 
 	private ArrayList<Teleport> teleports;
-	private boolean bossDefeated = false;
 
 
 	public Level1State(GameStateManager gsm) {
