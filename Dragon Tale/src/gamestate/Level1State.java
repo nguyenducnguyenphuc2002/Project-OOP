@@ -48,7 +48,7 @@ public class Level1State extends GameState {
 
 		player = new Player(tileMap);
 		player.setPosition(100, 100);
-        player.setPosition(2700,200);
+
 		dieEnemies = new ArrayList<>();
 		populateEnemies();
 		populateCollectables();
